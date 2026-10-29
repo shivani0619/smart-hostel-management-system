@@ -1,0 +1,160 @@
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SmartHostel</h2>
+
+            <span>AI HOSTEL</span>
+
+        </div>
+
+    </div>
+    <!-- MINI PROFILE -->
+
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar">
+
+            SS
+
+            <span class="online-dot"></span>
+
+        </div>
+
+        <div class="student-mini-info">
+
+            <h4>Student</h4>
+
+            <p>Student ID: —</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SIDEBAR NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="student-dashboard.html"
+           class="nav-item active">
+
+            <span class="nav-icon">⌂</span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- MY PROFILE -->
+
+        <a href="student-profile.html"
+           class="nav-item">
+
+            <span class="nav-icon">◉</span>
+
+            <span>My Profile</span>
+
+        </a>
+
+
+        <!-- MY ROOM -->
+
+        <a href="room-details.html"
+           class="nav-item">
+
+            <span class="nav-icon">▣</span>
+
+            <span>My Room</span>
+
+        </a>
+
+
+        <!-- LEAVE -->
+
+        <a href="leave-request.html"
+           class="nav-item">
+
+            <span class="nav-icon">▤</span>
+
+            <span>Leave Application</span>
+
+        </a>
+
+
+        <!-- EMERGENCY -->
+
+        <a href="emergency.html"
+           class="nav-item emergency-link">
+
+            <span class="nav-icon">!</span>
+
+            <span>Emergency / SOS</span>
+
+        </a>
+
+
+        <!-- ATTENDANCE -->
+
+        <a href="attendance.html"
+           class="nav-item">
+
+            <span class="nav-icon">◷</span>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartHostel AI | AI Emergency Assistant</title>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="student-dashboard.css">
+<link rel="stylesheet" href="emergency.css">
+    <!-- Global Sidebar CSS -->
+    <link rel="stylesheet" href="student-sidebar.css">
+</head>
+<body>
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SmartHostel</h2>
+
+            <span>AI HOSTEL</span>
+
+        </div>
+
+    </div>
+    <!-- MINI PROFILE -->
+
+<div class="student-mini-profile">
+
+    <div class="profile-avatar" id="profileAvatar">
+        ST
+        <span class="online-dot"></span>
+    </div>
+
+    <div class="student-mini-info">
+
+        <h4 id="studentMiniName">
+            Student
+        </h4>
+
+        <p id="studentMiniId">
+            Student ID: —
+        </p>
+
+    </div>
+
+</div>
+    <!-- =================================================
+         SIDEBAR NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="student-dashboard.html"
+           class="nav-item">
+
+            <span class="nav-icon">⌂</span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- MY PROFILE -->
+
+        <a href="student-profile.html"
+           class="nav-item">
+
+            <span class="nav-icon">◉</span>
+
+            <span>My Profile</span>
+
+        </a>
+
+
+        <!-- MY ROOM -->
+
+        <a href="room-details.html"
+           class="nav-item">
+
+            <span class="nav-icon">▣</span>
+
+            <span>My Room</span>
+
+        </a>
+
+
+        <!-- LEAVE -->
+
+        <a href="leave-request.html"
+           class="nav-item">
+
+            <span class="nav-icon">▤</span>
+
+            <span>Leave Application</span>
+
+        </a>
+
+
+        <!-- EMERGENCY -->
+
+        <a href="emergency.html"
+           class="nav-item emergency-link">
+
+            <span class="nav-icon">!</span>
+
+            <span>Emergency / SOS</span>
+
+        </a>
+
+
+        <!-- ATTENDANCE -->
+
+        <a href="attendance.html"
+           class="nav-item">
+
+            <span class="nav-icon">◷</span>
+
+            <span>Attendance</span>
+
+        </a>
+        <a href="student-notifications.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bell"></i>
+    </span>
+    <span>Notifications</span>
+</a>
+
+<a href="student-announcements.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bullhorn"></i>
+    </span>
+    <span>Announcements</span>
+</a>
+
+
+    </nav>
+
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+
+
+
+<main class="main-content">
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <div class="breadcrumb"><span>Emergency</span> / AI Assistant</div>
+  </header>
+
+  <section class="dashboard-content emergency-page">
+    <div class="welcome-section">
+      <div>
+        <p class="page-label">AI EMERGENCY ASSISTANT</p>
+        <h1>🚨 Need Help Right Now?</h1>
+        <p class="welcome-text">Describe your emergency in plain language. We will classify it and notify the warden and your parent.</p>
+      </div>
+    </div>
+
+    <div class="sos-card">
+      <div class="sos-card-header">
+        <h2>Describe your emergency</h2>
+        <p>Type what is happening. Example: “I fell down and need medical help.”</p>
+      </div>
+
+      <textarea id="sosDescription" rows="4" placeholder="I need help..." maxlength="2000"></textarea>
+      <div class="char-count"><span id="charCount">0</span>/2000</div>
+
+      <div class="sos-actions">
+        <button type="button" class="btn-classify" id="classifyBtn">Analyze</button>
+        <button type="button" class="btn-sos" id="sendSosBtn">🚨 SEND SOS</button>
+      </div>
+
+      <div id="classifyResult" class="classify-result hidden"></div>
+      <div id="sosResult" class="sos-result hidden"></div>
+
+      <p class="safety-disclaimer">
+        AI classification is for assistance only. This system does not diagnose conditions or recommend treatment.
+        For immediate danger, contact emergency services (e.g. 108 / 112) or a responsible person immediately.
+      </p>
+    </div>
+
+    <div class="sos-history panel">
+      <h2>My SOS History</h2>
+      <div id="historyEmpty" class="empty-state">No emergency requests yet.</div>
+      <table class="sos-table hidden" id="historyTable">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Type</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="api.js"></script>
+<script src="emergency.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartHostel AI | Parent Login</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Parent Login CSS -->
+    <link rel="stylesheet" href="parent-login.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================
+         BACKGROUND GLOW
+    =========================== -->
+
+    <div class="glow glow-one"></div>
+
+    <div class="glow glow-two"></div>
+
+
+    <!-- ==========================
+         BACK TO ROLE SELECTION
+    =========================== -->
+
+    <a href="roleselection.html" class="back-button">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </a>
+
+
+    <!-- ==========================
+         LOGIN CONTAINER
+    =========================== -->
+
+    <div class="login-container">
+
+
+        <!-- ==========================
+             LEFT BRANDING
+        =========================== -->
+
+        <div class="login-left">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <div class="logo-box">
+                    AI
+                </div>
+
+                <div class="logo-text">
+
+                    <h2>SmartHostel AI</h2>
+
+                    <span>AI Hostel Management</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- WELCOME -->
+
+            <h1>
+                Welcome Back,
+                <span>Parent!</span>
+            </h1>
+
+
+            <p>
+
+                Stay connected with your child's hostel life,
+                receive important updates, and keep track
+                of their safety and activities.
+
+            </p>
+
+
+            <!-- FEATURES -->
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <span>
+                        Student Safety
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>
+                        Instant Notifications
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Outing Updates
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ==========================
+             LOGIN RIGHT
+        =========================== -->
+
+        <div class="login-right">
+
+
+            <div class="login-card">
+
+
+                <div class="card-heading">
+
+                    <div class="student-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <h2>Parent Login</h2>
+
+                    <p>
+                        Sign in to monitor your child's hostel activities
+                    </p>
+
+                </div>
+
+
+                <!-- ==========================
+                     LOGIN FORM
+                =========================== -->
+
+                <form id="parentLoginForm">
+
+
+                    <!-- LINKED STUDENT ID -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Linked Student ID
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="studentId"
+                                placeholder="Enter your linked Student ID"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="parentEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="parentPassword"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="togglePassword"
+                                aria-label="Show password">
+
+                                <i
+                                    class="fa-solid fa-eye"
+                                    id="eyeIcon">
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OPTIONS -->
+
+                    <div class="login-options">
+
+
+                        <label class="remember">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe">
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+<a href="parent-forgot-password.html">
+    Forgot Password?
+</a>
+                    </div>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="login-button">
+
+                        <span>LOGIN</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- REGISTER -->
+
+                <div class="register">
+
+                    <p>
+
+                        New parent?
+
+                        <a href="parent-register.html">
+                            Create an account
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="api.js"></script>
+    <script src="parent-login.js"></script>
+
+
+</body>
+
+</html>

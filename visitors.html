@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SmartHostel AI | Visitors</title>
+
+  <link rel="stylesheet" href="student-dashboard.css">
+
+  <style>
+    .visitor-page {
+      padding: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .visitor-panel {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 18px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+
+    .visitor-table-wrap {
+      overflow-x: auto;
+    }
+
+    .visitor-table {
+      width: 100%;
+      min-width: 650px;
+      border-collapse: collapse;
+    }
+
+    .visitor-table th,
+    .visitor-table td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: left;
+    }
+
+    .visitor-state {
+      padding: 14px 0;
+      color: #64748b;
+    }
+  </style>
+
+  <!-- Global Sidebar CSS -->
+  <link rel="stylesheet" href="student-sidebar.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+  <!-- =====================================================
+       SIDEBAR
+  ===================================================== -->
+
+  <aside class="sidebar" id="sidebar">
+
+    <!-- LOGO -->
+    <div class="logo-section">
+
+      <div class="logo-icon">
+        <span>AI</span>
+      </div>
+
+      <div class="logo-text">
+        <h2>SmartHostel</h2>
+        <span>AI HOSTEL</span>
+      </div>
+
+    </div>
+
+
+    <!-- MINI PROFILE -->
+    <div class="student-mini-profile">
+
+      <div class="profile-avatar">
+        SS
+        <span class="online-dot"></span>
+      </div>
+
+      <div class="student-mini-info">
+        <h4>Student</h4>
+        <p>Student ID: —</p>
+      </div>
+
+    </div>
+
+
+    <!-- =================================================
+         SIDEBAR NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+      <p class="nav-title">
+        MAIN MENU
+      </p>
+
+
+      <!-- DASHBOARD -->
+      <a href="student-dashboard.html"
+         class="nav-item">
+
+        <span class="nav-icon">⌂</span>
+        <span>Dashboard</span>
+
+      </a>
+
+
+      <!-- MY PROFILE -->
+      <a href="student-profile.html"
+         class="nav-item">
+
+        <span class="nav-icon">◉</span>
+        <span>My Profile</span>
+
+      </a>
+
+
+      <!-- MY ROOM -->
+      <a href="room-details.html"
+         class="nav-item">
+
+        <span class="nav-icon">▣</span>
+        <span>My Room</span>
+
+      </a>
+
+
+      <!-- LEAVE -->
+      <a href="leave-request.html"
+         class="nav-item">
+
+        <span class="nav-icon">▤</span>
+        <span>Leave Application</span>
+
+      </a>
+
+
+      <!-- EMERGENCY -->
+      <a href="emergency.html"
+         class="nav-item emergency-link">
+
+        <span class="nav-icon">!</span>
+        <span>Emergency / SOS</span>
+
+      </a>
+
+
+      <!-- ATTENDANCE -->
+      <a href="attendance.html"
+         class="nav-item">
+
+        <span class="nav-icon">◷</span>
+        <span>Attendance</span>
+
+      </a>
+
+    </nav>
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+
+      <a href="roleselection.html"
+         class="logout-btn"
+         id="logoutBtn">
+
+        <span>↪</span>
+        Logout
+
+      </a>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ===================================================== -->
+
+  <div class="main-content">
+
+    <main class="visitor-page">
+
+      <h1>My Visitors</h1>
+
+      <p>
+        View visitor details and check the current visitor status.
+      </p>
+
+
+      <!-- =================================================
+           VISITOR DETAILS
+      ================================================= -->
+
+      <section class="visitor-panel visitor-table-wrap">
+
+        <h2>Visitor Details</h2>
+
+        <div id="visitorState" class="visitor-state">
+          Loading visitors...
+        </div>
+
+        <table id="visitorTable"
+               class="visitor-table"
+               hidden>
+
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Relation</th>
+              <th>Phone</th>
+              <th>Purpose</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="visitorBody"></tbody>
+
+        </table>
+
+      </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="api.js"></script>
+    <script src="visitors.js"></script>
+
+  </div>
+
+</div>
+
+</body>
+</html>

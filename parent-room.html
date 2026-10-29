@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHostel AI | Parent Room</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="emergency.css">
+  <link rel="stylesheet" href="portal-dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-section"><div class="logo-icon"><span>AI</span></div><div class="logo-text"><h2>SmartHostel</h2><span>PARENT</span></div></div>
+    <div class="student-mini-profile">
+      <div class="profile-avatar">P</div>
+      <div class="student-mini-info"><h4 id="parentName">Parent</h4><p>Guardian</p></div>
+    </div>
+    <nav class="sidebar-nav">
+      <p class="nav-title">PARENT PORTAL</p>
+      <a href="parent-room.html" class="nav-item active"><span class="nav-icon"><i class="fa-solid fa-bed"></i></span><span>Room</span></a>
+      <a href="parent-attendance.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-clock"></i></span><span>Attendance</span></a>
+      <a href="parent-leave.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-calendar-check"></i></span><span>Leave Status</span></a>
+      <a href="parent-visitors.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-id-card"></i></span><span>Visitors</span></a>
+      <a href="parent-emergency.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-triangle-exclamation"></i></span><span>Emergency</span></a>
+      <a href="parent-fees.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-receipt"></i></span><span>Fees</span></a>
+      <a href="parent-notifications.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-bell"></i></span><span>Notifications</span></a>
+      <a href="parent-announcements.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-bullhorn"></i></span><span>Announcements</span></a>
+    </nav>
+    <div class="sidebar-bottom"><a href="#" id="logoutBtn" class="logout-btn"><span class="nav-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span><span>Logout</span></a></div>
+  </aside>
+
+  <main class="main-content portal-main">
+    <header class="portal-header">
+      <button class="portal-menu-btn" id="menuBtn" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+      <div><h1>Room</h1><p>Student room allocation details</p></div>
+    </header>
+    <div class="panel"><div id="roomDetailsBox">Loading...</div></div>
+  </main>
+
+  <script src="api.js"></script>
+  <script src="shared-portal.js"></script>
+  <script src="parent-pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | SmartHost AI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Settings CSS -->
+    <link rel="stylesheet" href="settings.css">
+    <!-- Global Sidebar CSS -->
+    <link rel="stylesheet" href="student-sidebar.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         BACKGROUND GLOW
+    ========================================== -->
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SmartHostel</h2>
+
+            <span>AI HOSTEL</span>
+
+        </div>
+
+    </div>
+    <!-- MINI PROFILE -->
+
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar">
+
+            SS
+
+            <span class="online-dot"></span>
+
+        </div>
+
+        <div class="student-mini-info">
+
+            <h4>Student</h4>
+
+            <p>Student ID: —</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SIDEBAR NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="student-dashboard.html"
+           class="nav-item">
+
+            <span class="nav-icon">⌂</span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- MY PROFILE -->
+
+        <a href="student-profile.html"
+           class="nav-item">
+
+            <span class="nav-icon">◉</span>
+
+            <span>My Profile</span>
+
+        </a>
+
+
+        <!-- MY ROOM -->
+
+        <a href="room-details.html"
+           class="nav-item">
+
+            <span class="nav-icon">▣</span>
+
+            <span>My Room</span>
+
+        </a>
+
+
+        <!-- LEAVE -->
+
+        <a href="leave-request.html"
+           class="nav-item">
+
+            <span class="nav-icon">▤</span>
+
+            <span>Leave Application</span>
+
+        </a>
+
+
+        <!-- EMERGENCY -->
+
+        <a href="emergency.html"
+           class="nav-item emergency-link">
+
+            <span class="nav-icon">!</span>
+
+            <span>Emergency / SOS</span>
+
+        </a>
+
+
+        <!-- SETTINGS -->
+
+        <a href="settings.html"
+           class="nav-item active">
+
+            <span class="nav-icon">⚙</span>
+
+            <span>Settings</span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+
+
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =========================================
+             TOPBAR
+        ========================================== -->
+
+        <header class="topbar">
+
+            <div class="mobile-menu">
+                <button id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+
+            <!-- Page Title -->
+            <div class="page-title">
+
+                <span class="small-heading">
+                    ACCOUNT CENTER
+                </span>
+
+                <h1>Settings</h1>
+
+                <p>
+                    Manage your account, preferences and security.
+                </p>
+
+            </div>
+
+
+            <!-- Top Actions -->
+            <div class="topbar-actions">
+
+                <button class="icon-button" title="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="top-notification">
+                        3
+                    </span>
+
+                </button>
+
+
+                <div class="top-profile">
+
+                    <div class="top-avatar">
+                        S
+                    </div>
+
+                    <div class="top-profile-info">
+
+                        <strong>Student</strong>
+
+                        <span>Student</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================================
+             SETTINGS PAGE
+        ========================================== -->
+
+        <section class="settings-page">
+
+
+            <!-- =====================================
+                 HERO
+            ====================================== -->
+
+            <div class="settings-hero">
+
+                <div class="settings-hero-icon">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+
+
+                <div class="settings-hero-content">
+
+                    <span>
+                        PERSONAL CONTROL CENTER
+                    </span>
+
+                    <h2>
+                        Make SmartHost AI work for you
+                    </h2>
+
+                    <p>
+                        Customize your profile, notifications, privacy,
+                        security and appearance settings from one simple
+                        place.
+                    </p>
+
+                </div>
+
+
+                <div class="settings-status">
+                    <span></span>
+                    Account Active
+                </div>
+
+
+                <div class="hero-circle hero-circle-one"></div>
+                <div class="hero-circle hero-circle-two"></div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 SETTINGS LAYOUT
+            ====================================== -->
+
+            <div class="settings-layout">
+
+
+                <!-- =================================
+                     SETTINGS MENU
+                ================================== -->
+
+                <aside class="settings-menu">
+
+                    <div class="settings-menu-title">
+                        SETTINGS
+                    </div>
+
+
+                    <button
+                        class="settings-tab active"
+                        data-target="profile"
+                    >
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profile</span>
+                    </button>
+
+
+                    <button
+                        class="settings-tab"
+                        data-target="notifications"
+                    >
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Notifications</span>
+                    </button>
+
+
+                    <button
+                        class="settings-tab"
+                        data-target="security"
+                    >
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Security</span>
+                    </button>
+
+
+                    <button
+                        class="settings-tab"
+                        data-target="appearance"
+                    >
+                        <i class="fa-solid fa-palette"></i>
+                        <span>Appearance</span>
+                    </button>
+
+
+                    <button
+                        class="settings-tab"
+                        data-target="privacy"
+                    >
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Privacy</span>
+                    </button>
+
+                </aside>
+
+
+
+                <!-- =================================
+                     SETTINGS CONTENT
+                ================================== -->
+
+                <div class="settings-content">
+
+
+                    <!-- =================================
+                         PROFILE SECTION
+                    ================================== -->
+
+                    <section
+                        class="settings-section active"
+                        id="profile"
+                    >
+
+                        <div class="section-heading">
+
+                            <div class="section-heading-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+                                <h2>Profile Settings</h2>
+
+                                <p>
+                                    Manage your personal information
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Profile Card -->
+
+                        <div class="settings-card">
+
+                            <div class="profile-setting">
+
+                                <div class="large-avatar">
+                                    S
+                                </div>
+
+
+                                <div class="profile-setting-info">
+
+                                    <h3>
+                                        Student
+                                    </h3>
+
+                                    <p>
+                                        BCA Student • SmartHost AI
+                                    </p>
+
+                                    <span>
+                                        Student Account
+                                    </span>
+
+                                </div>
+
+
+                                <button
+                                    class="secondary-btn"
+                                    id="changePhotoBtn"
+                                >
+                                    <i class="fa-solid fa-camera"></i>
+                                    Change Photo
+                                </button>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <!-- Form -->
+
+                            <div class="form-grid">
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        value=""
+                                        id="fullName"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Student ID
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        value="STU2026"
+                                        disabled
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        value=""
+                                        id="email"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Phone Number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        value="+91 98765 43210"
+                                        id="phone"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Course
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        value="Bachelor of Computer Applications"
+                                        disabled
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Room Number
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        value="B-204"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="card-actions">
+
+                                <button
+                                    class="save-btn"
+                                    onclick="showToast('Profile updated successfully')"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                    Save Changes
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================
+                         NOTIFICATION SECTION
+                    ================================== -->
+
+                    <section
+                        class="settings-section"
+                        id="notifications"
+                    >
+
+                        <div class="section-heading">
+
+                            <div class="section-heading-icon">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Notification Settings
+                                </h2>
+
+                                <p>
+                                    Choose what notifications you receive
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+
+                            <!-- Leave -->
+
+                            <div class="setting-row">
+
+                                <div class="setting-row-info">
+
+                                    <div class="setting-icon blue">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <h3>
+                                            Leave Request Updates
+                                        </h3>
+
+                                        <p>
+                                            Get notified when your leave
+                                            request is approved or rejected.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <!-- Food -->
+
+                            <div class="setting-row">
+
+                                <div class="setting-row-info">
+
+                                    <div class="setting-icon orange">
+                                        <i class="fa-solid fa-utensils"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <h3>
+                                            Food & Mess Alerts
+                                        </h3>
+
+                                        <p>
+                                            Receive mess menu and food
+                                            related updates.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <!-- Safety -->
+
+                            <div class="setting-row">
+
+                                <div class="setting-row-info">
+
+                                    <div class="setting-icon green">
+                                        <i class="fa-solid fa-shield-heart"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <h3>
+                                            Safety Alerts
+                                        </h3>
+
+                                        <p>
+                                            Important hostel safety and
+                                            emergency notifications.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <!-- Visitor -->
+
+                            <div class="setting-row">
+
+                                <div class="setting-row-info">
+
+                                    <div class="setting-icon purple">
+                                        <i class="fa-solid fa-user-shield"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <h3>
+                                            Visitor Notifications
+                                        </h3>
+
+                                        <p>
+                                            Get alerts whenever a visitor
+                                            request is created.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================
+                         SECURITY SECTION
+                    ================================== -->
+
+                    <section
+                        class="settings-section"
+                        id="security"
+                    >
+
+                        <div class="section-heading">
+
+                            <div class="section-heading-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Security
+                                </h2>
+
+                                <p>
+                                    Keep your SmartHost account secure
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+
+                            <div class="security-status">
+
+                                <div class="security-check">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Your account is secure
+                                    </h3>
+
+                                    <p>
+                                        No suspicious activity detected.
+                                    </p>
+
+                                </div>
+
+                                <span class="secure-badge">
+                                    Protected
+                                </span>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <div class="security-option">
+
+                                <div>
+
+                                    <h3>
+                                        Two-Factor Authentication
+                                    </h3>
+
+                                    <p>
+                                        Add an extra layer of protection
+                                        to your account.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <div class="security-option">
+
+                                <div>
+
+                                    <h3>
+                                        Login Notifications
+                                    </h3>
+
+                                    <p>
+                                        Get notified when your account is
+                                        accessed from a new device.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <div class="card-actions">
+
+                                <button
+                                    class="secondary-btn"
+                                    onclick="showToast('Password change option opened')"
+                                >
+                                    <i class="fa-solid fa-key"></i>
+                                    Change Password
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================
+                         APPEARANCE SECTION
+                    ================================== -->
+
+                    <section
+                        class="settings-section"
+                        id="appearance"
+                    >
+
+                        <div class="section-heading">
+
+                            <div class="section-heading-icon">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Appearance
+                                </h2>
+
+                                <p>
+                                    Personalize the look of your dashboard
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <h3 class="appearance-title">
+                                Choose your theme
+                            </h3>
+
+                            <p class="appearance-description">
+                                Select the interface style that feels
+                                comfortable for you.
+                            </p>
+
+
+                            <div class="theme-options">
+
+
+                                <!-- Light -->
+
+                                <div
+                                    class="theme-option active"
+                                    data-theme="light"
+                                >
+
+                                    <div class="theme-preview light-preview">
+
+                                        <div></div>
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+                                    <strong>
+                                        Light
+                                    </strong>
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </div>
+
+
+                                <!-- Soft -->
+
+                                <div
+                                    class="theme-option"
+                                    data-theme="soft"
+                                >
+
+                                    <div class="theme-preview soft-preview">
+
+                                        <div></div>
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+                                    <strong>
+                                        Soft
+                                    </strong>
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </div>
+
+
+                                <!-- Dark -->
+
+                                <div
+                                    class="theme-option"
+                                    data-theme="dark"
+                                >
+
+                                    <div class="theme-preview dark-preview">
+
+                                        <div></div>
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+                                    <strong>
+                                        Dark
+                                    </strong>
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =================================
+                         PRIVACY SECTION
+                    ================================== -->
+
+                    <section
+                        class="settings-section"
+                        id="privacy"
+                    >
+
+                        <div class="section-heading">
+
+                            <div class="section-heading-icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Privacy
+                                </h2>
+
+                                <p>
+                                    Control how your information is used
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+
+                            <div class="setting-row">
+
+                                <div class="setting-row-info">
+
+                                    <div class="setting-icon blue">
+                                        <i class="fa-solid fa-user-group"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <h3>
+                                            Profile Visibility
+                                        </h3>
+
+                                        <p>
+                                            Allow hostel staff to view your
+                                            basic profile information.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <div class="setting-row">
+
+                                <div class="setting-row-info">
+
+                                    <div class="setting-icon purple">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <h3>
+                                            Location Sharing
+                                        </h3>
+
+                                        <p>
+                                            Allow emergency location sharing
+                                            when safety alerts are triggered.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="divider"></div>
+
+
+                            <div class="setting-row">
+
+                                <div class="setting-row-info">
+
+                                    <div class="setting-icon green">
+                                        <i class="fa-solid fa-robot"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <h3>
+                                            AI Personalization
+                                        </h3>
+
+                                        <p>
+                                            Allow SmartHost AI to personalize
+                                            recommendations for you.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input
+                                        type="checkbox"
+                                        checked
+                                    >
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Admin Contact -->
+
+                        <div class="danger-card">
+
+                            <div class="danger-icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+
+
+                            <div class="danger-content">
+
+                                <h3>
+                                    Need help with your account?
+                                </h3>
+
+                                <p>
+                                    Contact your hostel administrator
+                                    for account-related assistance.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                class="contact-admin-btn"
+                                onclick="showToast('Admin contact request sent')"
+                            >
+                                Contact Admin
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 FOOTER
+            ====================================== -->
+
+            <footer class="settings-footer">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                SmartHost AI keeps your hostel experience
+                simple, safe and smart.
+
+            </footer>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         TOAST
+    ========================================== -->
+
+    <div
+        class="settings-toast"
+        id="settingsToast"
+        style="display:none;"
+    >
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span id="toastMessage">
+            Changes saved successfully
+        </span>
+
+    </div>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        /* =========================================
+           SIDEBAR MOBILE
+        ========================================== */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+
+        if (menuBtn) {
+
+            menuBtn.addEventListener("click", () => {
+
+                sidebar.classList.toggle("show");
+
+            });
+
+        }
+
+
+        /* =========================================
+           SETTINGS TABS
+        ========================================== */
+
+        const tabs = document.querySelectorAll(".settings-tab");
+        const sections = document.querySelectorAll(".settings-section");
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                const target = tab.dataset.target;
+
+                tabs.forEach(item => {
+                    item.classList.remove("active");
+                });
+
+                sections.forEach(section => {
+                    section.classList.remove("active");
+                });
+
+                tab.classList.add("active");
+
+                const targetSection =
+                    document.getElementById(target);
+
+                if (targetSection) {
+                    targetSection.classList.add("active");
+                }
+
+            });
+
+        });
+
+
+        /* =========================================
+           THEME OPTIONS
+        ========================================== */
+
+        const themeOptions =
+            document.querySelectorAll(".theme-option");
+
+        themeOptions.forEach(option => {
+
+            option.addEventListener("click", () => {
+
+                themeOptions.forEach(item => {
+                    item.classList.remove("active");
+                });
+
+                option.classList.add("active");
+
+                const theme =
+                    option.dataset.theme;
+
+                showToast(
+                    theme.charAt(0).toUpperCase() +
+                    theme.slice(1) +
+                    " theme selected"
+                );
+
+            });
+
+        });
+
+
+        /* =========================================
+           TOAST
+        ========================================== */
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById("settingsToast");
+
+            const toastMessage =
+                document.getElementById("toastMessage");
+
+            toastMessage.textContent = message;
+
+            toast.style.display = "flex";
+
+            clearTimeout(window.toastTimer);
+
+            window.toastTimer =
+                setTimeout(() => {
+
+                    toast.style.display = "none";
+
+                }, 2500);
+
+        }
+
+
+        /* =========================================
+           CHANGE PHOTO
+        ========================================== */
+
+        const changePhotoBtn =
+            document.getElementById("changePhotoBtn");
+
+        if (changePhotoBtn) {
+
+            changePhotoBtn.addEventListener(
+                "click",
+                () => {
+
+                    showToast(
+                        "Profile photo option opened"
+                    );
+
+                }
+            );
+
+        }
+
+    </script>
+
+<script src="api.js"></script>
+<script src="settings.js"></script>
+<script src="chatbot.js"></script>
+</body>
+
+</html>

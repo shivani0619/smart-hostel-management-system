@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartHostel AI | Parent Registration</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="parent-register.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================
+         BACKGROUND
+    =========================== -->
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+    <!-- ==========================
+         BACK TO LOGIN
+    =========================== -->
+
+    <a href="parent-login.html" class="back-button">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back to Login
+
+    </a>
+
+
+    <!-- ==========================
+         REGISTER CONTAINER
+    =========================== -->
+
+    <div class="register-container">
+
+
+        <!-- ==========================
+             LEFT SIDE
+        =========================== -->
+
+        <div class="register-left">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <div class="logo-box">
+                    AI
+                </div>
+
+                <div class="logo-text">
+
+                    <h2>SmartHostel AI</h2>
+
+                    <span>AI Hostel Management</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- HEADING -->
+
+            <h1>
+
+                Stay Connected With Your
+                <span>Child's Hostel Life</span>
+
+            </h1>
+
+
+            <p>
+
+                Create your Parent account to stay updated
+                about your child's safety, outings, attendance,
+                food preferences, complaints and important
+                hostel notifications.
+
+            </p>
+
+
+            <!-- FEATURES -->
+
+            <div class="features">
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <span>
+                        Monitor your child's safety
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Get outing and return updates
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>
+                        Receive important notifications
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>
+                        Stay connected with the hostel
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ==========================
+             RIGHT SIDE
+        =========================== -->
+
+        <div class="register-right">
+
+
+            <div class="register-card">
+
+
+                <!-- HEADING -->
+
+                <div class="card-heading">
+
+                    <div class="parent-icon">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                    </div>
+
+                    <h2>Parent Registration</h2>
+
+                    <p>
+                        Create your SmartHostel parent account
+                    </p>
+
+                </div>
+
+
+                <!-- ==========================
+                     FORM
+                =========================== -->
+
+                <form id="parentRegisterForm">
+
+
+                    <!-- PARENT NAME -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Parent / Guardian Name
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="parentName"
+                                placeholder="Enter parent name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RELATIONSHIP -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Relationship with Student
+                        </label>
+
+                        <div class="input-box select-box">
+
+                            <i class="fa-solid fa-people-arrows"></i>
+
+                            <select id="relationship" required>
+
+                                <option value="">
+                                    Select Relationship
+                                </option>
+
+                                <option value="Father">
+                                    Father
+                                </option>
+
+                                <option value="Mother">
+                                    Mother
+                                </option>
+
+                                <option value="Guardian">
+                                    Guardian
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STUDENT ID -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Student ID
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="studentId"
+                                placeholder="Enter your child's Student ID"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STUDENT NAME -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Student Name
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user-graduate"></i>
+
+                            <input
+                                type="text"
+                                id="studentName"
+                                placeholder="Enter student's name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter 10-digit phone number"
+                                maxlength="10"
+                                pattern="[0-9]{10}"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="parentPassword"
+                                placeholder="Create a password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="toggleParentPassword">
+
+                                <i
+                                    class="fa-solid fa-eye"
+                                    id="parentEyeIcon">
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Confirm Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmParentPassword"
+                                placeholder="Confirm your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="toggleConfirmParentPassword">
+
+                                <i
+                                    class="fa-solid fa-eye"
+                                    id="confirmParentEyeIcon">
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REGISTER BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="register-button">
+
+                        <span>
+                            CREATE PARENT ACCOUNT
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- LOGIN LINK -->
+
+                <div class="login-link">
+
+                    <p>
+
+                        Already have an account?
+
+                        <a href="parent-login.html">
+                            Login
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="api.js"></script>
+    <script src="parent-register.js"></script>
+
+
+</body>
+
+</html>

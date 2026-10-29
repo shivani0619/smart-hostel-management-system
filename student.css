@@ -1,0 +1,108 @@
+.logo-content p{
+
+    font-size:14px;
+    color:#6b7280;
+
+}
+/* ==========================
+   MENU
+========================== */
+
+
+
+
+
+
+
+
+
+
+
+.active{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+.active i{
+
+    color:white !important;
+
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+
+.main{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:30px;
+
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+.navbar{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:22px;
+
+    padding:22px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 12px 30px rgba(37,99,235,.08);
+
+}
+
+.navbar h2{
+
+    color:#1E3A8A;
+
+}
+
+.user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.user i{
+
+    color:#2563EB;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.user img{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    border:3px solid #2563EB;
+
+}

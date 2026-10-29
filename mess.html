@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartHostel AI | Mess</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="mess.css">
+
+    <!-- Global Sidebar CSS -->
+    <link rel="stylesheet" href="student-sidebar.css">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background-shape shape-one"></div>
+<div class="background-shape shape-two"></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SmartHostel</h2>
+
+            <span>AI HOSTEL</span>
+
+        </div>
+
+    </div>
+    <!-- MINI PROFILE -->
+
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar">
+
+            SS
+
+            <span class="online-dot"></span>
+
+        </div>
+
+        <div class="student-mini-info">
+
+            <h4>Student</h4>
+
+            <p>Student ID: —</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SIDEBAR NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="student-dashboard.html"
+           class="nav-item">
+
+            <span class="nav-icon">⌂</span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- MY PROFILE -->
+
+        <a href="student-profile.html"
+           class="nav-item">
+
+            <span class="nav-icon">◉</span>
+
+            <span>My Profile</span>
+
+        </a>
+
+
+        <!-- MY ROOM -->
+
+        <a href="room-details.html"
+           class="nav-item">
+
+            <span class="nav-icon">▣</span>
+
+            <span>My Room</span>
+
+        </a>
+
+
+        <!-- LEAVE -->
+
+        <a href="leave-request.html"
+           class="nav-item">
+
+            <span class="nav-icon">▤</span>
+
+            <span>Leave Application</span>
+
+        </a>
+
+
+        <!-- EMERGENCY -->
+
+        <a href="emergency.html"
+           class="nav-item emergency-link">
+
+            <span class="nav-icon">!</span>
+
+            <span>Emergency / SOS</span>
+
+        </a>
+
+
+        <!-- ATTENDANCE -->
+
+        <a href="attendance.html"
+           class="nav-item">
+
+            <span class="nav-icon">◷</span>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================== -->
+
+    <header class="topbar">
+
+
+        <div class="mobile-menu">
+
+            <button id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <div class="page-title">
+
+            <span class="small-heading">
+                HOSTEL DINING
+            </span>
+
+            <h1>
+                Mess & Food
+            </h1>
+
+            <p>
+                Check today's menu and manage your meal preferences
+            </p>
+
+        </div>
+
+
+
+        <div class="topbar-actions">
+
+
+            <button
+                class="icon-button"
+                id="notificationBtn">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span class="top-notification">
+                    3
+                </span>
+
+            </button>
+
+
+
+            <div class="top-profile">
+
+                <div class="top-avatar">
+                    S
+                </div>
+
+                <div class="top-profile-info">
+
+                    <strong>
+                        Student
+                    </strong>
+
+                    <span>
+                        —
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         PAGE CONTENT
+    ================================================== -->
+
+    <section class="mess-page">
+
+
+
+        <!-- =================================================
+             MESS HERO
+        ================================================== -->
+
+        <div class="mess-hero">
+
+
+            <div class="hero-decoration decoration-one"></div>
+
+            <div class="hero-decoration decoration-two"></div>
+
+
+            <div class="mess-hero-content">
+
+
+                <div class="mess-hero-left">
+
+
+                    <div class="mess-hero-icon">
+
+                        <i class="fa-solid fa-bowl-food"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="hero-label">
+                            TODAY'S DINING
+                        </span>
+
+                        <h2>
+                            Eat Well. Stay Healthy.
+                        </h2>
+
+                        <p>
+                            View today's meals, give feedback,
+                            and help us reduce food waste.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="mess-status">
+
+                    <span class="status-dot"></span>
+
+                    Mess Open
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             TODAY'S SUMMARY
+        ================================================== -->
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    TODAY
+                </span>
+
+                <h2>
+                    Meal Schedule
+                </h2>
+
+                <p>
+                    Your complete meal timings for today
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="meal-summary-grid">
+
+
+            <!-- BREAKFAST -->
+
+            <div class="meal-summary-card breakfast">
+
+                <div class="meal-icon">
+
+                    <i class="fa-solid fa-mug-hot"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        BREAKFAST
+                    </span>
+
+                    <h3>
+                        07:30 AM
+                    </h3>
+
+                    <p>
+                        08:30 AM
+                    </p>
+
+                </div>
+
+                <div class="meal-state">
+                    Served
+                </div>
+
+            </div>
+
+
+
+            <!-- LUNCH -->
+
+            <div class="meal-summary-card lunch">
+
+                <div class="meal-icon">
+
+                    <i class="fa-solid fa-bowl-rice"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        LUNCH
+                    </span>
+
+                    <h3>
+                        12:30 PM
+                    </h3>
+
+                    <p>
+                        02:00 PM
+                    </p>
+
+                </div>
+
+                <div class="meal-state upcoming">
+                    Upcoming
+                </div>
+
+            </div>
+
+
+
+            <!-- SNACK -->
+
+            <div class="meal-summary-card snack">
+
+                <div class="meal-icon">
+
+                    <i class="fa-solid fa-cookie-bite"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        SNACK
+                    </span>
+
+                    <h3>
+                        04:30 PM
+                    </h3>
+
+                    <p>
+                        05:15 PM
+                    </p>
+
+                </div>
+
+                <div class="meal-state upcoming">
+                    Upcoming
+                </div>
+
+            </div>
+
+
+
+            <!-- DINNER -->
+
+            <div class="meal-summary-card dinner">
+
+                <div class="meal-icon">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        DINNER
+                    </span>
+
+                    <h3>
+                        07:30 PM
+                    </h3>
+
+                    <p>
+                        09:00 PM
+                    </p>
+
+                </div>
+
+                <div class="meal-state upcoming">
+                    Upcoming
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             MAIN MESS GRID
+        ================================================== -->
+
+        <div class="mess-main-grid">
+
+
+
+            <!-- =================================================
+                 TODAY MENU
+            ================================================== -->
+
+            <div class="menu-card">
+
+
+                <div class="card-heading">
+
+
+                    <div class="heading-left">
+
+                        <div class="heading-icon">
+
+                            <i class="fa-solid fa-plate-wheat"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Today's Menu
+                            </h3>
+
+                            <p>
+                                Friday, 21 August 2026
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="menu-badge">
+                        Vegetarian
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- BREAKFAST -->
+
+                <div class="menu-meal">
+
+                    <div class="menu-meal-icon breakfast-icon">
+
+                        <i class="fa-solid fa-mug-hot"></i>
+
+                    </div>
+
+
+                    <div class="menu-meal-info">
+
+                        <div class="menu-title-row">
+
+                            <h4>
+                                Breakfast
+                            </h4>
+
+                            <span>
+                                07:30 - 08:30 AM
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Idli • Sambar • Coconut Chutney
+                            • Banana • Tea / Coffee
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- LUNCH -->
+
+                <div class="menu-meal">
+
+                    <div class="menu-meal-icon lunch-icon">
+
+                        <i class="fa-solid fa-bowl-rice"></i>
+
+                    </div>
+
+
+                    <div class="menu-meal-info">
+
+                        <div class="menu-title-row">
+
+                            <h4>
+                                Lunch
+                            </h4>
+
+                            <span>
+                                12:30 - 02:00 PM
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Rice • Dal • Vegetable Curry
+                            • Rasam • Curd • Salad
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SNACK -->
+
+                <div class="menu-meal">
+
+                    <div class="menu-meal-icon snack-icon">
+
+                        <i class="fa-solid fa-cookie-bite"></i>
+
+                    </div>
+
+
+                    <div class="menu-meal-info">
+
+                        <div class="menu-title-row">
+
+                            <h4>
+                                Evening Snack
+                            </h4>
+
+                            <span>
+                                04:30 - 05:15 PM
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Vegetable Sandwich • Tea
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DINNER -->
+
+                <div class="menu-meal">
+
+                    <div class="menu-meal-icon dinner-icon">
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                    </div>
+
+
+                    <div class="menu-meal-info">
+
+                        <div class="menu-title-row">
+
+                            <h4>
+                                Dinner
+                            </h4>
+
+                            <span>
+                                07:30 - 09:00 PM
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Chapati • Paneer Gravy
+                            • Mixed Vegetable • Rice • Curd
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT SIDE
+            ================================================== -->
+
+            <div class="mess-side-column">
+
+
+
+                <!-- MEAL PREFERENCE -->
+
+                <div class="preference-card">
+
+
+                    <div class="card-heading">
+
+                        <div class="heading-left">
+
+                            <div class="heading-icon green">
+
+                                <i class="fa-solid fa-leaf"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Meal Preference
+                                </h3>
+
+                                <p>
+                                    Help reduce food waste
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="preference-content">
+
+                        <p>
+                            Will you be having your meals
+                            at the hostel today?
+                        </p>
+
+
+                        <div class="preference-buttons">
+
+
+                            <button
+                                class="preference-btn yes active"
+                                data-choice="yes">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Yes
+
+                            </button>
+
+
+                            <button
+                                class="preference-btn no"
+                                data-choice="no">
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                                No
+
+                            </button>
+
+
+                        </div>
+
+
+                        <div
+                            class="preference-message"
+                            id="preferenceMessage">
+
+                            Meal preference marked as
+                            <strong>Yes</strong>.
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- FOOD WASTE -->
+
+                <div class="waste-card">
+
+
+                    <div class="waste-top">
+
+                        <div>
+
+                            <span>
+                                SMART MESS AI
+                            </span>
+
+                            <h3>
+                                Food Waste Monitor
+                            </h3>
+
+                        </div>
+
+                        <div class="ai-icon">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="waste-number">
+
+                        18%
+
+                        <span>
+                            ↓ this week
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Food wastage has reduced compared
+                        to last week. Keep making your
+                        meal preferences!
+                    </p>
+
+
+                    <div class="waste-progress">
+
+                        <span style="width: 72%;"></span>
+
+                    </div>
+
+
+                    <div class="waste-footer">
+
+                        <span>
+                            Waste reduction goal
+                        </span>
+
+                        <strong>
+                            72%
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             FEEDBACK SECTION
+        ================================================== -->
+
+        <div class="feedback-section">
+
+
+            <div class="feedback-card">
+
+
+                <div class="feedback-left">
+
+
+                    <div class="feedback-icon">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            YOUR OPINION MATTERS
+                        </span>
+
+                        <h3>
+                            How was today's food?
+                        </h3>
+
+                        <p>
+                            Give quick feedback to help improve
+                            hostel food quality.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="rating-area">
+
+
+                    <button
+                        class="rating-btn"
+                        data-rating="1">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+
+                    <button
+                        class="rating-btn"
+                        data-rating="2">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+
+                    <button
+                        class="rating-btn"
+                        data-rating="3">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+
+                    <button
+                        class="rating-btn"
+                        data-rating="4">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+
+                    <button
+                        class="rating-btn"
+                        data-rating="5">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+
+                    <span
+                        id="ratingText">
+                        Select rating
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             MESS INFORMATION
+        ================================================== -->
+
+        <div class="mess-info-grid">
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+                        Mess Timings
+                    </h4>
+
+                    <p>
+                        Breakfast 07:30 AM<br>
+                        Lunch 12:30 PM<br>
+                        Dinner 07:30 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+                        Mess Support
+                    </h4>
+
+                    <p>
+                        Contact the mess manager for
+                        food-related issues.
+                    </p>
+
+                </div>
+
+                <button
+                    class="contact-btn"
+                    id="contactMessBtn">
+
+                    Contact
+
+                </button>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+
+                    <i class="fa-solid fa-recycle"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+                        Waste Smart
+                    </h4>
+
+                    <p>
+                        Mark your meals early to help
+                        reduce unnecessary food waste.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <div class="mess-footer">
+
+            <i class="fa-solid fa-seedling"></i>
+
+            Smart meals • Less waste • Better hostel
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="api.js"></script>
+    <script src="mess.js"></script>
+
+
+<script src="chatbot.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | SmartHostel AI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+          <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="student-dashboard.css">
+    <link rel="stylesheet" href="emergency.css">
+
+    <!-- Global Sidebar CSS -->
+    <link rel="stylesheet" href="student-sidebar.css">
+</head>
+<body>
+
+<aside class="sidebar" id="sidebar">
+    <div class="logo-section">
+        <div class="logo-icon"><span>AI</span></div>
+        <div class="logo-text"><h2>SmartHostel</h2><span>AI HOSTEL</span></div>
+    </div>
+<!-- STUDENT MINI PROFILE -->
+
+<div class="student-mini-profile">
+
+    <div class="profile-avatar" id="profileAvatar">
+        ST
+        <span class="online-dot"></span>
+    </div>
+
+    <div class="student-mini-info">
+
+        <h4 id="studentMiniName">
+            Student
+        </h4>
+
+        <p id="studentMiniId">
+            Student ID: —
+        </p>
+
+    </div>
+
+</div>
+    <nav class="sidebar-nav">
+        <p class="nav-title">MAIN MENU</p>
+        <a href="student-dashboard.html" class="nav-item active"><span class="nav-icon">⌂</span><span>Dashboard</span></a>
+        <a href="student-profile.html" class="nav-item"><span class="nav-icon">◉</span><span>My Profile</span></a>
+        <a href="room-details.html" class="nav-item"><span class="nav-icon">▣</span><span>My Room</span></a>
+        <a href="leave-request.html" class="nav-item"><span class="nav-icon">▤</span><span>Leave Application</span></a>
+        <a href="emergency.html" class="nav-item emergency-link"><span class="nav-icon">!</span><span>Emergency / SOS</span></a>
+        <a href="attendance.html" class="nav-item"><span class="nav-icon">◷</span><span>Attendance</span></a>
+<a href="student-notifications.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bell"></i>
+    </span>
+    <span>Notifications</span>
+</a>
+
+<a href="student-announcements.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bullhorn"></i>
+    </span>
+    <span>Announcements</span>
+</a>
+    </nav>
+
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+
+        <button class="menu-btn"
+                id="menuBtn">
+
+            ☰
+
+        </button>
+
+
+        <div class="breadcrumb">
+
+            <span>
+                Student Portal
+            </span>
+
+            <b>/</b>
+
+            <strong>
+                Dashboard
+            </strong>
+
+        </div>
+    </header>
+    <!-- =================================================
+         DASHBOARD CONTENT
+    ================================================= -->
+
+    <section class="dashboard-content">
+
+
+        <!-- =================================================
+             WELCOME HEADER
+        ================================================= -->
+
+        <div class="welcome-section">
+
+
+            <div>
+
+                <p class="page-label">
+                    STUDENT DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome back
+                </h1>
+
+                <p class="welcome-text">
+                    Here's what's happening with your hostel life today.
+                </p>
+
+            </div>
+
+
+            <div class="date-card">
+
+                <span class="date-icon">
+                    ◷
+                </span>
+
+                <div>
+
+                    <strong id="currentDate">
+                        Saturday, August 22
+                    </strong>
+
+                    <span>
+                        Academic Year 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- =================================================
+             STAT CARDS
+        ================================================= -->
+
+        <!-- AI EMERGENCY ASSISTANT CARD -->
+        <div class="sos-mini-card" id="sosMiniCard">
+            <h3>🚨 AI Emergency Assistant</h3>
+            <p>Describe your emergency and we&apos;ll help notify the hostel authorities.</p>
+            <a href="emergency.html">Open Emergency Assistant →</a>
+            <p class="safety-disclaimer" style="margin-top:12px">AI classification is for assistance only. For immediate danger, contact emergency services or a responsible person immediately.</p>
+        </div>
+
+        <div class="stats-grid">
+
+
+            <!-- ATTENDANCE -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-top">
+
+                    <div class="stat-icon purple">
+                        ◷
+                    </div>
+
+                    <span class="stat-status positive">
+                        —
+                    </span>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Attendance
+                    </span>
+
+                    <h2>
+                        —
+                    </h2>
+
+                    <p>
+                        This semester
+                    </p>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <span style="width:0%;"></span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ROOM -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-top">
+
+                    <div class="stat-icon blue">
+                        ▣
+                    </div>
+
+                    <span class="stat-status neutral">
+                        —
+                    </span>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        My Room
+                    </span>
+
+                    <h2>
+                        —
+                    </h2>
+
+                    <p id="roomMeta">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="stat-footer">
+
+                    <span>
+                        —
+                    </span>
+
+                    <a href="room-details.html">
+                        View →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- LEAVE -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-top">
+
+                    <div class="stat-icon orange">
+                        ▤
+                    </div>
+
+                    <span class="stat-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Leave Requests
+                    </span>
+
+                    <h2>
+                        —
+                    </h2>
+
+                    <p>
+                        —
+                    </p>
+
+                </div>
+
+
+                <div class="stat-footer">
+
+                    <span>
+                        —
+                    </span>
+
+                    <a href="leave-request.html">
+                        View →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FEES -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-top">
+
+                    <div class="stat-icon green">
+                        ₹
+                    </div>
+
+                    <span class="stat-status paid">
+                        —
+                    </span>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Hostel Fees
+                    </span>
+
+                    <h2>—</h2>
+
+                    <p>
+                        Current semester
+                    </p>
+
+                </div>
+
+
+                <div class="stat-footer">
+
+                    <span>
+                        Next due: —
+                    </span>
+
+                    <a href="fees.html">
+                        Details →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- =================================================
+             MAIN GRID
+        ================================================= -->
+
+        <div class="main-grid">
+
+
+            <!-- =================================================
+                 TODAY'S ACTIVITY
+            ================================================= -->
+
+            <div class="dashboard-card activity-card">
+
+
+                <div class="card-header">
+
+
+                    <div>
+
+                        <p class="card-label">
+                            TODAY
+                        </p>
+
+                        <h2>
+                            My Activity
+                        </h2>
+
+                    </div>
+
+
+                    <button class="more-btn"
+                            id="activityBtn">
+
+                        •••
+
+                    </button>
+
+
+                </div>
+
+
+
+                <div class="activity-list" id="activityList">
+
+
+                    <!-- ENTRY -->
+
+                    <div class="activity-item">
+
+
+                        <div class="activity-icon entry">
+                            ↙
+                        </div>
+
+
+                        <div class="activity-details">
+
+                            <h4>
+                                Hostel Entry
+                            </h4>
+
+                            <p>
+                                Main Gate • Face verified
+                            </p>
+
+                        </div>
+
+
+                        <span class="activity-time">
+                            —
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- EXIT -->
+
+                    <div class="activity-item">
+
+
+                        <div class="activity-icon exit">
+                            ↗
+                        </div>
+
+
+                        <div class="activity-details">
+
+                            <h4>
+                                College Exit
+                            </h4>
+
+                            <p>
+                                Gate 01 • Verified
+                            </p>
+
+                        </div>
+
+
+                        <span class="activity-time">
+                            —
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- NOTIFICATION -->
+
+                    <div class="activity-item">
+
+
+                        <div class="activity-icon notification">
+                            ♢
+                        </div>
+
+
+                        <div class="activity-details">
+
+                            <h4>
+                                Hostel Notification
+                            </h4>
+
+                            <p>
+                                Loading activity...
+                            </p>
+
+                        </div>
+
+
+                        <span class="activity-time">
+                            —
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- LEAVE -->
+
+                    <div class="activity-item">
+
+
+                        <div class="activity-icon leave">
+                            ▤
+                        </div>
+
+
+                        <div class="activity-details">
+
+                            <h4>
+                                Leave Application
+                            </h4>
+
+                            <p>
+                                Loading activity...
+                            </p>
+
+                        </div>
+
+
+                        <span class="activity-time">
+                            —
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <a href="attendance.html"
+                   class="view-all">
+
+                    View Full Activity
+
+                    <span>→</span>
+
+                </a>
+
+
+            </div>
+
+
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+            ================================================= -->
+
+            <div class="dashboard-card quick-card">
+
+
+                <div class="card-header">
+
+
+                    <div>
+
+                        <p class="card-label">
+                            SHORTCUTS
+                        </p>
+
+                        <h2>
+                            Quick Actions
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="quick-actions">
+
+
+                    <!-- ROOM -->
+
+                    <a href="room-details.html"
+                       class="quick-action">
+
+                        <div class="quick-action-icon purple">
+                            ▣
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                My Room
+                            </h4>
+
+                            <p>
+                                Room & roommate details
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- LEAVE -->
+
+                    <a href="leave-request.html"
+                       class="quick-action">
+
+                        <div class="quick-action-icon orange">
+                            ▤
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Apply Leave
+                            </h4>
+
+                            <p>
+                                AI-assisted application
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- VISITORS -->
+
+                    <a href="visitors.html"
+                       class="quick-action">
+
+                        <div class="quick-action-icon blue">
+                            ♙
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                My Visitors
+                            </h4>
+
+                            <p>
+                                Visitor history & verification
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- EMERGENCY -->
+
+                    <a href="emergency.html"
+                       class="quick-action emergency-action">
+
+                        <div class="quick-action-icon red">
+                            !
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Emergency / SOS
+                            </h4>
+
+                            <p>
+                                Get immediate assistance
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- =================================================
+             AI SERVICES
+        ================================================= -->
+
+        <div class="section-heading">
+
+
+            <div>
+
+                <p class="page-label">
+                    SMART FEATURES
+                </p>
+
+                <h2>
+                    AI Services for You
+                </h2>
+
+            </div>
+
+
+            <span>
+                Powered by SmartHost AI
+            </span>
+
+
+        </div>
+
+
+
+        <div class="ai-services-grid">
+
+
+            <!-- AI ROOMMATE -->
+
+            <a href="room-details.html"
+               class="ai-service-card">
+
+
+                <div class="service-icon purple">
+                    ✦
+                </div>
+
+
+                <div class="service-content">
+
+                    <span>
+                        AI MATCHING
+                    </span>
+
+                    <h3>
+                        Smart Roommate Matching
+                    </h3>
+
+                    <p>
+                        Find a compatible roommate based on
+                        lifestyle and preferences.
+                    </p>
+
+                </div>
+
+
+                <div class="service-arrow">
+                    →
+                </div>
+
+
+            </a>
+
+
+
+            <!-- AI LEAVE -->
+
+            <a href="leave-request.html"
+               class="ai-service-card">
+
+
+                <div class="service-icon orange">
+                    ✎
+                </div>
+
+
+                <div class="service-content">
+
+                    <span>
+                        AI ASSISTANT
+                    </span>
+
+                    <h3>
+                        AI Leave Assistant
+                    </h3>
+
+                    <p>
+                        Describe your reason naturally and
+                        let AI prepare your leave request.
+                    </p>
+
+                </div>
+
+
+                <div class="service-arrow">
+                    →
+                </div>
+
+
+            </a>
+
+
+
+            <!-- EMERGENCY AI -->
+
+            <a href="emergency.html"
+               class="ai-service-card">
+
+
+                <div class="service-icon red">
+                    !
+                </div>
+
+
+                <div class="service-content">
+
+                    <span>
+                        AI SAFETY
+                    </span>
+
+                    <h3>
+                        Emergency AI Assistant
+                    </h3>
+
+                    <p>
+                        Quickly report medical or safety
+                        emergencies and alert contacts.
+                    </p>
+
+                </div>
+
+
+                <div class="service-arrow">
+                    →
+                </div>
+
+
+            </a>
+
+
+        </div>
+
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================= -->
+
+        <footer class="dashboard-footer">
+
+
+            <p>
+                © 2026 SmartHostel AI. Smart Hostel Management System.
+            </p>
+
+
+            <div>
+
+                <span>
+                    Privacy
+                </span>
+
+                <span>
+                    Support
+                </span>
+
+            </div>
+
+
+        </footer>
+
+
+    </section>
+
+
+</main>
+
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div class="toast"
+     id="toast">
+
+
+    <div class="toast-icon">
+        ✓
+    </div>
+
+
+    <div>
+
+        <strong id="toastTitle">
+            Success
+        </strong>
+
+        <p id="toastMessage">
+            Action completed successfully.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="api.js"></script>
+    <script src="student-dashboard.js"></script>
+
+
+<script src="chatbot.js"></script>
+</body>
+
+</html>

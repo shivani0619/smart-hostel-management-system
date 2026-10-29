@@ -1,0 +1,541 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SmartHostel AI | Warden Visitors</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="emergency.css">
+  <link rel="stylesheet" href="portal-dashboard.css">
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       SIDEBAR
+  ====================================================== -->
+
+  <aside class="sidebar" id="sidebar">
+
+
+    <div class="logo-section">
+
+      <div class="logo-icon">
+        <span>AI</span>
+      </div>
+
+      <div class="logo-text">
+        <h2>SmartHostel</h2>
+        <span>WARDEN</span>
+      </div>
+
+    </div>
+
+
+    <div class="student-mini-profile">
+
+      <div class="profile-avatar">
+        W
+      </div>
+
+      <div class="student-mini-info">
+
+        <h4 id="wardenName">
+          Warden
+        </h4>
+
+        <p>
+          Administrator
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         SIDEBAR NAVIGATION
+    ==================================================== -->
+
+    <nav class="sidebar-nav">
+
+      <p class="nav-title">
+        MAIN MENU
+      </p>
+
+
+      <a
+        href="warden-dashboard.html"
+        class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </span>
+
+        <span>
+          Dashboard
+        </span>
+
+      </a>
+
+
+      <a
+        href="warden-students.html"
+        class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-users"></i>
+        </span>
+
+        <span>
+          Students
+        </span>
+
+      </a>
+
+
+      <a
+        href="warden-rooms.html"
+        class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-bed"></i>
+        </span>
+
+        <span>
+          Rooms
+        </span>
+
+      </a>
+
+
+      <a
+        href="warden-attendance.html"
+        class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-clock"></i>
+        </span>
+
+        <span>
+          Attendance
+        </span>
+
+      </a>
+
+
+      <a
+        href="warden-leaves.html"
+        class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </span>
+
+        <span>
+          Leave Requests
+        </span>
+
+      </a>
+
+
+      <a
+        href="warden-visitors.html"
+        class="nav-item active">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-id-card"></i>
+        </span>
+
+        <span>
+          Visitor Management
+        </span>
+
+      </a>
+
+
+      <a
+        href="warden-fees.html"
+        class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-money-bill-wave"></i>
+        </span>
+
+        <span>
+          Fees
+        </span>
+
+      </a>
+
+
+      <a
+        href="warden-emergency.html"
+        class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </span>
+
+        <span>
+          Emergency Alerts
+        </span>
+
+      </a>
+
+
+      <a
+        href="warden-notifications.html"
+        class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-bell"></i>
+        </span>
+
+        <span>
+          Notifications
+        </span>
+
+      </a>
+
+
+      <a
+        href="warden-announcements.html"
+        class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-bullhorn"></i>
+        </span>
+
+        <span>
+          Announcements
+        </span>
+
+      </a>
+
+    </nav>
+
+
+    <!-- ===================================================
+         LOGOUT
+    ==================================================== -->
+
+    <div class="sidebar-bottom">
+
+      <a
+        href="#"
+        id="logoutBtn"
+        class="logout-btn">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </span>
+
+        <span>
+          Logout
+        </span>
+
+      </a>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
+  <main class="main-content portal-main">
+
+
+    <!-- ===================================================
+         HEADER
+    ==================================================== -->
+
+    <header class="portal-header">
+
+
+      <button
+        class="portal-menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation">
+
+        <i class="fa-solid fa-bars"></i>
+
+      </button>
+
+
+      <div>
+
+        <h1>
+          Visitor Management
+        </h1>
+
+        <p>
+          Monitor hostel visitor entry and exit records
+        </p>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- ===================================================
+         VISITOR RECORDS
+    ==================================================== -->
+
+    <div class="panel">
+
+
+      <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:12px;
+        margin-bottom:18px;
+        flex-wrap:wrap;
+      ">
+
+
+        <div>
+
+          <h2 style="margin:0;">
+            Visitor Records
+          </h2>
+
+
+          <p style="
+            margin:5px 0 0;
+            color:#7c8494;
+            font-size:13px;
+          ">
+            Track visitor entry time and exit time
+          </p>
+
+        </div>
+
+
+      </div>
+<!-- =================================================
+     REGISTER VISITOR
+================================================= -->
+
+<div style="
+  background:#f8f6f0;
+  border:1px solid #e2e8f0;
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:24px;
+">
+
+  <h3 style="margin:0 0 6px;">
+    Register Visitor
+  </h3>
+
+  <p style="
+    margin:0 0 18px;
+    color:#7c8494;
+    font-size:13px;
+  ">
+    Register a visitor for a student
+  </p>
+
+  <form id="wardenVisitorForm">
+
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+    ">
+
+      <div>
+        <label>Student</label>
+
+        <select
+          id="visitorStudent"
+          required
+          style="
+            width:100%;
+            padding:11px;
+            margin-top:6px;
+            border:1px solid #d8dee9;
+            border-radius:8px;
+          ">
+          <option value="">Select Student</option>
+        </select>
+      </div>
+
+
+      <div>
+        <label>Visitor Name</label>
+
+        <input
+          type="text"
+          id="visitorName"
+          required
+          placeholder="Enter visitor name"
+          style="
+            width:100%;
+            padding:11px;
+            margin-top:6px;
+            border:1px solid #d8dee9;
+            border-radius:8px;
+          ">
+      </div>
+
+
+      <div>
+        <label>Relation</label>
+
+        <input
+          type="text"
+          id="visitorRelation"
+          placeholder="Father / Mother / Friend"
+          style="
+            width:100%;
+            padding:11px;
+            margin-top:6px;
+            border:1px solid #d8dee9;
+            border-radius:8px;
+          ">
+      </div>
+
+
+      <div>
+        <label>Phone</label>
+
+        <input
+          type="text"
+          id="visitorPhone"
+          placeholder="Visitor phone number"
+          style="
+            width:100%;
+            padding:11px;
+            margin-top:6px;
+            border:1px solid #d8dee9;
+            border-radius:8px;
+          ">
+      </div>
+
+
+      <div>
+        <label>Visit Date</label>
+
+        <input
+          type="date"
+          id="visitorDate"
+          required
+          style="
+            width:100%;
+            padding:11px;
+            margin-top:6px;
+            border:1px solid #d8dee9;
+            border-radius:8px;
+          ">
+      </div>
+
+
+      <div>
+        <label>Expected Time</label>
+
+        <input
+          type="time"
+          id="visitorTime"
+          style="
+            width:100%;
+            padding:11px;
+            margin-top:6px;
+            border:1px solid #d8dee9;
+            border-radius:8px;
+          ">
+      </div>
+
+    </div>
+
+
+    <div style="margin-top:14px;">
+
+      <label>Purpose</label>
+
+      <input
+        type="text"
+        id="visitorPurpose"
+        placeholder="Reason for visit"
+        style="
+          width:100%;
+          padding:11px;
+          margin-top:6px;
+          border:1px solid #d8dee9;
+          border-radius:8px;
+        ">
+
+    </div>
+
+
+    <button
+      type="submit"
+      class="btn btn-approve"
+      style="margin-top:16px;">
+
+      <i class="fa-solid fa-user-plus"></i>
+      Register Visitor
+
+    </button>
+
+  </form>
+
+</div>
+
+
+
+      <!-- =================================================
+           THIS ID IS USED BY warden-pages.js
+      ================================================== -->
+
+      <div id="visitorRecords">
+
+        Loading visitors...
+
+      </div>
+
+
+    </div>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script src="api.js"></script>
+
+  <script src="shared-portal.js"></script>
+
+  <script src="warden-pages.js"></script>
+
+
+</body>
+
+</html>
+

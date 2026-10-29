@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Room Details | SmartHostel AI</title>
+
+    <link rel="stylesheet" href="room-details.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Global Sidebar CSS -->
+    <link rel="stylesheet" href="student-sidebar.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <!-- LOGO -->
+
+        <div class="logo-section">
+
+            <div class="logo-icon">
+                <span>AI</span>
+            </div>
+
+            <div class="logo-text">
+                <h2>SmartHostel</h2>
+                <span>AI HOSTEL</span>
+            </div>
+
+        </div>
+<!-- STUDENT PROFILE -->
+
+<div class="student-mini-profile">
+
+    <div class="profile-avatar" id="profileAvatar">
+        ST
+        <span class="online-dot"></span>
+    </div>
+
+    <div class="student-mini-info">
+
+        <h4 id="studentMiniName">
+            Student
+        </h4>
+
+        <p id="studentMiniId">
+            Student ID: —
+        </p>
+
+    </div>
+
+</div>
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                MAIN MENU
+            </p>
+
+            <a
+                href="student-dashboard.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="student-profile.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">◉</span>
+                <span>My Profile</span>
+            </a>
+
+
+            <a
+                href="room-details.html"
+                class="nav-item active"
+            >
+                <span class="nav-icon">▣</span>
+                <span>My Room</span>
+            </a>
+
+
+            <a
+                href="leave-request.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">▤</span>
+                <span>Leave Application</span>
+            </a>
+
+
+            <a
+                href="emergency.html"
+                class="nav-item emergency-link"
+            >
+                <span class="nav-icon">!</span>
+                <span>Emergency / SOS</span>
+            </a>
+
+
+            <a
+                href="attendance.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">◷</span>
+                <span>Attendance</span>
+            </a>
+            <a href="student-notifications.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bell"></i>
+    </span>
+    <span>Notifications</span>
+</a>
+
+<a href="student-announcements.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bullhorn"></i>
+    </span>
+    <span>Announcements</span>
+</a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="roleselection.html"
+                class="logout-btn"
+                id="logoutBtn"
+            >
+
+                <span>↪</span>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <div class="page-heading">
+
+                <h1>
+                    Room Details
+                </h1>
+
+                <p>
+                    View and manage your hostel room information
+                </p>
+
+            </div>
+        </header>
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <section class="content-area">
+
+
+            <!-- =================================================
+                 ROOM HERO
+            ================================================== -->
+
+            <div class="room-hero">
+
+                <div class="hero-left">
+
+                    <div class="room-icon-large">
+
+                        <i class="fa-solid fa-bed"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="small-label">
+                            CURRENT ROOM
+                        </span>
+
+
+                        <!-- JS updates this -->
+
+                        <h2>
+                            Room —
+                        </h2>
+
+
+                        <!-- JS updates this -->
+
+                        <p>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            No room allocation
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-status">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            Room Status
+                        </strong>
+
+                        <span>
+                            Current allocation
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+            ================================================== -->
+
+            <div class="summary-grid">
+
+
+                <!-- OCCUPANCY -->
+
+                <div class="summary-card">
+
+                    <div class="summary-icon blue">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Occupancy
+                        </span>
+
+                        <h3 id="roomOccupancy">
+                            —
+                        </h3>
+
+                        <p>
+                            Students
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AVAILABLE BEDS -->
+
+                <div class="summary-card">
+
+                    <div class="summary-icon purple">
+
+                        <i class="fa-solid fa-bed"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Available Beds
+                        </span>
+
+                        <h3 id="roomAvailableBeds">
+                            —
+                        </h3>
+
+                        <p>
+                            Bed remaining
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ROOM TYPE -->
+
+                <div class="summary-card">
+
+                    <div class="summary-icon cyan">
+
+                        <i class="fa-solid fa-door-closed"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Room Type
+                        </span>
+
+                        <h3 id="roomType">
+                            —
+                        </h3>
+
+                        <p>
+                            Current room type
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONDITION -->
+
+                <div class="summary-card">
+
+                    <div class="summary-icon green">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Condition
+                        </span>
+
+                        <h3 id="roomCondition">
+                            —
+                        </h3>
+
+                        <p>
+                            Current room status
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 MAIN GRID
+            ================================================== -->
+
+            <div class="main-grid">
+
+
+                <!-- =================================================
+                     ROOM INFORMATION
+                ================================================== -->
+
+                <div class="glass-card room-information">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Room Information
+                            </h3>
+
+                            <p>
+                                Basic details about your allocated room
+                            </p>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-circle-info header-icon"></i>
+
+                    </div>
+
+
+                    <div class="information-grid">
+
+
+                        <!-- ROOM NUMBER -->
+
+                        <div class="info-item">
+
+                            <span>
+                                Room Number
+                            </span>
+
+                            <strong id="roomInfoNumber">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <!-- BLOCK -->
+
+                        <div class="info-item">
+
+                            <span>
+                                Block
+                            </span>
+
+                            <strong id="roomInfoBlock">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <!-- FLOOR -->
+
+                        <div class="info-item">
+
+                            <span>
+                                Floor
+                            </span>
+
+                            <strong id="roomInfoFloor">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <!-- ROOM TYPE -->
+
+                        <div class="info-item">
+
+                            <span>
+                                Room Type
+                            </span>
+
+                            <strong id="roomInfoType">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <!-- ROOM ID -->
+
+                        <div class="info-item">
+
+                            <span>
+                                Room ID
+                            </span>
+
+                            <!-- IMPORTANT:
+                                 JS targets this ID -->
+
+                            <strong id="roomInfoId">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <!-- ALLOCATION DATE -->
+
+                        <div class="info-item">
+
+                            <span>
+                                Allocation Date
+                            </span>
+
+                            <strong id="roomInfoAllocationDate">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     FACILITIES
+                ================================================== -->
+
+                <div class="glass-card facilities-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Room Facilities
+                            </h3>
+
+                            <p>
+                                Available facilities
+                            </p>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-wifi header-icon"></i>
+
+                    </div>
+
+
+                    <div
+                        class="facilities-list"
+                        id="facilitiesList"
+                    >
+                        No room facility records available.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ROOM MEMBERS
+            ================================================== -->
+
+            <div class="glass-card roommates-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Room Members
+                        </h3>
+
+                        <p>
+                            Students currently assigned to this room
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Student
+                                </th>
+
+                                <th>
+                                    Student ID
+                                </th>
+
+                                <th>
+                                    Bed
+                                </th>
+
+                                <th>
+                                    Department
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="roomMembersBody">
+
+                            <tr>
+
+                                <td colspan="5">
+                                    No active room members found.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOTTOM GRID
+            ================================================== -->
+
+            <div class="bottom-grid">
+
+
+                <!-- =================================================
+                     BED STATUS
+                ================================================== -->
+
+                <div class="glass-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Bed Status
+                            </h3>
+
+                            <p>
+                                Current bed allocation
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="bed-list"
+                        id="bedStatusList"
+                    >
+                        No bed allocation data available.
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ROOM RULES
+                ================================================== -->
+
+                <div class="glass-card rules-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Room Rules
+                            </h3>
+
+                            <p>
+                                Important hostel guidelines
+                            </p>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-shield-halved header-icon"></i>
+
+                    </div>
+
+
+                    <ul class="rules-list">
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Maintain room cleanliness regularly.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Follow hostel quiet hours after 10:00 PM.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Do not share your locker with others.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Report maintenance issues immediately.
+                            </span>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACTIONS
+            ================================================== -->
+
+            <div class="action-section">
+
+                <button
+                    class="action-btn secondary"
+                    id="maintenanceBtn"
+                >
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    Report Maintenance
+
+                </button>
+
+
+                <button
+                    class="action-btn primary"
+                    id="changeRoomBtn"
+                >
+
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    Request Room Change
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     AI FLOATING BUTTON
+========================================================= -->
+
+<button
+    class="ai-floating-btn"
+    id="aiButton"
+>
+
+    <i class="fa-solid fa-robot"></i>
+
+    <span>
+        Ask AI
+    </span>
+
+</button>
+
+
+<!-- =========================================================
+     AI POPUP
+========================================================= -->
+
+<div
+    class="ai-popup"
+    id="aiPopup"
+>
+
+    <!-- AI HEADER -->
+
+    <div class="ai-popup-header">
+
+        <div class="ai-title">
+
+            <div class="ai-icon">
+
+                <i class="fa-solid fa-robot"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    SmartHost AI
+                </strong>
+
+                <span>
+                    Room Assistant
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button id="closeAi">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- AI MESSAGES -->
+
+    <div class="ai-messages">
+
+        <div class="ai-message">
+
+            Hello!<br>
+
+            How can I help you with your room?
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK QUESTIONS -->
+
+    <div class="ai-suggestions">
+
+        <button
+            data-question="What is my room number?"
+        >
+            Room Number
+        </button>
+
+
+        <button
+            data-question="Who are my roommates?"
+        >
+            Roommates
+        </button>
+
+
+        <button
+            data-question="What facilities are available?"
+        >
+            Facilities
+        </button>
+
+    </div>
+
+
+    <!-- AI INPUT -->
+
+    <div class="ai-input">
+
+        <input
+            type="text"
+            id="aiInput"
+            placeholder="Ask something..."
+        >
+
+
+        <button id="sendAi">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="api.js"></script>
+
+<script src="room-details.js"></script>
+
+</body>
+</html>

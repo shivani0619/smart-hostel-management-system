@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Announcements | SmartHostel AI</title>
+
+
+    <!-- =================================================
+         GOOGLE FONTS
+    ================================================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =================================================
+         FONT AWESOME
+    ================================================= -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <!-- =================================================
+         CSS
+    ================================================= -->
+
+    <link rel="stylesheet"
+          href="student-dashboard.css">
+
+    <link rel="stylesheet"
+          href="emergency.css">
+
+    <link rel="stylesheet"
+          href="student-sidebar.css">
+
+
+    <style>
+
+        /* =================================================
+           ANNOUNCEMENT PAGE
+        ================================================= */
+
+        .announcement-content {
+            padding: 30px;
+        }
+
+
+        /* PAGE HEADER */
+
+        .announcement-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+
+        .announcement-header-left h1 {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 28px;
+            color: #182235;
+        }
+
+
+        .announcement-header-left p {
+            margin: 7px 0 0;
+            color: #7c8494;
+            font-size: 14px;
+        }
+
+        /* MAIN CARD */
+
+        .announcement-panel {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+        }
+
+
+        .panel-title {
+            margin: 0;
+            color: #182235;
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+        }
+
+
+        .panel-subtitle {
+            margin: 5px 0 22px;
+            color: #7c8494;
+            font-size: 13px;
+        }
+
+
+        /* ANNOUNCEMENT CARD */
+
+        .announcement-card {
+            border: 1px solid #e8eaf0;
+            border-radius: 15px;
+            padding: 18px;
+            margin-bottom: 15px;
+            background: #ffffff;
+            transition: 0.2s ease;
+        }
+
+
+        .announcement-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+
+
+        .announcement-top {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+
+        .announcement-icon {
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+            border-radius: 12px;
+            background: #eef0ff;
+            color: #5b5ce2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+
+        .announcement-info {
+            flex: 1;
+        }
+
+
+        .announcement-title {
+            margin: 0 0 7px;
+            color: #182235;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+
+        .announcement-text {
+            margin: 0;
+            color: #5f6878;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+
+        .announcement-date {
+            display: block;
+            margin-top: 12px;
+            color: #9aa1ad;
+            font-size: 12px;
+        }
+
+
+        /* EMPTY / LOADING / ERROR */
+
+        .announcement-state {
+            padding: 55px 20px;
+            text-align: center;
+            color: #7c8494;
+        }
+
+
+        .announcement-state i {
+            font-size: 38px;
+            margin-bottom: 14px;
+            color: #5b5ce2;
+        }
+
+
+        .announcement-state h3 {
+            margin: 0 0 8px;
+            color: #182235;
+            font-size: 18px;
+        }
+
+
+        .announcement-state p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .announcement-content {
+                padding: 20px;
+            }
+
+            .announcement-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .announcement-panel {
+                padding: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar"
+       id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>
+                SmartHostel
+            </h2>
+
+            <span>
+                AI HOSTEL
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- STUDENT MINI PROFILE -->
+
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar"
+             id="profileAvatar">
+
+            ST
+
+            <span class="online-dot"></span>
+
+        </div>
+
+
+        <div class="student-mini-info">
+
+            <h4 id="studentMiniName">
+                Student
+            </h4>
+
+            <p id="studentMiniId">
+                Student ID: —
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="student-dashboard.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ⌂
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <!-- PROFILE -->
+
+        <a href="student-profile.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ◉
+            </span>
+
+            <span>
+                My Profile
+            </span>
+
+        </a>
+
+
+        <!-- ROOM -->
+
+        <a href="room-details.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ▣
+            </span>
+
+            <span>
+                My Room
+            </span>
+
+        </a>
+
+
+        <!-- LEAVE -->
+
+        <a href="leave-request.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ▤
+            </span>
+
+            <span>
+                Leave Application
+            </span>
+
+        </a>
+
+
+        <!-- EMERGENCY -->
+
+        <a href="emergency.html"
+           class="nav-item emergency-link">
+
+            <span class="nav-icon">
+                !
+            </span>
+
+            <span>
+                Emergency / SOS
+            </span>
+
+        </a>
+
+
+        <!-- ATTENDANCE -->
+
+        <a href="attendance.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ◷
+            </span>
+
+            <span>
+                Attendance
+            </span>
+
+        </a>
+
+
+        <!-- VISITORS -->
+
+        <a href="visitors.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ♙
+            </span>
+
+            <span>
+                My Visitors
+            </span>
+
+        </a>
+
+
+        <!-- FEES -->
+
+        <a href="fees.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ₹
+            </span>
+
+            <span>
+                Fees
+            </span>
+
+        </a>
+<a href="student-notifications.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bell"></i>
+    </span>
+    <span>Notifications</span>
+</a>
+
+<a href="student-announcements.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bullhorn"></i>
+    </span>
+    <span>Announcements</span>
+</a>
+    </nav>
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>
+                ↪
+            </span>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+
+        <button class="menu-btn"
+                id="menuBtn">
+
+            ☰
+
+        </button>
+
+
+        <div class="breadcrumb">
+
+            <span>
+                Student Portal
+            </span>
+
+            <b>/</b>
+
+            <strong>
+                Announcements
+            </strong>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ANNOUNCEMENT CONTENT
+    ================================================= -->
+
+    <section class="announcement-content">
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="announcement-header">
+
+
+            <div class="announcement-header-left">
+
+                <p class="page-label">
+                    STUDENT PORTAL
+                </p>
+
+                <h1>
+                    Announcements
+                </h1>
+
+                <p>
+                    Stay updated with important hostel information.
+                </p>
+
+            </div>
+        </div>
+
+
+
+        <!-- =================================================
+             ANNOUNCEMENT PANEL
+        ================================================= -->
+
+        <div class="announcement-panel">
+
+
+            <h2 class="panel-title">
+                Hostel Announcements
+            </h2>
+
+
+            <p class="panel-subtitle">
+                Latest announcements published by the hostel warden.
+            </p>
+
+
+
+            <!-- =================================================
+                 ANNOUNCEMENT LIST
+            ================================================= -->
+
+            <div id="studentAnnouncementsBox">
+
+
+                <!-- LOADING -->
+
+                <div class="announcement-state">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                    <h3>
+                        Loading announcements...
+                    </h3>
+
+                    <p>
+                        Please wait.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="api.js"></script>
+
+<script src="student-dashboard.js"></script>
+
+<script src="student-announcements.js"></script>
+
+
+</body>
+
+</html>

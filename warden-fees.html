@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fees Management | SmartHostel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="emergency.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="portal-dashboard.css">
+
+    <style>
+        .fees-page {
+            padding: 30px;
+        }
+
+        .page-header {
+            margin-bottom: 25px;
+        }
+
+        .page-header h1 {
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 6px;
+        }
+
+        .page-header p {
+            color: #7c8494;
+        }
+
+        .fee-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .fee-card {
+            background: #fff;
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .fee-card h3 {
+            color: #7c8494;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .fee-amount {
+            font-size: 28px;
+            font-weight: 700;
+            color: #5b5ce2;
+        }
+
+        .assign-card,
+        .table-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .assign-card h2,
+        .table-card h2 {
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 16px;
+            align-items: end;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #182235;
+        }
+
+        .form-group select {
+            padding: 12px;
+            border: 1px solid #d9dce5;
+            border-radius: 10px;
+            font-family: "Inter", sans-serif;
+            background: #fff;
+            outline: none;
+        }
+
+        .form-group select:focus {
+            border-color: #5b5ce2;
+        }
+
+        .assign-btn {
+            border: none;
+            background: #5b5ce2;
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: "Inter", sans-serif;
+        }
+
+        .assign-btn:hover {
+            opacity: 0.9;
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .fee-table-wrap {
+            overflow-x: auto;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 950px;
+        }
+
+        .fee-table th,
+        .fee-table td {
+            padding: 14px 12px;
+            text-align: left;
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        .fee-table th {
+            color: #7c8494;
+            font-size: 13px;
+        }
+
+        .fee-table td {
+            font-size: 14px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status.pending {
+            background: #fff3cd;
+            color: #946c00;
+        }
+
+        .status.paid {
+            background: #e8f7ee;
+            color: #218838;
+        }
+
+        .status.partial {
+            background: #e8f0ff;
+            color: #3157a6;
+        }
+
+        .loading {
+            color: #7c8494;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 900px) {
+
+            .fee-summary {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fees-page {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<aside class="sidebar" id="sidebar">
+
+    <!-- LOGO -->
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+            <h2>SmartHostel</h2>
+            <span>WARDEN</span>
+        </div>
+
+    </div>
+
+
+    <!-- WARDEN PROFILE -->
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar">
+            W
+        </div>
+
+        <div class="student-mini-info">
+            <h4 id="wardenName">Warden</h4>
+            <p>Administrator</p>
+        </div>
+
+    </div>
+
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a href="warden-dashboard.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="warden-students.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-users"></i>
+            </span>
+
+            <span>Students</span>
+
+        </a>
+
+
+        <a href="warden-rooms.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-bed"></i>
+            </span>
+
+            <span>Rooms</span>
+
+        </a>
+
+
+        <a href="warden-attendance.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-clock"></i>
+            </span>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+        <a href="warden-leaves.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-calendar-check"></i>
+            </span>
+
+            <span>Leave Requests</span>
+
+        </a>
+
+
+        <a href="warden-visitors.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-id-card"></i>
+            </span>
+
+            <span>Visitor Management</span>
+
+        </a>
+
+
+        <a href="warden-fees.html"
+           class="nav-item active">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-money-bill-wave"></i>
+            </span>
+
+            <span>Fees</span>
+
+        </a>
+
+
+        <a href="warden-emergency.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </span>
+
+            <span>Emergency Alerts</span>
+
+        </a>
+        <a href="warden-notifications.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-bell"></i>
+            </span>
+
+            <span>Notifications</span>
+
+        </a>
+
+
+        <a href="warden-announcements.html"
+           class="nav-item">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-bullhorn"></i>
+            </span>
+
+            <span>Announcements</span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- LOGOUT -->
+    <div class="sidebar-bottom">
+
+        <a href="#"
+           id="logoutBtn"
+           class="logout-btn">
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </span>
+
+            <span>Logout</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- MAIN CONTENT -->
+<main class="main-content portal-main">
+
+    <div class="fees-page">
+
+
+        <!-- HEADER -->
+        <div class="page-header">
+
+            <h1>
+                Fees Management
+            </h1>
+
+            <p>
+                Assign and monitor student hostel fees
+            </p>
+
+        </div>
+
+
+        <!-- SUMMARY -->
+        <section class="fee-summary">
+
+
+            <div class="fee-card">
+
+                <h3>
+                    Total Fees
+                </h3>
+
+                <div
+                    class="fee-amount"
+                    id="totalFees"
+                >
+                    ₹0
+                </div>
+
+            </div>
+
+
+            <div class="fee-card">
+
+                <h3>
+                    Collected
+                </h3>
+
+                <div
+                    class="fee-amount"
+                    id="collectedFees"
+                >
+                    ₹0
+                </div>
+
+            </div>
+
+
+            <div class="fee-card">
+
+                <h3>
+                    Pending
+                </h3>
+
+                <div
+                    class="fee-amount"
+                    id="pendingFees"
+                >
+                    ₹0
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGN FEE -->
+        <section class="assign-card">
+
+            <h2>
+                Assign Fee to Student
+            </h2>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="feeStudent">
+                        Select Student
+                    </label>
+
+                    <select id="feeStudent">
+
+                        <option value="">
+                            Loading students...
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="feeStructure">
+                        Select Fee
+                    </label>
+
+                    <select id="feeStructure">
+
+                        <option value="">
+                            Loading fees...
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="assign-btn"
+                    id="assignFeeBtn"
+                >
+                    Assign Fee
+                </button>
+
+            </div>
+
+
+            <div
+                id="assignMessage"
+                class="message"
+            ></div>
+
+        </section>
+
+
+        <!-- FEE DETAILS -->
+        <section class="table-card">
+
+            <h2>
+                Student Fee Details
+            </h2>
+
+
+            <div class="fee-table-wrap">
+
+
+                <div
+                    id="feeLoading"
+                    class="loading"
+                >
+                    Loading fee records...
+                </div>
+
+
+                <table
+                    class="fee-table"
+                    id="feeTable"
+                    hidden
+                >
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Student ID
+                            </th>
+
+                            <th>
+                                Student Name
+                            </th>
+
+                            <th>
+                                Fee
+                            </th>
+
+                            <th>
+                                Amount
+                            </th>
+
+                            <th>
+                                Paid
+                            </th>
+
+                            <th>
+                                Balance
+                            </th>
+
+                            <th>
+                                Due Date
+                            </th>
+<th>
+    Status
+</th>
+
+<th>
+    Parent Response
+</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="feeTableBody"></tbody>
+
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="api.js"></script>
+
+<script src="shared-portal.js"></script>
+
+<script src="warden-fees.js"></script>
+
+
+</body>
+</html>

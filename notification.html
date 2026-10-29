@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartHostel AI | Notifications</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="notification.css">
+
+    <!-- Global Sidebar CSS -->
+    <link rel="stylesheet" href="student-sidebar.css">
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         BACKGROUND
+    =========================================== -->
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SmartHostel</h2>
+
+            <span>AI HOSTEL</span>
+
+        </div>
+
+    </div>
+    <!-- MINI PROFILE -->
+
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar">
+
+            SS
+
+            <span class="online-dot"></span>
+
+        </div>
+
+        <div class="student-mini-info">
+
+            <h4>Student</h4>
+
+            <p>Student ID: —</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SIDEBAR NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="student-dashboard.html"
+           class="nav-item">
+
+            <span class="nav-icon">⌂</span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- MY PROFILE -->
+
+        <a href="student-profile.html"
+           class="nav-item">
+
+            <span class="nav-icon">◉</span>
+
+            <span>My Profile</span>
+
+        </a>
+
+
+        <!-- MY ROOM -->
+
+        <a href="room-details.html"
+           class="nav-item">
+
+            <span class="nav-icon">▣</span>
+
+            <span>My Room</span>
+
+        </a>
+
+
+        <!-- LEAVE -->
+
+        <a href="leave-request.html"
+           class="nav-item">
+
+            <span class="nav-icon">▤</span>
+
+            <span>Leave Application</span>
+
+        </a>
+
+
+        <!-- EMERGENCY -->
+
+        <a href="emergency.html"
+           class="nav-item emergency-link">
+
+            <span class="nav-icon">!</span>
+
+            <span>Emergency / SOS</span>
+
+        </a>
+
+
+        <!-- ATTENDANCE -->
+
+        <a href="attendance.html"
+           class="nav-item">
+
+            <span class="nav-icon">◷</span>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+
+
+
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+
+    <main class="main-content">
+
+
+
+        <!-- ======================================
+             TOP BAR
+        ======================================= -->
+
+        <header class="topbar">
+
+
+            <div class="mobile-menu">
+
+                <button id="menuBtn">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <div class="page-title">
+
+                <span class="small-heading">
+                    STUDENT PORTAL
+                </span>
+
+                <h1>
+                    Notifications
+                </h1>
+
+                <p>
+                    Stay updated with your hostel activities and alerts.
+                </p>
+
+            </div>
+
+
+
+            <div class="topbar-actions">
+
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    class="icon-button"
+                    id="notificationBtn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="top-notification">
+                        3
+                    </span>
+
+                </button>
+
+
+
+                <!-- PROFILE -->
+
+                <div class="top-profile">
+
+                    <div class="top-avatar">
+                        S
+                    </div>
+
+                    <div class="top-profile-info">
+
+                        <strong>
+                            Student
+                        </strong>
+
+                        <span>
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ======================================
+             PAGE CONTENT
+        ======================================= -->
+
+        <section class="notification-page">
+
+
+
+            <!-- ==================================
+                 HERO
+            =================================== -->
+
+            <div class="notification-hero">
+
+
+                <div class="hero-icon">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </div>
+
+
+                <div class="hero-content">
+
+                    <span>
+                        SMART HOSTEL ALERT CENTER
+                    </span>
+
+                    <h2>
+                        Stay Updated
+                    </h2>
+
+                    <p>
+                        Important announcements, hostel updates,
+                        leave status and safety alerts are shown here.
+                    </p>
+
+                </div>
+
+
+                <div class="hero-status">
+
+                    <span class="status-dot"></span>
+
+                    <span>
+                        System Active
+                    </span>
+
+                </div>
+
+
+                <div class="hero-circle circle-one"></div>
+
+                <div class="hero-circle circle-two"></div>
+
+
+            </div>
+
+
+
+            <!-- ==================================
+                 NOTIFICATION HEADER
+            =================================== -->
+
+            <div class="notification-heading">
+
+
+                <div>
+
+                    <span>
+                        RECENT ACTIVITY
+                    </span>
+
+                    <h2>
+                        Your Notifications
+                    </h2>
+
+                    <p>
+                        You have
+                        <strong id="unreadCount">3</strong>
+                        unread notifications.
+                    </p>
+
+                </div>
+
+
+                <div class="notification-actions">
+
+                    <button
+                        class="filter-btn active"
+                        data-filter="all">
+
+                        All
+
+                    </button>
+
+
+                    <button
+                        class="filter-btn"
+                        data-filter="unread">
+
+                        Unread
+
+                    </button>
+
+
+                    <button
+                        class="mark-all-btn"
+                        id="markAllBtn">
+
+                        <i class="fa-solid fa-check-double"></i>
+
+                        Mark all as read
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==================================
+                 FILTER TABS
+            =================================== -->
+
+            <div class="category-tabs">
+
+
+                <button
+                    class="category-tab active"
+                    data-category="all">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    All
+
+                </button>
+
+
+                <button
+                    class="category-tab"
+                    data-category="hostel">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    Hostel
+
+                </button>
+
+
+                <button
+                    class="category-tab"
+                    data-category="leave">
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                    Leave
+
+                </button>
+
+
+                <button
+                    class="category-tab"
+                    data-category="mess">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    Mess
+
+                </button>
+
+
+                <button
+                    class="category-tab"
+                    data-category="security">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Security
+
+                </button>
+
+
+                <button
+                    class="category-tab"
+                    data-category="maintenance">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    Maintenance
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ==================================
+                 NOTIFICATION LIST
+            =================================== -->
+
+            <div class="notification-list"
+                 id="notificationList">
+
+
+
+                <!-- NOTIFICATION 1 -->
+
+                <article
+                    class="notification-card unread"
+                    data-category="leave"
+                    data-read="false">
+
+
+                    <div class="notification-icon leave">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                    </div>
+
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <div>
+
+                                <h3>
+                                    Leave Request Approved
+                                </h3>
+
+                                <span class="notification-category">
+                                    Leave Request
+                                </span>
+
+                            </div>
+
+                            <span class="notification-time">
+                                10 mins ago
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Your leave request for 22 August 2026
+                            has been approved by the warden.
+                        </p>
+
+
+                        <div class="notification-footer">
+
+                            <span class="unread-label">
+                                <span></span>
+                                Unread
+                            </span>
+
+
+                            <button
+                                class="read-btn">
+
+                                Mark as read
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="delete-notification"
+                        title="Delete notification">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+
+                </article>
+
+
+
+                <!-- NOTIFICATION 2 -->
+
+                <article
+                    class="notification-card unread"
+                    data-category="mess"
+                    data-read="false">
+
+
+                    <div class="notification-icon mess">
+
+                        <i class="fa-solid fa-utensils"></i>
+
+                    </div>
+
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <div>
+
+                                <h3>
+                                    Mess Menu Updated
+                                </h3>
+
+                                <span class="notification-category">
+                                    Mess
+                                </span>
+
+                            </div>
+
+                            <span class="notification-time">
+                                1 hour ago
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Tomorrow's breakfast, lunch and dinner
+                            menu has been updated. Check the Mess section
+                            for complete details.
+                        </p>
+
+
+                        <div class="notification-footer">
+
+                            <span class="unread-label">
+                                <span></span>
+                                Unread
+                            </span>
+
+
+                            <button
+                                class="read-btn">
+
+                                Mark as read
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="delete-notification"
+                        title="Delete notification">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+
+                </article>
+
+
+
+                <!-- NOTIFICATION 3 -->
+
+                <article
+                    class="notification-card unread"
+                    data-category="security"
+                    data-read="false">
+
+
+                    <div class="notification-icon security">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <div>
+
+                                <h3>
+                                    Hostel Security Alert
+                                </h3>
+
+                                <span class="notification-category">
+                                    Security
+                                </span>
+
+                            </div>
+
+                            <span class="notification-time">
+                                2 hours ago
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Please ensure that you complete your
+                            entry/exit verification before leaving
+                            the hostel premises.
+                        </p>
+
+
+                        <div class="notification-footer">
+
+                            <span class="unread-label">
+                                <span></span>
+                                Unread
+                            </span>
+
+
+                            <button
+                                class="read-btn">
+
+                                Mark as read
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="delete-notification"
+                        title="Delete notification">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+
+                </article>
+
+
+
+                <!-- NOTIFICATION 4 -->
+
+                <article
+                    class="notification-card"
+                    data-category="maintenance"
+                    data-read="true">
+
+
+                    <div class="notification-icon maintenance">
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    </div>
+
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <div>
+
+                                <h3>
+                                    Maintenance Request Updated
+                                </h3>
+
+                                <span class="notification-category">
+                                    Maintenance
+                                </span>
+
+                            </div>
+
+                            <span class="notification-time">
+                                Yesterday
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Your room maintenance request has been
+                            received. The maintenance team will
+                            inspect the issue shortly.
+                        </p>
+
+
+                        <div class="notification-footer">
+
+                            <span class="read-label">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Read
+
+                            </span>
+
+
+                            <button
+                                class="read-btn">
+
+                                Mark as unread
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="delete-notification"
+                        title="Delete notification">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+
+                </article>
+
+
+
+                <!-- NOTIFICATION 5 -->
+
+                <article
+                    class="notification-card"
+                    data-category="hostel"
+                    data-read="true">
+
+
+                    <div class="notification-icon hostel">
+
+                        <i class="fa-solid fa-bullhorn"></i>
+
+                    </div>
+
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <div>
+
+                                <h3>
+                                    Hostel Announcement
+                                </h3>
+
+                                <span class="notification-category">
+                                    Hostel
+                                </span>
+
+                            </div>
+
+                            <span class="notification-time">
+                                Yesterday
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Students are requested to maintain
+                            silence during the designated quiet hours
+                            from 10:00 PM to 6:00 AM.
+                        </p>
+
+
+                        <div class="notification-footer">
+
+                            <span class="read-label">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Read
+
+                            </span>
+
+
+                            <button
+                                class="read-btn">
+
+                                Mark as unread
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="delete-notification"
+                        title="Delete notification">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+
+                </article>
+
+
+
+                <!-- NOTIFICATION 6 -->
+
+                <article
+                    class="notification-card"
+                    data-category="hostel"
+                    data-read="true">
+
+
+                    <div class="notification-icon hostel">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+
+                    <div class="notification-content">
+
+                        <div class="notification-top">
+
+                            <div>
+
+                                <h3>
+                                    Attendance Reminder
+                                </h3>
+
+                                <span class="notification-category">
+                                    Hostel
+                                </span>
+
+                            </div>
+
+                            <span class="notification-time">
+                                2 days ago
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Please make sure your daily hostel
+                            attendance is completed before the
+                            scheduled closing time.
+                        </p>
+
+
+                        <div class="notification-footer">
+
+                            <span class="read-label">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Read
+
+                            </span>
+
+
+                            <button
+                                class="read-btn">
+
+                                Mark as unread
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="delete-notification"
+                        title="Delete notification">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+
+                </article>
+
+
+
+            </div>
+
+
+
+            <!-- ==================================
+                 EMPTY STATE
+            =================================== -->
+
+            <div
+                class="empty-state"
+                id="emptyState"
+                style="display:none;">
+
+                <div class="empty-icon">
+
+                    <i class="fa-regular fa-bell-slash"></i>
+
+                </div>
+
+                <h3>
+                    No Notifications Found
+                </h3>
+
+                <p>
+                    There are no notifications matching
+                    your selected filter.
+                </p>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 SMART ALERT BANNER
+            =================================== -->
+
+            <div class="smart-alert-banner">
+
+
+                <div class="smart-alert-icon">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                </div>
+
+
+                <div class="smart-alert-content">
+
+                    <span>
+                        SMART HOSTEL AI
+                    </span>
+
+                    <h3>
+                        Important alerts are monitored automatically.
+                    </h3>
+
+                    <p>
+                        AI-powered hostel notifications help students,
+                        wardens and parents stay informed about safety,
+                        attendance, leave and hostel activities.
+                    </p>
+
+                </div>
+
+
+                <div class="ai-pulse">
+
+                    <span></span>
+
+                    AI Active
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FOOTER -->
+
+            <footer class="notification-footer-bottom">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+                SmartHostel AI • Secure Student Management System
+
+            </footer>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="api.js"></script>
+    <script src="notification.js"></script>
+
+
+<script src="chatbot.js"></script>
+</body>
+
+</html>

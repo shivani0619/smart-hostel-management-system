@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartHostel AI | Face Recognition</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="face-recognition.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="sidebar-logo">
+
+        <div class="logo-box">
+            AI
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SmartHostel</h2>
+
+            <span>AI Management</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- STUDENT PROFILE -->
+
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+        </div>
+
+        <div class="student-info">
+
+            <h4>Student</h4>
+
+            <span>Student ID: —</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <a href="student-dashboard.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="student-profile.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>My Profile</span>
+
+        </a>
+
+
+        <a href="room-details.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-bed"></i>
+
+            <span>Room Details</span>
+
+        </a>
+
+
+        <a href="attendance.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+        <a href="entry-exit.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-right-left"></i>
+
+            <span>Entry / Exit</span>
+
+        </a>
+
+
+        <a href="leave-request.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-file-signature"></i>
+
+            <span>Leave Request</span>
+
+        </a>
+
+
+        <a href="complaints.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-comment-dots"></i>
+
+            <span>Complaints</span>
+
+            <span class="notification-badge">
+                2
+            </span>
+
+        </a>
+
+
+        <a href="mess.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <span>Mess</span>
+
+        </a>
+
+
+        <a href="face-recognition.html"
+           class="nav-link active">
+
+            <i class="fa-solid fa-camera"></i>
+
+            <span>Face Recognition</span>
+
+        </a>
+
+
+        <a href="notification.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span>Notifications</span>
+
+            <span class="notification-badge">
+                3
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+
+        <a href="#"
+           class="nav-link">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </a>
+
+
+        <a href="studentlogin.html"
+           class="nav-link logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================== -->
+
+    <header class="topbar">
+
+
+        <div class="mobile-menu">
+
+            <button id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <div class="page-title">
+
+            <span class="small-heading">
+                AI SECURITY SYSTEM
+            </span>
+
+            <h1>
+                Face Recognition
+            </h1>
+
+            <p>
+                Secure identity verification for hostel access
+            </p>
+
+        </div>
+
+
+
+        <div class="topbar-actions">
+
+
+            <button
+                class="icon-button"
+                id="notificationBtn">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span class="top-notification">
+                    3
+                </span>
+
+            </button>
+
+
+
+            <div class="top-profile">
+
+                <div class="top-avatar">
+                    S
+                </div>
+
+                <div class="top-profile-info">
+
+                    <strong>
+                        Student
+                    </strong>
+
+                    <span>
+                        —
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         PAGE CONTENT
+    ================================================== -->
+
+    <section class="face-page">
+
+
+
+        <!-- =================================================
+             AI HERO
+        ================================================== -->
+
+        <div class="face-hero">
+
+
+            <div class="hero-circle circle-one"></div>
+
+            <div class="hero-circle circle-two"></div>
+
+
+            <div class="face-hero-content">
+
+
+                <div class="hero-icon">
+
+                    <i class="fa-solid fa-face-smile"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        SMART HOSTEL AI
+                    </span>
+
+                    <h2>
+                        AI Face Verification
+                    </h2>
+
+                    <p>
+                        Use facial recognition for quick,
+                        secure and contactless hostel verification.
+                    </p>
+
+                </div>
+
+
+                <div class="ai-status">
+
+                    <span class="live-dot"></span>
+
+                    AI System Online
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             VERIFICATION AREA
+        ================================================== -->
+
+        <div class="section-heading">
+
+            <span>
+                IDENTITY VERIFICATION
+            </span>
+
+            <h2>
+                Verify Your Identity
+            </h2>
+
+            <p>
+                Position your face inside the frame and start verification.
+            </p>
+
+        </div>
+
+
+
+        <div class="verification-grid">
+
+
+
+            <!-- =================================================
+                 CAMERA AREA
+            ================================================== -->
+
+            <div class="camera-card">
+
+
+                <div class="camera-header">
+
+                    <div>
+
+                        <h3>
+                            <i class="fa-solid fa-camera"></i>
+                            Face Scanner
+                        </h3>
+
+                        <p>
+                            Camera verification
+                        </p>
+
+                    </div>
+
+
+                    <span class="secure-badge">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        Secure
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- CAMERA -->
+
+                <div class="camera-container"
+                     id="cameraContainer">
+
+
+                    <div class="camera-placeholder"
+                         id="cameraPlaceholder">
+
+
+                        <div class="camera-user-icon">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Camera Ready
+                        </h4>
+
+
+                        <p>
+                            Click the button below
+                            to start face scanning.
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- FACE FRAME -->
+
+                    <div class="face-frame"
+                         id="faceFrame">
+
+                        <span class="corner top-left"></span>
+                        <span class="corner top-right"></span>
+                        <span class="corner bottom-left"></span>
+                        <span class="corner bottom-right"></span>
+
+                        <div class="scan-line"></div>
+
+                    </div>
+
+
+                    <div class="scan-status"
+                         id="scanStatus">
+
+                        Ready to Scan
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CAMERA CONTROLS -->
+
+                <div class="camera-controls">
+
+
+                    <button
+                        class="start-scan-btn"
+                        id="startScanBtn">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        Start Face Scan
+
+                    </button>
+
+
+                    <button
+                        class="stop-scan-btn"
+                        id="stopScanBtn">
+
+                        <i class="fa-solid fa-stop"></i>
+
+                        Stop
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 VERIFICATION INFO
+            ================================================== -->
+
+            <div class="verification-card">
+
+
+                <div class="verification-title">
+
+                    <div class="verification-icon">
+
+                        <i class="fa-solid fa-fingerprint"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Verification Status
+                        </h3>
+
+                        <p>
+                            Your latest recognition details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATUS -->
+
+                <div class="verification-status"
+                     id="verificationStatus">
+
+
+                    <div class="status-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            STATUS
+                        </span>
+
+                        <h4>
+                            Not Verified
+                        </h4>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- STUDENT DETAILS -->
+
+                <div class="identity-details">
+
+
+                    <div class="identity-row">
+
+                        <span>
+                            Student Name
+                        </span>
+
+                        <strong>
+                            Student
+                        </strong>
+
+                    </div>
+
+
+                    <div class="identity-row">
+
+                        <span>
+                            Student ID
+                        </span>
+
+                        <strong>
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="identity-row">
+
+                        <span>
+                            Room Number
+                        </span>
+
+                        <strong>
+                            204-B
+                        </strong>
+
+                    </div>
+
+
+                    <div class="identity-row">
+
+                        <span>
+                            Recognition Accuracy
+                        </span>
+
+                        <strong id="accuracyValue">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="identity-row">
+
+                        <span>
+                            Last Verified
+                        </span>
+
+                        <strong id="lastVerified">
+                            Not yet
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SECURITY INFO -->
+
+                <div class="security-note">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <div>
+
+                        <strong>
+                            Your data is protected
+                        </strong>
+
+                        <p>
+                            Face verification is used only
+                            for hostel security and attendance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             VERIFICATION RESULT
+        ================================================== -->
+
+        <div class="result-card"
+             id="resultCard">
+
+
+            <div class="result-icon">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+
+            <div class="result-content">
+
+                <span>
+                    VERIFICATION COMPLETE
+                </span>
+
+                <h3>
+                    Identity Successfully Verified
+                </h3>
+
+                <p>
+                    Your face has been successfully matched
+                    with your registered student profile.
+                </p>
+
+            </div>
+
+
+            <div class="result-time">
+
+                <span>
+                    Verified at
+                </span>
+
+                <strong id="resultTime">
+                    --:--
+
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             HOW IT WORKS
+        ================================================== -->
+
+        <div class="how-section">
+
+
+            <div class="section-heading">
+
+                <span>
+                    SIMPLE & SECURE
+                </span>
+
+                <h2>
+                    How Face Recognition Works
+                </h2>
+
+            </div>
+
+
+
+            <div class="steps-grid">
+
+
+                <!-- STEP 1 -->
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-icon">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                    </div>
+
+                    <h3>
+                        Start Scanner
+                    </h3>
+
+                    <p>
+                        Allow the system to access
+                        your camera and start scanning.
+                    </p>
+
+                </div>
+
+
+
+                <!-- STEP 2 -->
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-icon">
+
+                        <i class="fa-solid fa-face-smile"></i>
+
+                    </div>
+
+                    <h3>
+                        Face Detection
+                    </h3>
+
+                    <p>
+                        AI detects your face and checks
+                        the facial features.
+                    </p>
+
+                </div>
+
+
+
+                <!-- STEP 3 -->
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-icon">
+
+                        <i class="fa-solid fa-fingerprint"></i>
+
+                    </div>
+
+                    <h3>
+                        Identity Match
+                    </h3>
+
+                    <p>
+                        Your face is compared with
+                        your registered profile.
+                    </p>
+
+                </div>
+
+
+
+                <!-- STEP 4 -->
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div class="step-icon">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <h3>
+                        Access Verified
+                    </h3>
+
+                    <p>
+                        Verification is recorded securely
+                        in the hostel system.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SECURITY FEATURES
+        ================================================== -->
+
+        <div class="security-grid">
+
+
+            <div class="security-feature">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+                        Secure Verification
+                    </h4>
+
+                    <p>
+                        AI-powered identity matching
+                        for safer hostel access.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="security-feature">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+                        Instant Verification
+                    </h4>
+
+                    <p>
+                        Quick contactless verification
+                        without manual checking.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="security-feature">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <div>
+
+                    <h4>
+                        Student Safety
+                    </h4>
+
+                    <p>
+                        Helps wardens monitor secure
+                        hostel entry and exit.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <div class="face-footer">
+
+            <i class="fa-solid fa-shield-heart"></i>
+
+            SmartHostel AI • Secure Student Verification
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="face-recognition.js"></script>
+
+
+</body>
+
+</html>

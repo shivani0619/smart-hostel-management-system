@@ -1,0 +1,1400 @@
+/* =========================================================
+   SMART HOSTEL AI — STUDENT PROFILE
+   WHITE / CREAM PREMIUM THEME
+========================================================= */
+
+
+/* =========================
+   ROOT
+========================= */
+
+:root{
+
+    --sidebar:#182235;
+    --sidebar-light:#202d45;
+    --sidebar-text:#aeb9ca;
+
+    --primary:#5b5ce2;
+    --primary-light:#efefff;
+
+    --background:#f8f6f0;
+    --card:#ffffff;
+
+    --text:#1c2535;
+    --muted:#7c8494;
+
+    --border:#ebe8df;
+
+    --green:#28a66f;
+    --green-light:#e9f8f1;
+
+    --blue:#4387e8;
+    --blue-light:#eaf2ff;
+
+    --orange:#e99535;
+    --orange-light:#fff3df;
+
+    --red:#e45757;
+    --red-light:#fff0f0;
+
+    --shadow:0 8px 30px rgba(29,36,55,.06);
+
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+button,
+input,
+select{
+
+    font-family:inherit;
+
+}
+
+button{
+
+    cursor:pointer;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main-content{
+
+    margin-left:260px;
+
+    min-height:100vh;
+
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar{
+
+    height:78px;
+
+    background:rgba(255,255,255,.88);
+
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 35px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:500;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:11px;
+
+    color:#9ba1ad;
+
+}
+
+.breadcrumb b{
+
+    color:#d0d1d5;
+
+}
+
+.breadcrumb strong{
+
+    color:#3d4657;
+
+}
+
+.topbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.icon-btn{
+
+    width:36px;
+    height:36px;
+
+    border:none;
+
+    background:#f7f5ef;
+
+    border:1px solid #ebe8df;
+
+    border-radius:11px;
+
+    color:#6c7484;
+
+    font-size:17px;
+
+    position:relative;
+
+}
+
+.icon-btn:hover{
+
+    background:#eeecff;
+
+    color:var(--primary);
+
+}
+
+.top-notification{
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#e45757;
+
+    position:absolute;
+
+    top:8px;
+    right:8px;
+
+    border:1px solid white;
+
+}
+
+.top-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.top-avatar{
+
+    width:38px;
+    height:38px;
+
+    border-radius:11px;
+
+    background:linear-gradient(
+        135deg,
+        #6869e7,
+        #8a6aff
+    );
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:10px;
+
+    font-weight:700;
+
+}
+
+.top-profile-info h4{
+
+    font-size:10px;
+
+    font-weight:600;
+
+}
+
+.top-profile-info span{
+
+    font-size:8px;
+
+    color:#9299a6;
+
+    display:block;
+
+    margin-top:2px;
+
+}
+
+.dropdown-arrow{
+
+    color:#9ca3af;
+
+}
+
+.menu-btn{
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    font-size:22px;
+
+}
+
+
+/* =========================================================
+   PROFILE CONTENT
+========================================================= */
+
+.profile-content{
+
+    padding:34px 35px 25px;
+
+    max-width:1600px;
+
+    margin:auto;
+
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:24px;
+
+}
+
+.page-label{
+
+    color:var(--primary);
+
+    font-size:8px;
+
+    letter-spacing:1.6px;
+
+    font-weight:700;
+
+    margin-bottom:7px;
+
+}
+
+.page-header h1{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:27px;
+
+    font-weight:600;
+
+    letter-spacing:-.7px;
+
+}
+
+.page-description{
+
+    font-size:10px;
+
+    color:#8a919e;
+
+    margin-top:5px;
+
+}
+
+.profile-status{
+
+    padding:9px 13px;
+
+    background:var(--green-light);
+
+    color:var(--green);
+
+    border-radius:10px;
+
+    font-size:9px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+}
+
+.status-dot{
+
+    width:6px;
+    height:6px;
+
+    background:#32c681;
+
+    border-radius:50%;
+
+}
+
+
+/* =========================================================
+   PROFILE HERO
+========================================================= */
+
+.profile-hero{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:18px;
+
+}
+
+.profile-photo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:17px;
+
+}
+
+.large-avatar{
+
+    width:80px;
+    height:80px;
+
+    border-radius:22px;
+
+    background:linear-gradient(
+        135deg,
+        #6969e6,
+        #8c69ff
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    position:relative;
+
+    box-shadow:0 10px 25px rgba(91,92,226,.20);
+
+}
+
+.camera-btn{
+
+    position:absolute;
+
+    bottom:-5px;
+
+    right:-5px;
+
+    width:27px;
+    height:27px;
+
+    border-radius:8px;
+
+    border:3px solid white;
+
+    background:#202c41;
+
+    color:white;
+
+    font-size:11px;
+
+}
+
+.profile-basic h2{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#283243;
+
+}
+
+.profile-basic p{
+
+    font-size:10px;
+
+    color:#7f8795;
+
+    margin-top:3px;
+
+}
+
+.student-id{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    padding:5px 8px;
+
+    border-radius:7px;
+
+    background:#f1f0ff;
+
+    color:var(--primary);
+
+    font-size:8px;
+
+    font-weight:600;
+
+}
+
+.profile-actions{
+
+    display:flex;
+
+    gap:9px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    height:39px;
+
+    padding:0 16px;
+
+    border-radius:10px;
+
+    font-size:9px;
+
+    font-weight:600;
+
+}
+
+.primary-btn{
+
+    border:1px solid var(--primary);
+
+    background:var(--primary);
+
+    color:white;
+
+    box-shadow:0 6px 15px rgba(91,92,226,.18);
+
+}
+
+.primary-btn:hover{
+
+    background:#4d4ed1;
+
+}
+
+.secondary-btn{
+
+    border:1px solid #e7e4dc;
+
+    background:#f9f8f4;
+
+    color:#747c89;
+
+}
+
+.secondary-btn:hover{
+
+    background:#f1efe8;
+
+}
+
+
+/* =========================================================
+   CONTENT GRID
+========================================================= */
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+    margin-bottom:18px;
+
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.profile-card{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+}
+
+.card-label{
+
+    font-size:7px;
+
+    letter-spacing:1.4px;
+
+    color:#999fa9;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+}
+
+.card-header h2{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#293344;
+
+}
+
+.card-icon{
+
+    width:36px;
+    height:36px;
+
+    border-radius:11px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:15px;
+
+}
+
+.card-icon.purple{
+
+    background:#efedff;
+
+}
+
+.card-icon.blue{
+
+    background:#eaf2ff;
+
+}
+
+.card-icon.green{
+
+    background:#e9f8f1;
+
+}
+
+.card-icon.orange{
+
+    background:#fff3df;
+
+}
+
+.card-icon.red{
+
+    background:#fff0f0;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.form-group label{
+
+    font-size:8px;
+
+    color:#8e95a1;
+
+    font-weight:500;
+
+}
+
+.form-group input,
+.form-group select{
+
+    width:100%;
+
+    height:38px;
+
+    padding:0 11px;
+
+    border:1px solid #ebe8df;
+
+    border-radius:9px;
+
+    background:#faf9f5;
+
+    color:#3d4656;
+
+    font-size:9px;
+
+    outline:none;
+
+    transition:.2s;
+
+}
+
+.form-group input:disabled,
+.form-group select:disabled{
+
+    color:#4d5665;
+
+    cursor:not-allowed;
+
+}
+
+.form-group input:not(:disabled),
+.form-group select:not(:disabled){
+
+    background:white;
+
+    border-color:#c9c7f5;
+
+    box-shadow:0 0 0 3px rgba(91,92,226,.05);
+
+}
+
+.form-group input:focus,
+.form-group select:focus{
+
+    border-color:var(--primary);
+
+}
+
+
+/* =========================================================
+   ACADEMIC INFO
+========================================================= */
+
+.info-list{
+
+    border-top:1px solid #f0eee8;
+
+}
+
+.info-row{
+
+    padding:12px 0;
+
+    border-bottom:1px solid #f0eee8;
+
+}
+
+.info-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.info-row span{
+
+    display:block;
+
+    font-size:8px;
+
+    color:#9a9fa8;
+
+    margin-bottom:4px;
+
+}
+
+.info-row strong{
+
+    display:block;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    color:#3d4655;
+
+}
+
+
+/* =========================================================
+   HOSTEL INFO
+========================================================= */
+
+.hostel-info-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    gap:11px;
+
+}
+
+.hostel-item{
+
+    background:#faf9f5;
+
+    border:1px solid #eeeae1;
+
+    border-radius:11px;
+
+    padding:12px;
+
+}
+
+.hostel-item span{
+
+    display:block;
+
+    font-size:7px;
+
+    color:#9da3ad;
+
+    margin-bottom:5px;
+
+}
+
+.hostel-item strong{
+
+    font-size:10px;
+
+    color:#3c4554;
+
+}
+
+
+/* =========================================================
+   GUARDIAN
+========================================================= */
+
+.guardian-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+
+    padding:14px;
+
+    background:#faf9f5;
+
+    border:1px solid #eeeae1;
+
+    border-radius:13px;
+
+}
+
+.guardian-avatar{
+
+    width:45px;
+    height:45px;
+
+    border-radius:13px;
+
+    background:#fff0dc;
+
+    color:#d68b2d;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:11px;
+
+    font-weight:700;
+
+}
+
+.guardian-details{
+
+    flex:1;
+
+}
+
+.guardian-details h3{
+
+    font-size:11px;
+
+    color:#3a4454;
+
+    font-weight:600;
+
+}
+
+.guardian-details p{
+
+    font-size:8px;
+
+    color:#9a9fa9;
+
+    margin-top:3px;
+
+}
+
+.guardian-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+    margin-top:8px;
+
+}
+
+.guardian-contact span{
+
+    font-size:8px;
+
+    color:#727b89;
+
+}
+
+.verified-badge{
+
+    padding:5px 7px;
+
+    border-radius:7px;
+
+    background:#e9f8f1;
+
+    color:#28a66f;
+
+    font-size:7px;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   EMERGENCY CONTACT
+========================================================= */
+
+.emergency-contact-card{
+
+    margin-bottom:18px;
+
+}
+
+.red-label{
+
+    color:var(--red);
+
+}
+
+.emergency-grid{
+
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+
+    gap:12px;
+
+    align-items:center;
+
+}
+
+.emergency-person{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.emergency-avatar{
+
+    width:40px;
+    height:40px;
+
+    border-radius:11px;
+
+    background:#fff0f0;
+
+    color:var(--red);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:10px;
+
+    font-weight:700;
+
+}
+
+.emergency-person span,
+.emergency-detail span{
+
+    display:block;
+
+    font-size:7px;
+
+    color:#9ba0aa;
+
+    margin-bottom:4px;
+
+}
+
+.emergency-person strong,
+.emergency-detail strong{
+
+    font-size:9px;
+
+    color:#3d4655;
+
+}
+
+.available{
+
+    color:var(--green) !important;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.profile-footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:5px 2px 10px;
+
+    color:#a1a5ad;
+
+    font-size:8px;
+
+}
+
+.profile-footer div{
+
+    display:flex;
+
+    gap:17px;
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:320px;
+
+    padding:14px 15px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    box-shadow:0 15px 45px rgba(25,32,48,.14);
+
+    display:none;
+
+    align-items:center;
+
+    gap:11px;
+
+    z-index:5000;
+
+}
+
+.toast.show{
+
+    display:flex;
+
+    animation:toastIn .3s ease;
+
+}
+
+.toast-icon{
+
+    width:34px;
+    height:34px;
+
+    border-radius:10px;
+
+    background:var(--green-light);
+
+    color:var(--green);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.toast strong{
+
+    display:block;
+
+    color:#293344;
+
+    font-size:10px;
+
+    margin-bottom:3px;
+
+}
+
+.toast p{
+
+    color:#8b929f;
+
+    font-size:8px;
+
+}
+
+@keyframes toastIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+    
+
+    .main-content{
+
+        margin-left:235px;
+
+    }
+
+    .content-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .emergency-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+@media(max-width:900px){
+
+    
+
+    
+
+    .main-content{
+
+        margin-left:0;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    .topbar{
+
+        padding:0 20px;
+
+    }
+
+    .profile-content{
+
+        padding:25px 20px;
+
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+    }
+
+    .profile-hero{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+    }
+
+    .profile-actions{
+
+        width:100%;
+
+    }
+
+    .profile-actions button{
+
+        flex:1;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hostel-info-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .emergency-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .profile-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+    .top-profile-info,
+    .dropdown-arrow{
+
+        display:none;
+
+    }
+
+}
+
+
+@media(max-width:420px){
+
+    .profile-content{
+
+        padding:20px 14px;
+
+    }
+
+    .profile-card{
+
+        padding:17px;
+
+    }
+
+    .profile-hero{
+
+        padding:18px;
+
+    }
+
+    .large-avatar{
+
+        width:70px;
+        height:70px;
+
+    }
+
+    .hostel-info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .profile-photo-section{
+
+        align-items:flex-start;
+
+    }
+
+}

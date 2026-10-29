@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartHostel AI | Attendance</title>
+
+    <!-- Google Font -->
+     <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="attendance.css">
+
+    <!-- Global Sidebar CSS -->
+    <link rel="stylesheet" href="student-sidebar.css">
+</head>
+
+
+<body>
+
+
+    <!-- ==========================
+         BACKGROUND GLOW
+    =========================== -->
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+
+    <!-- ==========================
+         SIDEBAR
+    =========================== -->
+
+    <!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SmartHostel</h2>
+
+            <span>AI HOSTEL</span>
+
+        </div>
+
+    </div>
+    <!-- MINI PROFILE -->
+
+<div class="student-mini-profile">
+
+    <div class="profile-avatar" id="profileAvatar">
+
+        ST
+
+        <span class="online-dot"></span>
+
+    </div>
+
+    <div class="student-mini-info">
+
+        <h4 id="studentMiniName">
+            Student
+        </h4>
+
+        <p id="studentMiniId">
+            Student ID: —
+        </p>
+
+    </div>
+
+</div>
+    <!-- =================================================
+         SIDEBAR NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="student-dashboard.html"
+           class="nav-item">
+
+            <span class="nav-icon">⌂</span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- MY PROFILE -->
+
+        <a href="student-profile.html"
+           class="nav-item">
+
+            <span class="nav-icon">◉</span>
+
+            <span>My Profile</span>
+
+        </a>
+
+
+        <!-- MY ROOM -->
+
+        <a href="room-details.html"
+           class="nav-item">
+
+            <span class="nav-icon">▣</span>
+
+            <span>My Room</span>
+
+        </a>
+
+
+        <!-- LEAVE -->
+
+        <a href="leave-request.html"
+           class="nav-item">
+
+            <span class="nav-icon">▤</span>
+
+            <span>Leave Application</span>
+
+        </a>
+
+
+        <!-- EMERGENCY -->
+
+        <a href="emergency.html"
+           class="nav-item emergency-link">
+
+            <span class="nav-icon">!</span>
+
+            <span>Emergency / SOS</span>
+
+        </a>
+
+
+        <!-- ATTENDANCE -->
+
+        <a href="attendance.html"
+           class="nav-item active">
+
+            <span class="nav-icon">◷</span>
+
+            <span>Attendance</span>
+
+        </a>
+        <a href="student-notifications.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bell"></i>
+    </span>
+    <span>Notifications</span>
+</a>
+
+<a href="student-announcements.html" class="nav-item">
+    <span class="nav-icon">
+        <i class="fa-solid fa-bullhorn"></i>
+    </span>
+    <span>Announcements</span>
+</a>
+
+
+    </nav>
+
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+    <!-- ==========================
+         MAIN CONTENT
+    =========================== -->
+
+    <main class="main-content">
+
+
+        <!-- ==========================
+             TOPBAR
+        =========================== -->
+
+        <header class="topbar">
+
+
+            <div class="mobile-menu">
+
+                <button id="menuBtn">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="page-title">
+
+                <h1>Attendance</h1>
+
+                <p>
+                    Track your hostel attendance records
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+            </div>
+
+        </header>
+
+
+
+        <!-- ==========================
+             ATTENDANCE PAGE
+        =========================== -->
+
+        <section class="attendance-page">
+
+
+            <!-- ==========================
+                 SUMMARY CARDS
+            =========================== -->
+
+            <div class="attendance-summary">
+
+
+                <!-- Overall -->
+
+                <div class="attendance-stat">
+
+                    <div class="attendance-stat-icon blue">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Overall Attendance</span>
+
+                        <h2 id="attendancePercentage">—</h2>
+
+                        <small>
+                            Good attendance
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Present -->
+
+                <div class="attendance-stat">
+
+                    <div class="attendance-stat-icon green">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Present Days</span>
+
+                        <h2 id="presentDays">—</h2>
+
+                        <small>
+                            This month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Absent -->
+
+                <div class="attendance-stat">
+
+                    <div class="attendance-stat-icon red">
+
+                        <i class="fa-solid fa-user-xmark"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Absent Days</span>
+
+                        <h2 id="absentDays">—</h2>
+
+                        <small>
+                            This month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Working Days -->
+
+                <div class="attendance-stat">
+
+                    <div class="attendance-stat-icon purple">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Total Days</span>
+
+                        <h2 id="totalDays">—</h2>
+
+                        <small>
+                            This month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================
+                 ATTENDANCE OVERVIEW
+            =========================== -->
+
+            <div class="attendance-grid">
+
+
+                <!-- Attendance Progress -->
+
+                <div class="attendance-card overview-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Attendance Overview
+                            </h3>
+
+                            <p>
+                                Your attendance performance
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+
+
+                    <div class="attendance-overview-content">
+
+
+                        <div class="attendance-circle">
+
+                            <div>
+
+                                <strong id="overviewPercentage">—</strong>
+
+                                <span>
+                                    Attendance
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="attendance-message">
+
+                            <div class="status-badge">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                Good Standing
+
+                            </div>
+
+                            <h3>
+                                Keep it up!
+                            </h3>
+
+                            <p>
+                                Your attendance is above the
+                                required minimum of 75%.
+                            </p>
+
+
+                            <div class="progress-container">
+
+                                <div class="progress-label">
+
+                                    <span>
+                                        Attendance
+                                    </span>
+
+                                        <strong id="progressPercentage">—</strong>
+
+                                </div>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-fill"
+                                        id="attendanceProgress"
+                                        style="width:0%">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Monthly Breakdown -->
+
+                <div class="attendance-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Monthly Breakdown
+                            </h3>
+
+                            <p>
+                                Current month statistics
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                    </div>
+
+
+
+                    <div class="monthly-list">
+
+
+                        <div class="monthly-item">
+
+                            <div class="monthly-label">
+
+                                <span>Present</span>
+
+                                    <strong id="monthlyPresent">—</strong>
+
+                            </div>
+
+                            <div class="mini-progress">
+
+                                <div
+                                    class="mini-progress-fill present"
+                                    id="presentProgress"
+                                    style="width:0%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="monthly-item">
+
+                            <div class="monthly-label">
+
+                                <span>Absent</span>
+
+                                    <strong id="monthlyAbsent">—</strong>
+
+                            </div>
+
+                            <div class="mini-progress">
+
+                                <div
+                                    class="mini-progress-fill absent"
+                                    id="absentProgress"
+                                    style="width:0%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="monthly-item">
+
+                            <div class="monthly-label">
+
+                                <span>Leave</span>
+
+                                    <strong id="monthlyLeave">—</strong>
+
+                            </div>
+
+                            <div class="mini-progress">
+
+                                <div
+                                    class="mini-progress-fill leave"
+                                    id="leaveProgress"
+                                    style="width:0%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="attendance-note">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <span>
+                            Minimum required attendance:
+                            <strong>75%</strong>
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================
+                 FILTER SECTION
+            =========================== -->
+       <!-- ==========================
+     FILTER SECTION
+=========================== -->
+
+<div class="attendance-card attendance-history">
+
+    <div class="history-header">
+
+        <div>
+            <h3>Attendance History</h3>
+
+            <p>
+                View your daily attendance records
+            </p>
+        </div>
+
+        <div class="filter-group">
+<select id="monthFilter">
+
+    <option value="all" selected>
+        All Months
+    </option>
+
+    <option value="2026-10">
+        October 2026
+    </option>
+
+    <option value="2026-09">
+        September 2026
+    </option>
+
+    <option value="2026-08">
+        August 2026
+    </option>
+
+    <option value="2026-07">
+        July 2026
+    </option>
+
+    <option value="2026-06">
+        June 2026
+    </option>
+
+    <option value="2026-05">
+        May 2026
+    </option>
+
+    <option value="2026-04">
+        April 2026
+    </option>
+
+    <option value="2026-03">
+        March 2026
+    </option>
+
+    <option value="2026-02">
+        February 2026
+    </option>
+
+    <option value="2026-01">
+        January 2026
+    </option>
+
+</select>
+<select id="statusFilter">
+    <option value="all" selected>All Status</option>
+    <option value="present">Present</option>
+    <option value="absent">Absent</option>
+    <option value="late">Late</option>
+    <option value="leave">Leave</option>
+</select>
+
+        </div>
+
+    </div>
+
+
+    <!-- ATTENDANCE TABLE -->
+
+    <div class="attendance-table-wrapper">
+
+        <table class="attendance-table">
+
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="attendanceTableBody">
+
+                <tr>
+                    <td colspan="5">
+                        Loading attendance...
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+            <!-- ==========================
+                 ATTENDANCE INFO
+            =========================== -->
+
+            <div class="attendance-info-card">
+
+
+                <div class="info-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Attendance Tip
+                    </h3>
+
+                    <p>
+                        Maintaining regular attendance helps
+                        you stay eligible for hostel activities
+                        and academic requirements.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================
+         JAVASCRIPT
+    =========================== -->
+
+    <script src="api.js"></script>
+    <script src="attendance.js"></script>
+
+
+<script src="chatbot.js"></script>
+</body>
+
+</html>

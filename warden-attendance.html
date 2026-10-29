@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    SmartHostel AI | Warden Attendance
+  </title>
+
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- FONT AWESOME -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+
+
+  <!-- EXISTING CSS -->
+
+  <link
+    rel="stylesheet"
+    href="emergency.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="portal-dashboard.css"
+  >
+
+
+  <!-- ATTENDANCE PAGE CSS -->
+
+  <style>
+
+    /* =====================================================
+       PAGE
+    ===================================================== */
+
+    .attendance-page {
+      padding: 28px;
+    }
+
+
+    /* =====================================================
+       SUMMARY CARDS
+    ===================================================== */
+
+    .attendance-summary {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 18px;
+
+      margin-bottom: 24px;
+
+    }
+
+
+    .attendance-stat-card {
+
+      background: #ffffff;
+
+      border: 1px solid #e8eaf0;
+
+      border-radius: 16px;
+
+      padding: 20px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      box-shadow:
+        0 4px 14px
+        rgba(15, 23, 42, 0.04);
+
+    }
+
+
+    .attendance-stat-icon {
+
+      width: 48px;
+
+      height: 48px;
+
+      border-radius: 14px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background: #eef0ff;
+
+      color: #5b5ce2;
+
+      font-size: 19px;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .attendance-stat-info span {
+
+      display: block;
+
+      color: #7c8494;
+
+      font-size: 12px;
+
+      font-weight: 500;
+
+      margin-bottom: 4px;
+
+    }
+
+
+    .attendance-stat-info strong {
+
+      display: block;
+
+      color: #182235;
+
+      font-size: 25px;
+
+      line-height: 1;
+
+    }
+
+
+    /* =====================================================
+       MAIN PANEL
+    ===================================================== */
+
+    .attendance-panel {
+
+      background: #ffffff;
+
+      border: 1px solid #e8eaf0;
+
+      border-radius: 18px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 4px 18px
+        rgba(15, 23, 42, 0.04);
+
+    }
+
+
+    .attendance-panel-header {
+
+      padding: 22px 24px;
+
+      border-bottom: 1px solid #eef0f4;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 20px;
+
+    }
+
+
+    .attendance-panel-header h2 {
+
+      margin: 0;
+
+      color: #182235;
+
+      font-family: "Poppins", sans-serif;
+
+      font-size: 19px;
+
+      font-weight: 600;
+
+    }
+
+
+    .attendance-panel-header p {
+
+      margin: 5px 0 0;
+
+      color: #7c8494;
+
+      font-size: 13px;
+
+    }
+
+
+    .attendance-record-label {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      padding: 8px 12px;
+
+      border-radius: 10px;
+
+      background: #f5f5ff;
+
+      color: #5b5ce2;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+    }
+
+
+    /* =====================================================
+       TABLE
+    ===================================================== */
+
+    .attendance-table-wrapper {
+
+      width: 100%;
+
+      overflow-x: auto;
+
+    }
+
+
+    .attendance-table {
+
+      width: 100%;
+
+      border-collapse: collapse;
+
+      min-width: 900px;
+
+    }
+
+
+    .attendance-table thead th {
+
+      background: #fafbfc;
+
+      color: #7c8494;
+
+      font-size: 11px;
+
+      font-weight: 600;
+
+      text-transform: uppercase;
+
+      letter-spacing: .04em;
+
+      text-align: left;
+
+      padding: 14px 18px;
+
+      border-bottom: 1px solid #eef0f4;
+
+      white-space: nowrap;
+
+    }
+
+
+    .attendance-table tbody td {
+
+      padding: 16px 18px;
+
+      border-bottom: 1px solid #f0f1f4;
+
+      vertical-align: middle;
+
+      color: #182235;
+
+    }
+
+
+    .attendance-main-row {
+
+      transition: background .2s ease;
+
+    }
+
+
+    .attendance-main-row:hover {
+
+      background: #fafaff;
+
+    }
+
+
+    /* =====================================================
+       STUDENT
+    ===================================================== */
+
+    .attendance-student {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      min-width: 180px;
+
+    }
+
+
+    .attendance-avatar {
+
+      width: 42px;
+
+      height: 42px;
+
+      border-radius: 12px;
+
+      background: linear-gradient(
+        135deg,
+        #5b5ce2,
+        #7c6ff0
+      );
+
+      color: #ffffff;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .attendance-student-info strong {
+
+      display: block;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      color: #182235;
+
+    }
+
+
+    .attendance-student-info span {
+
+      display: block;
+
+      margin-top: 3px;
+
+      color: #8a91a0;
+
+      font-size: 12px;
+
+    }
+
+
+    /* =====================================================
+       ATTENDANCE PERCENTAGE
+    ===================================================== */
+
+    .attendance-percentage {
+
+      width: 150px;
+
+    }
+
+
+    .percentage-top {
+
+      display: flex;
+
+      align-items: baseline;
+
+      justify-content: space-between;
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .percentage-top strong {
+
+      font-size: 15px;
+
+      color: #182235;
+
+    }
+
+
+    .percentage-top span {
+
+      font-size: 10px;
+
+      color: #8a91a0;
+
+    }
+
+
+    .attendance-progress {
+
+      width: 100%;
+
+      height: 7px;
+
+      background: #eceef4;
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+    }
+
+
+    .attendance-progress-bar {
+
+      height: 100%;
+
+      border-radius: 20px;
+
+      background: #5b5ce2;
+
+    }
+
+
+    .attendance-progress-bar.progress-warning {
+
+      background: #f59e0b;
+
+    }
+
+
+    .attendance-progress-bar.progress-low {
+
+      background: #ef4444;
+
+    }
+
+
+    /* =====================================================
+       COUNTS
+    ===================================================== */
+
+    .attendance-count {
+
+      text-align: center;
+
+      min-width: 65px;
+
+    }
+
+
+    .attendance-count span {
+
+      display: block;
+
+      font-size: 17px;
+
+      font-weight: 700;
+
+    }
+
+
+    .attendance-count small {
+
+      display: block;
+
+      margin-top: 2px;
+
+      font-size: 10px;
+
+      color: #8a91a0;
+
+    }
+
+
+    .present-count span {
+
+      color: #16a34a;
+
+    }
+
+
+    .absent-count span {
+
+      color: #dc2626;
+
+    }
+
+
+    /* =====================================================
+       STATUS
+    ===================================================== */
+
+    .attendance-status {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+      padding: 6px 10px;
+
+      border-radius: 20px;
+
+      font-size: 11px;
+
+      font-weight: 600;
+
+      white-space: nowrap;
+
+    }
+
+
+    .status-dot {
+
+      width: 6px;
+
+      height: 6px;
+
+      border-radius: 50%;
+
+      background: currentColor;
+
+    }
+
+
+    .attendance-status.good {
+
+      background: #ecfdf3;
+
+      color: #15803d;
+
+    }
+
+
+    .attendance-status.warning {
+
+      background: #fff7ed;
+
+      color: #c2410c;
+
+    }
+
+
+    .attendance-status.low {
+
+      background: #fef2f2;
+
+      color: #dc2626;
+
+    }
+
+
+    /* =====================================================
+       VIEW RECORD BUTTON
+    ===================================================== */
+
+    .view-attendance-btn {
+
+      border: 1px solid #dddff2;
+
+      background: #ffffff;
+
+      color: #5b5ce2;
+
+      padding: 8px 12px;
+
+      border-radius: 9px;
+
+      font-family: "Inter", sans-serif;
+
+      font-size: 11px;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+      transition: all .2s ease;
+
+      white-space: nowrap;
+
+    }
+
+
+    .view-attendance-btn:hover {
+
+      background: #f5f5ff;
+
+      border-color: #c9c9f0;
+
+    }
+
+
+    /* =====================================================
+       EXPANDED RECORDS
+    ===================================================== */
+
+    .attendance-record-row td {
+
+      padding: 0 !important;
+
+      background: #fafbff;
+
+    }
+
+
+    .attendance-record-panel {
+
+      padding: 20px 24px 22px;
+
+      border-top: 1px solid #eeeef8;
+
+    }
+
+
+    .record-panel-header {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 15px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .record-panel-header h4 {
+
+      margin: 0;
+
+      font-size: 14px;
+
+      color: #182235;
+
+    }
+
+
+    .record-panel-header p {
+
+      margin: 4px 0 0;
+
+      font-size: 12px;
+
+      color: #8a91a0;
+
+    }
+
+
+    .record-count {
+
+      padding: 6px 10px;
+
+      border-radius: 8px;
+
+      background: #eef0ff;
+
+      color: #5b5ce2;
+
+      font-size: 11px;
+
+      font-weight: 600;
+
+    }
+
+
+    .attendance-record-list {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(150px, 1fr));
+
+      gap: 8px;
+
+    }
+
+
+    .attendance-record-item {
+
+      background: #ffffff;
+
+      border: 1px solid #eceef3;
+
+      border-radius: 9px;
+
+      padding: 9px 11px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 8px;
+
+    }
+
+
+    .record-date {
+
+      color: #4b5563;
+
+      font-size: 11px;
+
+    }
+
+
+    .attendance-record-status {
+
+      padding: 4px 7px;
+
+      border-radius: 6px;
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .record-present {
+
+      background: #ecfdf3;
+
+      color: #15803d;
+
+    }
+
+
+    .record-absent {
+
+      background: #fef2f2;
+
+      color: #dc2626;
+
+    }
+
+
+    .record-late {
+
+      background: #fff7ed;
+
+      color: #c2410c;
+
+    }
+
+
+    .no-records {
+
+      padding: 15px;
+
+      text-align: center;
+
+      color: #8a91a0;
+
+      font-size: 13px;
+
+    }
+
+
+    .attendance-empty {
+
+      text-align: center;
+
+      padding: 40px !important;
+
+      color: #8a91a0;
+
+      font-size: 13px;
+
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 1100px) {
+
+      .attendance-summary {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+      .attendance-record-list {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .attendance-page {
+
+        padding: 16px;
+
+      }
+
+
+      .attendance-summary {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .attendance-panel-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+      }
+
+
+      .attendance-record-list {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ====================================================
+       SIDEBAR
+  ===================================================== -->
+
+  <aside
+    class="sidebar"
+    id="sidebar"
+  >
+
+    <div class="logo-section">
+
+      <div class="logo-icon">
+        <span>AI</span>
+      </div>
+
+      <div class="logo-text">
+
+        <h2>
+          SmartHostel
+        </h2>
+
+        <span>
+          WARDEN
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="student-mini-profile">
+
+      <div class="profile-avatar">
+        W
+      </div>
+
+      <div class="student-mini-info">
+
+        <h4 id="wardenName">
+          Warden
+        </h4>
+
+        <p>
+          Administrator
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+      <p class="nav-title">
+        MAIN MENU
+      </p>
+
+
+      <a
+        href="warden-dashboard.html"
+        class="nav-item"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </span>
+        <span>
+          Dashboard
+        </span>
+      </a>
+
+
+      <a
+        href="warden-students.html"
+        class="nav-item"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-users"></i>
+        </span>
+        <span>
+          Students
+        </span>
+      </a>
+
+
+      <a
+        href="warden-rooms.html"
+        class="nav-item"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-bed"></i>
+        </span>
+        <span>
+          Rooms
+        </span>
+      </a>
+
+
+      <a
+        href="warden-attendance.html"
+        class="nav-item active"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-clock"></i>
+        </span>
+        <span>
+          Attendance
+        </span>
+      </a>
+
+
+      <a
+        href="warden-leaves.html"
+        class="nav-item"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </span>
+        <span>
+          Leave Requests
+        </span>
+      </a>
+
+
+      <a
+        href="warden-visitors.html"
+        class="nav-item"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-id-card"></i>
+        </span>
+        <span>
+          Visitor Management
+        </span>
+      </a>
+
+
+      <a
+        href="warden-fees.html"
+        class="nav-item"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-money-bill-wave"></i>
+        </span>
+        <span>
+          Fees
+        </span>
+      </a>
+
+
+      <a
+        href="warden-emergency.html"
+        class="nav-item"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </span>
+        <span>
+          Emergency Alerts
+        </span>
+      </a>
+
+
+      <a
+        href="warden-notifications.html"
+        class="nav-item"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-bell"></i>
+        </span>
+        <span>
+          Notifications
+        </span>
+      </a>
+
+
+      <a
+        href="warden-announcements.html"
+        class="nav-item"
+      >
+        <span class="nav-icon">
+          <i class="fa-solid fa-bullhorn"></i>
+        </span>
+        <span>
+          Announcements
+        </span>
+      </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+      <a
+        href="#"
+        id="logoutBtn"
+        class="logout-btn"
+      >
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </span>
+
+        <span>
+          Logout
+        </span>
+
+      </a>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- ====================================================
+       MAIN
+  ===================================================== -->
+
+  <main class="main-content portal-main">
+
+
+    <!-- HEADER -->
+
+    <header class="portal-header">
+
+      <button
+        class="portal-menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation"
+      >
+
+        <i class="fa-solid fa-bars"></i>
+
+      </button>
+
+
+      <div>
+
+        <h1>
+          Attendance
+        </h1>
+
+        <p>
+          Review student attendance trends
+        </p>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- PAGE -->
+
+    <div class="attendance-page">
+
+
+      <!-- ==================================================
+           SUMMARY
+      ================================================== -->
+
+      <div class="attendance-summary">
+
+
+        <!-- TOTAL -->
+
+        <div class="attendance-stat-card">
+
+          <div class="attendance-stat-icon">
+
+            <i class="fa-solid fa-users"></i>
+
+          </div>
+
+          <div class="attendance-stat-info">
+
+            <span>
+              Total Students
+            </span>
+
+            <strong id="attendanceTotalStudents">
+              —
+            </strong>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PRESENT -->
+
+        <div class="attendance-stat-card">
+
+          <div class="attendance-stat-icon">
+
+            <i class="fa-solid fa-user-check"></i>
+
+          </div>
+
+          <div class="attendance-stat-info">
+
+            <span>
+              Present Today
+            </span>
+
+            <strong id="attendancePresent">
+              —
+            </strong>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ABSENT -->
+
+        <div class="attendance-stat-card">
+
+          <div class="attendance-stat-icon">
+
+            <i class="fa-solid fa-user-xmark"></i>
+
+          </div>
+
+          <div class="attendance-stat-info">
+
+            <span>
+              Absent Today
+            </span>
+
+            <strong id="attendanceAbsent">
+              —
+            </strong>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- LOW -->
+
+        <div class="attendance-stat-card">
+
+          <div class="attendance-stat-icon">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+          </div>
+
+          <div class="attendance-stat-info">
+
+            <span>
+              Low Attendance
+            </span>
+
+            <strong id="attendanceLow">
+              —
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ==================================================
+           ATTENDANCE PANEL
+      ================================================== -->
+
+      <section class="attendance-panel">
+
+
+        <div class="attendance-panel-header">
+
+          <div>
+
+            <h2>
+              Student Attendance
+            </h2>
+
+            <p>
+              View and review individual student attendance
+            </p>
+
+          </div>
+
+
+          <div class="attendance-record-label">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            Attendance Records
+
+          </div>
+
+        </div>
+
+
+
+        <!-- TABLE -->
+
+        <div class="attendance-table-wrapper">
+
+          <table class="attendance-table">
+
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Student
+                </th>
+
+                <th>
+                  Attendance
+                </th>
+
+                <th>
+                  Present
+                </th>
+
+                <th>
+                  Absent
+                </th>
+
+                <th>
+                  Status
+                </th>
+
+                <th>
+                  Records
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody id="attendanceTable">
+
+              <tr>
+
+                <td
+                  colspan="6"
+                  class="attendance-empty"
+                >
+
+                  Loading attendance data...
+
+                </td>
+
+              </tr>
+
+            </tbody>
+
+
+          </table>
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- ====================================================
+       SCRIPTS
+  ===================================================== -->
+
+  <script src="api.js"></script>
+
+  <script src="shared-portal.js"></script>
+
+  <script src="warden-pages.js"></script>
+
+
+</body>
+
+</html>

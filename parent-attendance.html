@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHostel AI | Parent Attendance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="emergency.css">
+  <link rel="stylesheet" href="portal-dashboard.css">
+  <style>
+    /* Attendance Summary Cards */
+    .attendance-summary-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .attendance-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #eeeeee;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .attendance-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0efff;
+      color: #5b5ce2;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .attendance-card-info span {
+      display: block;
+      font-size: 13px;
+      color: #7c8494;
+      margin-bottom: 4px;
+    }
+    .attendance-card-info strong {
+      display: block;
+      font-size: 24px;
+      color: #182235;
+      font-weight: 700;
+    }
+    @media (max-width: 900px) {
+      .attendance-summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 500px) {
+      .attendance-summary-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-section">
+      <div class="logo-icon"><span>AI</span></div>
+      <div class="logo-text">
+        <h2>SmartHostel</h2>
+        <span>PARENT</span>
+      </div>
+    </div>
+<div class="student-mini-profile">
+  <div class="profile-avatar">P</div>
+  <div class="student-mini-info">
+    <h4 id="parentName">Parent</h4>
+    <p>Guardian</p>
+  </div>
+</div>
+<nav class="sidebar-nav">
+  <p class="nav-title">PARENT PORTAL</p>
+  <a href="parent-room.html" class="nav-item">
+    <span class="nav-icon"><i class="fa-solid fa-bed"></i></span>
+    <span>Room</span>
+  </a>
+  <a href="parent-attendance.html" class="nav-item active">
+    <span class="nav-icon"><i class="fa-solid fa-clock"></i></span>
+    <span>Attendance</span>
+  </a>
+  <a href="parent-leave.html" class="nav-item">
+    <span class="nav-icon"><i class="fa-solid fa-calendar-check"></i></span>
+    <span>Leave Status</span>
+  </a>
+  <a href="parent-visitors.html" class="nav-item">
+    <span class="nav-icon"><i class="fa-solid fa-id-card"></i></span>
+    <span>Visitors</span>
+  </a>
+  <a href="parent-emergency.html" class="nav-item">
+    <span class="nav-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+    <span>Emergency</span>
+  </a>
+  <a href="parent-fees.html" class="nav-item">
+    <span class="nav-icon"><i class="fa-solid fa-receipt"></i></span>
+    <span>Fees</span>
+  </a>
+  <a href="parent-notifications.html" class="nav-item">
+    <span class="nav-icon"><i class="fa-solid fa-bell"></i></span>
+    <span>Notifications</span>
+  </a>
+  <a href="parent-announcements.html" class="nav-item">
+    <span class="nav-icon"><i class="fa-solid fa-bullhorn"></i></span>
+    <span>Announcements</span>
+  </a>
+</nav>
+<div class="sidebar-bottom">
+  <a href="#" id="logoutBtn" class="logout-btn">
+    <span class="nav-icon">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </span>
+    <span>Logout</span>
+  </a>
+</div>
+  </aside>
+  <main class="main-content portal-main">
+<header class="portal-header">
+  <button class="portal-menu-btn" id="menuBtn" aria-label="Open navigation">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <div>
+    <h1>Attendance</h1>
+    <p>Student attendance summary</p>
+  </div>
+</header>
+<div class="panel">
+  <!-- Attendance Summary Cards -->
+  <div class="attendance-summary-cards">
+    <div class="attendance-card">
+      <div class="attendance-card-icon">
+        <i class="fa-solid fa-chart-line"></i>
+      </div>
+      <div class="attendance-card-info">
+        <span>Attendance</span>
+        <strong id="attendancePercentage">--%</strong>
+      </div>
+    </div>
+    <div class="attendance-card">
+      <div class="attendance-card-icon">
+        <i class="fa-solid fa-user-check"></i>
+      </div>
+      <div class="attendance-card-info">
+        <span>Present</span>
+        <strong id="presentCount">--</strong>
+      </div>
+    </div>
+    <div class="attendance-card">
+      <div class="attendance-card-icon">
+        <i class="fa-solid fa-user-xmark"></i>
+      </div>
+      <div class="attendance-card-info">
+        <span>Absent</span>
+        <strong id="absentCount">--</strong>
+      </div>
+    </div>
+    <div class="attendance-card">
+      <div class="attendance-card-icon">
+        <i class="fa-solid fa-calendar-days"></i>
+      </div>
+      <div class="attendance-card-info">
+        <span>Total Days</span>
+        <strong id="totalDays">--</strong>
+      </div>
+    </div>
+  </div>
+  <!-- Existing Attendance Content -->
+  <div id="attendanceBox">Loading...</div>
+</div>
+  </main>
+
+  <script src="api.js"></script>
+
+  <script src="shared-portal.js"></script>
+
+  <script src="parent-pages.js"></script>
+
+</body>
+</html>

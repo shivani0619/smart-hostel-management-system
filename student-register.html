@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartHostel AI | Student Registration</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="student-register.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==========================
+         BACKGROUND
+    =========================== -->
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+    <!-- ==========================
+         BACK TO LOGIN
+    =========================== -->
+
+    <a href="studentlogin.html" class="back-button">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back to Login
+
+    </a>
+
+
+    <!-- ==========================
+         REGISTER CONTAINER
+    =========================== -->
+
+    <div class="register-container">
+
+
+        <!-- ==========================
+             LEFT SIDE
+        =========================== -->
+
+        <div class="register-left">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <div class="logo-box">
+                    AI
+                </div>
+
+                <div class="logo-text">
+
+                    <h2>SmartHostel AI</h2>
+
+                    <span>AI Hostel Management</span>
+
+                </div>
+
+            </div>
+
+
+            <h1>
+                Create Your
+                <span>Student Account</span>
+            </h1>
+
+
+            <p>
+
+                Join SmartHostel AI and manage your
+                hostel activities, outings, food preferences,
+                complaints and notifications easily.
+
+            </p>
+
+
+            <!-- FEATURES -->
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Manage your outings
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    <span>
+                        Manage food preferences
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>
+                        Receive important notifications
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-message"></i>
+
+                    <span>
+                        Submit hostel complaints
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ==========================
+             RIGHT SIDE
+        =========================== -->
+
+        <div class="register-right">
+
+
+            <div class="register-card">
+
+
+                <!-- HEADING -->
+
+                <div class="card-heading">
+
+                    <div class="student-icon">
+
+                        <i class="fa-solid fa-user-graduate"></i>
+
+                    </div>
+
+                    <h2>Student Registration</h2>
+
+                    <p>
+                        Create your SmartHostel account
+                    </p>
+
+                </div>
+
+
+                <!-- ==========================
+                     FORM
+                =========================== -->
+
+                <form id="studentRegisterForm">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter 10-digit phone number"
+                                maxlength="10"
+                                pattern="[0-9]{10}"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DEPARTMENT -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Department
+                        </label>
+
+                        <div class="input-box select-box">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                            <select id="department" required>
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option value="BCA">
+                                    BCA
+                                </option>
+
+                                <option value="BBA">
+                                    BBA
+                                </option>
+
+                                <option value="BCom">
+                                    B.Com
+                                </option>
+
+                                <option value="BA">
+                                    BA
+                                </option>
+
+                                <option value="BSc">
+                                    B.Sc
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- YEAR -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Year of Study
+                        </label>
+
+                        <div class="input-box select-box">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <select id="year" required>
+
+                                <option value="">
+                                    Select Year
+                                </option>
+
+                                <option value="1">
+                                    1st Year
+                                </option>
+
+                                <option value="2">
+                                    2nd Year
+                                </option>
+
+                                <option value="3">
+                                    3rd Year
+                                </option>
+
+                                <option value="4">
+                                    4th Year
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Create a password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="togglePassword">
+
+                                <i
+                                    class="fa-solid fa-eye"
+                                    id="eyeIcon">
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Confirm Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="toggleConfirmPassword">
+
+                                <i
+                                    class="fa-solid fa-eye"
+                                    id="confirmEyeIcon">
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REGISTER BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="register-button">
+
+                        <span>
+                            CREATE ACCOUNT
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- LOGIN LINK -->
+
+                <div class="login-link">
+
+                    <p>
+
+                        Already have an account?
+
+                        <a href="student-login.html">
+                            Login
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="api.js"></script>
+    <script src="student-register.js"></script>
+
+</body>
+
+</html>

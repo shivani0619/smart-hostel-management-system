@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartHostel AI | Notifications</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="student-dashboard.css">
+<link rel="stylesheet" href="student-sidebar.css">
+
+<style>
+.notifications-page {
+    padding: 28px;
+}
+
+.page-header {
+    margin-bottom: 24px;
+}
+
+.page-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #5b5ce2;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: #182235;
+    font-size: 28px;
+}
+
+.page-header p {
+    color: #7c8494;
+    margin-top: 8px;
+}
+
+.notification-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.notification-card {
+    display: flex;
+    gap: 14px;
+    padding: 18px 4px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.notification-card:last-child {
+    border-bottom: none;
+}
+
+.notification-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 12px;
+    background: #eef0ff;
+    color: #5b5ce2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content h3 {
+    margin: 0 0 6px;
+    color: #182235;
+    font-size: 16px;
+}
+
+.notification-content p {
+    margin: 0 0 8px;
+    color: #687184;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.notification-time {
+    font-size: 12px;
+    color: #9aa1ad;
+}
+
+.empty-notifications {
+    text-align: center;
+    padding: 60px 20px;
+    color: #7c8494;
+}
+
+.empty-notifications i {
+    font-size: 42px;
+    margin-bottom: 14px;
+    color: #c4c8d2;
+}
+
+.empty-notifications h3 {
+    color: #182235;
+    margin: 0 0 8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="logo-section">
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+            <h2>SmartHostel</h2>
+            <span>AI HOSTEL</span>
+        </div>
+    </div>
+
+    <!-- MINI PROFILE -->
+
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar" id="profileAvatar">
+            ST
+            <span class="online-dot"></span>
+        </div>
+
+        <div class="student-mini-info">
+            <h4 id="studentMiniName">Student</h4>
+            <p id="studentMiniId">Student ID: —</p>
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">MAIN MENU</p>
+
+        <a href="student-dashboard.html" class="nav-item">
+            <span class="nav-icon">⌂</span>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="student-profile.html" class="nav-item">
+            <span class="nav-icon">◉</span>
+            <span>My Profile</span>
+        </a>
+
+        <a href="room-details.html" class="nav-item">
+            <span class="nav-icon">▣</span>
+            <span>My Room</span>
+        </a>
+
+        <a href="leave-request.html" class="nav-item">
+            <span class="nav-icon">▤</span>
+            <span>Leave Application</span>
+        </a>
+
+        <a href="emergency.html" class="nav-item emergency-link">
+            <span class="nav-icon">!</span>
+            <span>Emergency / SOS</span>
+        </a>
+
+        <a href="attendance.html" class="nav-item">
+            <span class="nav-icon">◷</span>
+            <span>Attendance</span>
+        </a>
+
+        <a href="student-notifications.html" class="nav-item active">
+            <span class="nav-icon">
+                <i class="fa-solid fa-bell"></i>
+            </span>
+            <span>Notifications</span>
+        </a>
+
+        <a href="student-announcements.html" class="nav-item">
+            <span class="nav-icon">
+                <i class="fa-solid fa-bullhorn"></i>
+            </span>
+            <span>Announcements</span>
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+            Logout
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+        <div class="breadcrumb">
+            <span>Notifications</span> / Student Portal
+        </div>
+
+    </header>
+
+
+    <section class="dashboard-content notifications-page">
+
+        <div class="page-header">
+
+            <p class="page-label">
+                STUDENT NOTIFICATIONS
+            </p>
+
+            <h1>
+                Notifications
+            </h1>
+
+            <p>
+                Stay updated with important hostel notifications.
+            </p>
+
+        </div>
+
+
+        <div class="notification-box"
+             id="studentNotificationsBox">
+
+            <div class="empty-notifications">
+
+                <i class="fa-solid fa-spinner fa-spin"></i>
+
+                <h3>Loading notifications...</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="api.js"></script>
+<script src="student-notifications.js"></script>
+
+</body>
+</html>

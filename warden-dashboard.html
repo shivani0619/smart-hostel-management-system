@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartHostel AI | Warden Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="emergency.css">
+<link rel="stylesheet" href="portal-dashboard.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
+
+<aside class="sidebar" id="sidebar">
+
+  <div class="logo-section">
+
+
+<div class="logo-icon">
+  <span>AI</span>
+</div>
+
+<div class="logo-text">
+  <h2>SmartHostel</h2>
+  <span>WARDEN</span>
+</div>
+
+
+  </div>
+
+  <div class="student-mini-profile">
+
+
+<div class="profile-avatar">
+  W
+</div>
+
+<div class="student-mini-info">
+  <h4 id="wardenName">Warden</h4>
+  <p>Administrator</p>
+</div>
+
+
+  </div>
+
+  <!-- =======================================================
+       SIDEBAR NAVIGATION
+  ======================================================== -->
+
+  <nav class="sidebar-nav">
+
+
+<p class="nav-title">
+  MAIN MENU
+</p>
+
+
+<a href="warden-dashboard.html"
+   class="nav-item active">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-chart-line"></i>
+  </span>
+
+  <span>Dashboard</span>
+
+</a>
+
+
+<a href="warden-students.html"
+   class="nav-item">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-users"></i>
+  </span>
+
+  <span>Students</span>
+
+</a>
+
+
+<a href="warden-rooms.html"
+   class="nav-item">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-bed"></i>
+  </span>
+
+  <span>Rooms</span>
+
+</a>
+
+
+<a href="warden-attendance.html"
+   class="nav-item">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-clock"></i>
+  </span>
+
+  <span>Attendance</span>
+
+</a>
+
+
+<a href="warden-leaves.html"
+   class="nav-item">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-calendar-check"></i>
+  </span>
+
+  <span>Leave Requests</span>
+
+</a>
+
+
+<a href="warden-visitors.html"
+   class="nav-item">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-id-card"></i>
+  </span>
+
+  <span>Visitor Management</span>
+
+</a>
+
+
+<a href="warden-fees.html"
+   class="nav-item">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-money-bill-wave"></i>
+  </span>
+
+  <span>Fees</span>
+
+</a>
+
+
+<a href="warden-emergency.html"
+   class="nav-item">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-triangle-exclamation"></i>
+  </span>
+
+  <span>Emergency Alerts</span>
+
+</a>
+
+
+<a href="warden-notifications.html"
+   class="nav-item">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-bell"></i>
+  </span>
+
+  <span>Notifications</span>
+
+</a>
+
+
+<a href="warden-announcements.html"
+   class="nav-item">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-bullhorn"></i>
+  </span>
+
+  <span>Announcements</span>
+
+</a>
+
+
+  </nav>
+
+  <!-- =======================================================
+       LOGOUT
+  ======================================================== -->
+
+  <div class="sidebar-bottom">
+
+<a href="#"
+   id="logoutBtn"
+   class="logout-btn">
+
+  <span class="nav-icon">
+    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+  </span>
+
+  <span>Logout</span>
+
+</a>
+
+
+  </div>
+
+</aside>
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main class="main-content portal-main">
+
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
+  <header class="portal-header">
+
+<button
+  class="portal-menu-btn"
+  id="menuBtn"
+  aria-label="Open navigation">
+
+  <i class="fa-solid fa-bars"></i>
+
+</button>
+
+
+<div>
+
+  <h1>
+    Warden Dashboard
+  </h1>
+
+  <p>
+    Manage hostel operations
+  </p>
+
+</div>
+
+
+  </header>
+
+  <!-- =======================================================
+       STATISTICS
+  ======================================================== -->
+
+  <div class="stat-grid"
+       id="statsGrid">
+
+
+<div class="stat-card">
+
+  <div class="stat-card-icon blue">
+    <i class="fa-solid fa-users"></i>
+  </div>
+
+  <h3 id="sStudents">—</h3>
+
+  <p>
+    Total Students
+  </p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+  <div class="stat-card-icon purple">
+    <i class="fa-solid fa-door-open"></i>
+  </div>
+
+  <h3 id="sRooms">—</h3>
+
+  <p>
+    Total Rooms
+  </p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+  <div class="stat-card-icon green">
+    <i class="fa-solid fa-bed"></i>
+  </div>
+
+  <h3 id="sOccupied">—</h3>
+
+  <p>
+    Occupied Rooms
+  </p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+  <div class="stat-card-icon orange">
+    <i class="fa-solid fa-bed"></i>
+  </div>
+
+  <h3 id="sAvailable">—</h3>
+
+  <p>
+    Available Rooms
+  </p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+  <div class="stat-card-icon orange">
+    <i class="fa-solid fa-calendar-check"></i>
+  </div>
+
+  <h3 id="sLeaves">—</h3>
+
+  <p>
+    Pending Leaves
+  </p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+  <div class="stat-card-icon blue">
+    <i class="fa-solid fa-id-card"></i>
+  </div>
+
+  <h3 id="sVisitors">—</h3>
+
+  <p>
+    Today's Visitors
+  </p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+  <div class="stat-card-icon purple">
+    <i class="fa-solid fa-message"></i>
+  </div>
+
+  <h3 id="sComplaints">—</h3>
+
+  <p>
+    Pending Complaints
+  </p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+  <div class="stat-card-icon red">
+    <i class="fa-solid fa-triangle-exclamation"></i>
+  </div>
+
+  <h3 id="sEmergencies">—</h3>
+
+  <p>
+    Active Emergency Alerts
+  </p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+  <div class="stat-card-icon green">
+    <i class="fa-solid fa-clock"></i>
+  </div>
+
+  <h3 id="sPresent">—</h3>
+
+  <p>
+    Present Today
+  </p>
+
+</div>
+
+  </div>
+
+  <!-- =======================================================
+       MAINTENANCE REQUESTS
+  ======================================================== -->
+
+  <div class="panel">
+
+
+<h2>
+  Maintenance Requests
+</h2>
+
+<div id="maintenanceRequests">
+  Loading maintenance requests...
+</div>
+
+
+  </div>
+
+  <!-- =======================================================
+       ROOM CHANGE REQUESTS
+  ======================================================== -->
+
+  <div class="panel">
+
+
+<h2>
+  Room Change Requests
+</h2>
+
+<div id="roomChangeRequests">
+  Loading room-change requests...
+</div>
+
+
+  </div>
+
+</main>
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="api.js"></script>
+
+<script src="shared-portal.js"></script>
+
+<script src="warden-pages.js"></script>
+
+</body>
+</html>

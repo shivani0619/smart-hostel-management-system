@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SmartHostel AI | Parent Notifications</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="emergency.css">
+  <link rel="stylesheet" href="portal-dashboard.css">
+
+  <style>
+
+    /* ==========================================
+       PARENT NOTIFICATIONS
+       ========================================== */
+
+    .notification-section {
+      background: #ffffff;
+      border: 1px solid #eeeeee;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .notification-section-header {
+      margin-bottom: 20px;
+    }
+
+    .notification-section-header h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #182235;
+      font-weight: 600;
+    }
+
+    .notification-section-header p {
+      margin: 5px 0 0;
+      color: #7c8494;
+      font-size: 13px;
+    }
+
+
+    /* ==========================================
+       NOTIFICATION CARDS
+       ========================================== */
+
+    .notification-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .notification-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 18px;
+      border: 1px solid #eeeeee;
+      border-radius: 14px;
+      background: #ffffff;
+      transition: transform 0.2s ease,
+                  box-shadow 0.2s ease;
+    }
+
+    .notification-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(24, 34, 53, 0.07);
+    }
+
+
+    /* ==========================================
+       ICON
+       ========================================== */
+
+    .notification-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+
+    .notification-icon.leave-approved {
+      background: #eaf8ef;
+      color: #23824a;
+    }
+
+    .notification-icon.leave-request {
+      background: #fff4df;
+      color: #b76b00;
+    }
+
+    .notification-icon.visitor {
+      background: #f0efff;
+      color: #5b5ce2;
+    }
+
+    .notification-icon.emergency {
+      background: #fff0f0;
+      color: #d64545;
+    }
+
+    .notification-icon.default {
+      background: #f1f3f5;
+      color: #596273;
+    }
+
+
+    /* ==========================================
+       CONTENT
+       ========================================== */
+
+    .notification-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .notification-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .notification-title {
+      margin: 0;
+      color: #182235;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .notification-time {
+      color: #9aa1ad;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .notification-message {
+      margin: 7px 0 0;
+      color: #596273;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+
+    /* ==========================================
+       EMERGENCY NOTIFICATION
+       ========================================== */
+
+    .notification-card.emergency-alert {
+      border-color: #f2cccc;
+      background: #fffafa;
+    }
+
+    .notification-card.emergency-alert .notification-title {
+      color: #c03939;
+    }
+
+
+    /* ==========================================
+       EMPTY STATE
+       ========================================== */
+
+    .notification-empty {
+      text-align: center;
+      padding: 45px 20px;
+      color: #7c8494;
+      font-size: 14px;
+    }
+
+    .notification-empty i {
+      display: block;
+      font-size: 32px;
+      margin-bottom: 12px;
+      color: #b8bec8;
+    }
+
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+
+    @media (max-width: 650px) {
+
+      .notification-section {
+        padding: 18px;
+      }
+
+      .notification-card {
+        padding: 15px;
+      }
+
+      .notification-header {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .notification-time {
+        white-space: normal;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo-section">
+
+      <div class="logo-icon">
+        <span>AI</span>
+      </div>
+
+      <div class="logo-text">
+        <h2>SmartHostel</h2>
+        <span>PARENT</span>
+      </div>
+
+    </div>
+
+
+    <div class="student-mini-profile">
+
+      <div class="profile-avatar">
+        P
+      </div>
+
+      <div class="student-mini-info">
+
+        <h4 id="parentName">
+          Parent
+        </h4>
+
+        <p>
+          Guardian
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+      <p class="nav-title">
+        PARENT PORTAL
+      </p>
+      <a href="parent-room.html" class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-bed"></i>
+        </span>
+
+        <span>
+          Room
+        </span>
+
+      </a>
+
+
+      <a href="parent-attendance.html" class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-clock"></i>
+        </span>
+
+        <span>
+          Attendance
+        </span>
+
+      </a>
+
+
+      <a href="parent-leave.html" class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </span>
+
+        <span>
+          Leave Status
+        </span>
+
+      </a>
+
+
+      <a href="parent-visitors.html" class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-id-card"></i>
+        </span>
+
+        <span>
+          Visitors
+        </span>
+
+      </a>
+
+
+      <a href="parent-emergency.html" class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </span>
+
+        <span>
+          Emergency
+        </span>
+
+      </a>
+
+
+      <a href="parent-fees.html" class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-receipt"></i>
+        </span>
+
+        <span>
+          Fees
+        </span>
+
+      </a>
+
+
+      <a href="parent-notifications.html" class="nav-item active">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-bell"></i>
+        </span>
+
+        <span>
+          Notifications
+        </span>
+
+      </a>
+
+
+      <a href="parent-announcements.html" class="nav-item">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-bullhorn"></i>
+        </span>
+
+        <span>
+          Announcements
+        </span>
+
+      </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+      <a href="#" id="logoutBtn" class="logout-btn">
+
+        <span class="nav-icon">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </span>
+
+        <span>
+          Logout
+        </span>
+
+      </a>
+
+    </div>
+
+  </aside>
+
+
+  <main class="main-content portal-main">
+
+    <header class="portal-header">
+
+      <button
+        class="portal-menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation"
+      >
+
+        <i class="fa-solid fa-bars"></i>
+
+      </button>
+
+
+      <div>
+
+        <h1>
+          Notifications
+        </h1>
+
+        <p>
+          Recent updates and alerts
+        </p>
+
+      </div>
+
+    </header>
+
+
+    <div class="notification-section">
+
+      <div class="notification-section-header">
+
+        <h2>
+          Recent Notifications
+        </h2>
+
+        <p>
+          Updates and alerts related to your student
+        </p>
+
+      </div>
+
+
+      <div id="notificationsBox">
+
+        <div class="notification-empty">
+
+          <i class="fa-solid fa-spinner fa-spin"></i>
+
+          Loading notifications...
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <script src="api.js"></script>
+  <script src="shared-portal.js"></script>
+  <script src="parent-pages.js"></script>
+
+</body>
+</html>

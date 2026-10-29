@@ -1,0 +1,694 @@
+:root {
+  --portal-sidebar: #182235;
+  --portal-sidebar-light: #202d45;
+  --portal-sidebar-text: #aeb9ca;
+  --portal-primary: #5b5ce2;
+  --portal-primary-soft: #efefff;
+  --portal-bg: #f8f6f0;
+  --portal-card: #ffffff;
+  --portal-ink: #1c2535;
+  --portal-muted: #7c8494;
+  --portal-border: #ebe8df;
+  --portal-shadow: 0 8px 30px rgba(29, 36, 55, .06);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--portal-bg);
+  color: var(--portal-ink);
+  font-family: 'Inter', sans-serif;
+}
+
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.portal-shell-sidebar,
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--portal-sidebar);
+  color: #fff;
+  box-shadow: 8px 0 30px rgba(15, 22, 38, .08);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  flex: 0 0 85px;
+  gap: 12px;
+  padding: 0 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+
+.logo-icon,
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  background: linear-gradient(135deg, #6667e8, #8c68ff);
+}
+
+.logo-icon { width: 42px; height: 42px; border-radius: 13px; box-shadow: 0 8px 20px rgba(91, 92, 226, .25); }
+.logo-icon span { font-size: 13px; font-weight: 700; }
+.logo-text h2 { margin: 0; font-family: 'Poppins', sans-serif; font-size: 18px; }
+.logo-text span { display: block; margin-top: 2px; color: #8995aa; font-size: 8px; letter-spacing: 2px; }
+
+.student-mini-profile {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 11px;
+  margin: 20px 16px;
+  padding: 13px;
+  border: 1px solid rgba(255, 255, 255, .06);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .055);
+}
+
+.profile-avatar { width: 40px; height: 40px; border-radius: 12px; font-size: 12px; font-weight: 700; }
+.student-mini-info h4 { margin: 0; color: #f4f6fb; font-size: 12px; }
+.student-mini-info p { margin: 3px 0 0; color: #8995aa; font-size: 9px; }
+
+.sidebar-nav {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0 13px 12px;
+  overflow-y: auto;
+}
+
+.nav-title { margin: 0; padding: 7px 12px 9px; color: #65738a; font-size: 8px; font-weight: 600; letter-spacing: 1.5px; }
+.nav-item, .logout-btn { text-decoration: none; }
+.nav-item {
+  display: flex;
+  align-items: center;
+  min-height: 43px;
+  gap: 12px;
+  margin: 3px 0;
+  padding: 0 12px;
+  border-radius: 11px;
+  color: var(--portal-sidebar-text);
+  font-size: 11px;
+  font-weight: 500;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.nav-item:hover { color: #fff; background: rgba(255, 255, 255, .065); transform: translateX(2px); }
+.nav-item.active { color: #fff; background: linear-gradient(90deg, rgba(105, 105, 232, .28), rgba(105, 105, 232, .1)); box-shadow: inset 3px 0 0 var(--portal-primary); }
+.nav-icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; color: #8996aa; font-size: 15px; }
+.nav-item.active .nav-icon { color: #a6a8ff; }
+
+.sidebar-bottom { flex: 0 0 auto; padding: 14px 15px 18px; border-top: 1px solid rgba(255, 255, 255, .07); }
+.logout-btn { display: flex; align-items: center; min-height: 39px; gap: 11px; padding: 0 12px; border-radius: 10px; color: #8793a8; font-size: 11px; }
+.logout-btn:hover { color: #ff9b9b; background: rgba(228, 87, 87, .08); }
+
+.main-content { min-height: 100vh; margin-left: 260px; }
+.portal-main { padding: 32px 36px 48px; }
+.portal-header { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
+.portal-header h1 { margin: 0; font-size: 28px; line-height: 1.2; }
+.portal-header p { margin: 8px 0 0; color: var(--portal-muted); font-size: 13px; }
+
+.stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0 0 22px; }
+.stat-card, .panel { border: 1px solid var(--portal-border); border-radius: 15px; background: var(--portal-card); box-shadow: var(--portal-shadow); }
+.stat-card { min-height: 112px; padding: 16px 20px 20px; transition: transform .2s ease, box-shadow .2s ease; }
+.stat-card:hover { transform: translateY(-3px); box-shadow: 0 14px 35px rgba(29, 36, 55, .09); }
+.stat-card-icon { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin-bottom: 12px; border-radius: 10px; font-size: 15px; }
+.stat-card-icon.blue { background: #eaf2ff; color: #4387e8; }
+.stat-card-icon.purple { background: #efedff; color: var(--portal-primary); }
+.stat-card-icon.green { background: #e9f8f1; color: #28a66f; }
+.stat-card-icon.orange { background: #fff3df; color: #e99535; }
+.stat-card-icon.red { background: #fff0f0; color: #e45757; }
+.stat-card h3 { margin: 0; color: var(--portal-primary); font-size: 27px; }
+.stat-card p { margin: 6px 0 0; color: var(--portal-muted); font-size: 12px; }
+.panel { margin-top: 18px; padding: 22px; overflow: hidden; }
+.panel h2 { margin: 0 0 16px; font-size: 17px; }
+.panel p, #wardenRecentActivity, #wardenNotifications, #parentNotifs, #parentAnnouncements, #parentLeaves, #parentAttendance, #parentFees, #parentVisitors { color: var(--portal-muted); line-height: 1.7; }
+
+table { width: 100%; min-width: 620px; border-collapse: collapse; color: var(--portal-ink); font-size: 13px; }
+th, td { padding: 12px 10px; border-bottom: 1px solid var(--portal-border); text-align: left; }
+th { background: #fbfaf7; color: var(--portal-muted); font-size: 11px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
+tbody tr:hover { background: #fbfaf7; }
+.panel > div[style*="overflow-x"] { overflow-x: auto; }
+
+.btn, .tab, .form-row input, .form-row select, .form-row textarea { border: 1px solid var(--portal-border); border-radius: 9px; }
+.btn, .tab { min-height: 34px; padding: 8px 13px; font-weight: 600; }
+.btn-approve, .tab.active { border-color: var(--portal-primary); background: var(--portal-primary); color: #fff; }
+.btn-reject { background: #fff0f0; color: #c44949; }
+.form-row input, .form-row select, .form-row textarea { padding: 10px 12px; background: #fff; color: var(--portal-ink); }
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: 2px solid rgba(91, 92, 226, .18); border-color: var(--portal-primary); }
+
+.portal-menu-btn { display: none; width: 40px; height: 40px; border: 1px solid var(--portal-border); border-radius: 11px; background: #fff; color: var(--portal-ink); }
+.portal-backdrop { display: none; }
+
+@media (max-width: 1100px) { .stat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 820px) {
+  .portal-menu-btn { display: inline-flex; align-items: center; justify-content: center; }
+  .sidebar { transform: translateX(-100%); transition: transform .25s ease; }
+  .sidebar.is-open { transform: translateX(0); }
+  .portal-backdrop.is-visible { display: block; position: fixed; inset: 0; z-index: 900; background: rgba(24, 34, 53, .38); }
+  .main-content { margin-left: 0; }
+  .portal-main { padding: 22px 20px 36px; }
+  .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .portal-main { padding: 16px 12px 28px; }
+  .portal-header { align-items: flex-start; }
+  .portal-header h1 { font-size: 23px; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .panel { padding: 16px; }
+}
+/* ==========================================
+   PARENT ROOM PAGE
+========================================== */
+
+#roomDetailsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* ==========================================
+   COMMON ROOM SECTION CARD
+========================================== */
+
+.room-section-card {
+  background: #ffffff;
+  border: 1px solid #ececf3;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 5px 20px rgba(24, 34, 53, 0.04);
+}
+
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.room-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.room-card-header h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #182235;
+}
+
+.room-card-header p {
+  margin: 0;
+  font-size: 12px;
+  color: #7c8494;
+}
+
+
+/* ==========================================
+   ICONS
+========================================== */
+
+.room-card-icon,
+.room-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.room-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  font-size: 17px;
+}
+
+.room-card-icon.purple,
+.room-stat-icon.purple {
+  background: #eeedff;
+  color: #5b5ce2;
+}
+
+.room-card-icon.blue,
+.room-stat-icon.blue {
+  background: #eaf4ff;
+  color: #3788d8;
+}
+
+.room-card-icon.green,
+.room-stat-icon.green {
+  background: #e9f8f0;
+  color: #2ca66f;
+}
+
+.room-card-icon.orange,
+.room-stat-icon.orange {
+  background: #fff2e5;
+  color: #e89442;
+}
+
+
+/* ==========================================
+   STUDENT INFORMATION
+========================================== */
+
+.student-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.info-item {
+  background: #f8f8fc;
+  border: 1px solid #eeeeF4;
+  border-radius: 13px;
+  padding: 16px;
+}
+
+.info-label {
+  display: block;
+  font-size: 11px;
+  color: #8a91a0;
+  margin-bottom: 7px;
+  font-weight: 500;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 14px;
+  color: #182235;
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   ROOM SUMMARY
+========================================== */
+
+.room-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.room-stat-card {
+  background: #ffffff;
+  border: 1px solid #ececf3;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 5px 20px rgba(24, 34, 53, 0.04);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.room-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(24, 34, 53, 0.07);
+}
+
+.room-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  font-size: 18px;
+}
+
+.room-stat-content {
+  min-width: 0;
+}
+
+.room-stat-content > span {
+  display: block;
+  font-size: 11px;
+  color: #8a91a0;
+  margin-bottom: 4px;
+}
+
+.room-stat-content strong {
+  display: block;
+  color: #182235;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.room-stat-content small {
+  display: block;
+  color: #9aa0ad;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+
+/* ==========================================
+   STATUS BADGE
+========================================== */
+
+.room-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.room-status-badge.available {
+  background: #e9f8f0;
+  color: #21885b;
+}
+
+.room-status-badge.occupied {
+  background: #fff2e5;
+  color: #d27a27;
+}
+
+.room-status-badge.maintenance {
+  background: #ffecec;
+  color: #d84d4d;
+}
+
+.room-status-badge.reserved {
+  background: #eeedff;
+  color: #5b5ce2;
+}
+
+
+/* ==========================================
+   OCCUPANCY
+========================================== */
+
+.occupancy-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.occupancy-stat {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  border-radius: 14px;
+}
+
+.occupancy-stat.occupied {
+  background: #f5f3ff;
+}
+
+.occupancy-stat.available {
+  background: #f0faf5;
+}
+
+.occupancy-stat.total {
+  background: #f3f7fc;
+}
+
+.occupancy-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.occupied .occupancy-icon {
+  background: #e7e3ff;
+  color: #5b5ce2;
+}
+
+.available .occupancy-icon {
+  background: #dff4e9;
+  color: #2ca66f;
+}
+
+.total .occupancy-icon {
+  background: #e4edf8;
+  color: #4c79a8;
+}
+
+.occupancy-stat span {
+  display: block;
+  font-size: 10px;
+  color: #7c8494;
+  margin-bottom: 3px;
+}
+
+.occupancy-stat strong {
+  display: block;
+  font-size: 18px;
+  color: #182235;
+}
+
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.occupancy-progress-wrapper {
+  margin-top: 5px;
+}
+
+.occupancy-progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.occupancy-progress-label span {
+  font-size: 12px;
+  color: #697182;
+}
+
+.occupancy-progress-label strong {
+  font-size: 12px;
+  color: #5b5ce2;
+}
+
+.occupancy-progress {
+  width: 100%;
+  height: 8px;
+  background: #eeeeF5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.occupancy-progress-fill {
+  height: 100%;
+  background: #5b5ce2;
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+.occupancy-helper {
+  margin: 8px 0 0;
+  font-size: 10px;
+  color: #969dab;
+}
+
+
+/* ==========================================
+   ROOMMATES
+========================================== */
+
+.roommates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roommate-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #f8f8fc;
+  border: 1px solid #eeeeF4;
+  border-radius: 13px;
+}
+
+.roommate-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #eeedff;
+  color: #5b5ce2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.roommate-item strong {
+  display: block;
+  font-size: 13px;
+  color: #182235;
+}
+
+.roommate-item span {
+  display: block;
+  font-size: 10px;
+  color: #8a91a0;
+  margin-top: 2px;
+}
+
+
+/* ==========================================
+   NO ROOMMATES
+========================================== */
+
+.no-roommates {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  background: #f8f8fc;
+  border: 1px dashed #dfe1e9;
+  border-radius: 13px;
+}
+
+.no-roommates-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #eeeeF5;
+  color: #858c9b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-roommates strong {
+  display: block;
+  font-size: 13px;
+  color: #182235;
+}
+
+.no-roommates p {
+  margin: 3px 0 0;
+  font-size: 11px;
+  color: #8a91a0;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.room-loading {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #7c8494;
+  font-size: 13px;
+}
+
+.room-loading i {
+  color: #5b5ce2;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.room-empty-state {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.room-empty-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: #eeedff;
+  color: #5b5ce2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.room-empty-state h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  color: #182235;
+}
+
+.room-empty-state p {
+  margin: 0;
+  font-size: 12px;
+  color: #8a91a0;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .student-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .room-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .occupancy-stats {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .room-section-card {
+    padding: 18px;
+    border-radius: 15px;
+  }
+
+  .student-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .room-stat-card {
+    padding: 16px;
+  }
+
+  .occupancy-stat {
+    padding: 13px;
+  }
+
+}

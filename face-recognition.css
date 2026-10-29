@@ -1,0 +1,1322 @@
+/* Requested Student navigation/header removals. */
+.sidebar a[href="visitors.html"],
+.sidebar a[href="fees.html"],
+.sidebar a[href="settings.html"],
+.topbar #notificationBtn {
+    display: none !important;
+}
+
+/* =====================================================
+   SMART HOSTEL AI
+   FACE RECOGNITION PAGE
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #f7f7fb;
+    color: #303548;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: -1;
+    opacity: .35;
+}
+
+.glow-one {
+    width: 300px;
+    height: 300px;
+    background: #e6e4ff;
+    top: -130px;
+    right: 120px;
+}
+
+.glow-two {
+    width: 280px;
+    height: 280px;
+    background: #dff7f2;
+    bottom: -130px;
+    left: 300px;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.main-content {
+    margin-left: 235px;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   TOPBAR
+===================================================== */
+
+.topbar {
+    height: 82px;
+    background: rgba(255, 255, 255, .88);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #ebebf1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.page-title .small-heading {
+    display: block;
+    color: #969aaa;
+    font-size: 5.5px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    margin-bottom: 2px;
+}
+
+.page-title h1 {
+    font-size: 17px;
+    font-weight: 650;
+    color: #303548;
+}
+
+.page-title p {
+    font-size: 6.5px;
+    color: #9a9eac;
+    margin-top: 2px;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.icon-button {
+    width: 31px;
+    height: 31px;
+    border-radius: 9px;
+    border: 1px solid #ebebf1;
+    background: white;
+    color: #74798b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .25s ease;
+}
+
+.icon-button:hover {
+    color: #6364d5;
+    border-color: #dcdcf3;
+    transform: translateY(-2px);
+}
+
+.icon-button i {
+    font-size: 10px;
+}
+
+.top-notification {
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #6869d9;
+    color: white;
+    font-size: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.top-profile {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.top-avatar {
+    width: 31px;
+    height: 31px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ececff;
+    color: #6566d6;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.top-profile-info strong {
+    display: block;
+    font-size: 7px;
+    color: #444a5c;
+}
+
+.top-profile-info span {
+    display: block;
+    font-size: 5.5px;
+    color: #a0a4b1;
+    margin-top: 1px;
+}
+
+.profile-arrow {
+    font-size: 6px;
+    color: #aaaeba;
+    margin-left: 3px;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.face-page {
+    padding: 25px 32px 35px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.face-hero {
+    min-height: 155px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            120deg,
+            #5558c8,
+            #6f70d5 50%,
+            #8980dc
+        );
+    box-shadow:
+        0 18px 45px rgba(87, 89, 194, .17);
+    margin-bottom: 28px;
+}
+
+.face-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(255,255,255,.18),
+            transparent 28%
+        );
+}
+
+.face-hero-content {
+    min-height: 155px;
+    padding: 28px 30px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    backdrop-filter: blur(8px);
+}
+
+.face-hero-content > div:nth-child(2) {
+    flex: 1;
+}
+
+.face-hero-content > div:nth-child(2) > span {
+    color: rgba(255,255,255,.7);
+    font-size: 6px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.face-hero h2 {
+    color: white;
+    font-size: 22px;
+    font-weight: 650;
+    margin-top: 4px;
+}
+
+.face-hero p {
+    color: rgba(255,255,255,.72);
+    font-size: 7px;
+    margin-top: 5px;
+    line-height: 1.6;
+}
+
+.ai-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border-radius: 9px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.18);
+    color: white;
+    font-size: 6px;
+    backdrop-filter: blur(8px);
+}
+
+.live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #72e0a4;
+    box-shadow:
+        0 0 0 4px rgba(114,224,164,.12);
+}
+
+.hero-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,.06);
+}
+
+.circle-one {
+    width: 210px;
+    height: 210px;
+    right: 100px;
+    top: -100px;
+}
+
+.circle-two {
+    width: 130px;
+    height: 130px;
+    right: -25px;
+    bottom: -70px;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.section-heading {
+    margin-bottom: 16px;
+}
+
+.section-heading > span {
+    color: #9da1b0;
+    font-size: 5.5px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    font-size: 15px;
+    color: #3a4052;
+    margin-top: 3px;
+}
+
+.section-heading p {
+    font-size: 6.5px;
+    color: #9ca0ae;
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   VERIFICATION GRID
+===================================================== */
+
+.verification-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(280px, .75fr);
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   CAMERA CARD
+===================================================== */
+
+.camera-card,
+.verification-card {
+    background: white;
+    border: 1px solid #ebebf1;
+    border-radius: 17px;
+    box-shadow:
+        0 8px 25px rgba(40,45,75,.035);
+}
+
+.camera-card {
+    padding: 20px;
+}
+
+.camera-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.camera-header h3 {
+    font-size: 10px;
+    color: #404657;
+}
+
+.camera-header h3 i {
+    color: #6869d8;
+    margin-right: 5px;
+}
+
+.camera-header p {
+    font-size: 5.5px;
+    color: #a1a5b2;
+    margin-top: 2px;
+}
+
+.secure-badge {
+    padding: 6px 8px;
+    border-radius: 7px;
+    background: #eaf8f1;
+    color: #45a576;
+    font-size: 5px;
+    font-weight: 600;
+}
+
+.secure-badge i {
+    margin-right: 3px;
+}
+
+
+/* =====================================================
+   CAMERA CONTAINER
+===================================================== */
+
+.camera-container {
+    height: 330px;
+    border-radius: 14px;
+    background:
+        radial-gradient(
+            circle at center,
+            #252b3b 0%,
+            #171c29 65%,
+            #111522 100%
+        );
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #303748;
+}
+
+.camera-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 49.8%,
+            rgba(255,255,255,.025) 50%,
+            transparent 50.2%
+        ),
+        linear-gradient(
+            0deg,
+            transparent 49.8%,
+            rgba(255,255,255,.025) 50%,
+            transparent 50.2%
+        );
+    background-size: 50px 50px;
+}
+
+
+/* CAMERA PLACEHOLDER */
+
+.camera-placeholder {
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    transition: .3s ease;
+}
+
+.camera-user-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: auto;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9da5ba;
+    font-size: 28px;
+}
+
+.camera-placeholder h4 {
+    color: #e9ebf2;
+    font-size: 10px;
+    margin-top: 12px;
+}
+
+.camera-placeholder p {
+    color: #7f879b;
+    font-size: 6px;
+    max-width: 210px;
+    line-height: 1.6;
+    margin: 5px auto 0;
+}
+
+
+/* =====================================================
+   FACE FRAME
+===================================================== */
+
+.face-frame {
+    width: 190px;
+    height: 245px;
+    border-radius: 47% 47% 43% 43%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .3s ease;
+    pointer-events: none;
+}
+
+.face-frame.active {
+    opacity: 1;
+}
+
+.corner {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-color: #77dba1;
+    border-style: solid;
+}
+
+.corner.top-left {
+    top: 0;
+    left: 0;
+    border-width: 3px 0 0 3px;
+    border-radius: 8px 0 0 0;
+}
+
+.corner.top-right {
+    top: 0;
+    right: 0;
+    border-width: 3px 3px 0 0;
+    border-radius: 0 8px 0 0;
+}
+
+.corner.bottom-left {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 3px 3px;
+    border-radius: 0 0 0 8px;
+}
+
+.corner.bottom-right {
+    bottom: 0;
+    right: 0;
+    border-width: 0 3px 3px 0;
+    border-radius: 0 0 8px 0;
+}
+
+.scan-line {
+    width: 100%;
+    height: 2px;
+    background: #72d99f;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    box-shadow:
+        0 0 10px #72d99f;
+    opacity: 0;
+}
+
+.face-frame.scanning .scan-line {
+    opacity: 1;
+    animation: scanFace 2s linear infinite;
+}
+
+@keyframes scanFace {
+
+    0% {
+        top: 8%;
+    }
+
+    50% {
+        top: 90%;
+    }
+
+    100% {
+        top: 8%;
+    }
+
+}
+
+
+/* =====================================================
+   SCAN STATUS
+===================================================== */
+
+.scan-status {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 10px;
+    border-radius: 7px;
+    background: rgba(0,0,0,.4);
+    color: #aab2c5;
+    font-size: 5.5px;
+    z-index: 4;
+    white-space: nowrap;
+}
+
+.scan-status.scanning {
+    color: #7be1a6;
+}
+
+.scan-status.success {
+    color: #7be1a6;
+    background: rgba(42,110,74,.35);
+}
+
+.scan-status.error {
+    color: #ff9b9b;
+    background: rgba(130,50,50,.3);
+}
+
+
+/* =====================================================
+   CAMERA CONTROLS
+===================================================== */
+
+.camera-controls {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.start-scan-btn,
+.stop-scan-btn {
+    height: 36px;
+    border-radius: 9px;
+    font-size: 6.5px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.start-scan-btn {
+    flex: 1;
+    border: 0;
+    color: white;
+    background:
+        linear-gradient(
+            135deg,
+            #6667d6,
+            #8980dc
+        );
+    box-shadow:
+        0 8px 20px rgba(102,103,214,.18);
+}
+
+.start-scan-btn:hover {
+    transform: translateY(-2px);
+}
+
+.stop-scan-btn {
+    width: 75px;
+    border: 1px solid #eeeeF2;
+    color: #9296a4;
+    background: #fafafd;
+}
+
+.stop-scan-btn:hover {
+    color: #d66a74;
+    background: #fff3f4;
+}
+
+
+/* =====================================================
+   VERIFICATION CARD
+===================================================== */
+
+.verification-card {
+    padding: 20px;
+}
+
+.verification-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verification-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: #eeeeff;
+    color: #6768d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.verification-title h3 {
+    font-size: 10px;
+    color: #404657;
+}
+
+.verification-title p {
+    font-size: 5.5px;
+    color: #a1a5b2;
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.verification-status {
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 11px;
+    background: #f8f8fc;
+    border: 1px solid #eeeeF3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: .3s ease;
+}
+
+.status-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #f0f0f5;
+    color: #999eac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.verification-status span {
+    display: block;
+    font-size: 5px;
+    letter-spacing: .8px;
+    color: #a3a7b3;
+}
+
+.verification-status h4 {
+    font-size: 8px;
+    color: #777d8d;
+    margin-top: 2px;
+}
+
+.verification-status.verified {
+    background: #eaf8f1;
+    border-color: #d3efdf;
+}
+
+.verification-status.verified .status-icon {
+    background: #d8f2e4;
+    color: #43a274;
+}
+
+.verification-status.verified h4 {
+    color: #43a274;
+}
+
+
+/* =====================================================
+   IDENTITY DETAILS
+===================================================== */
+
+.identity-details {
+    margin-top: 15px;
+}
+
+.identity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f4;
+    gap: 10px;
+}
+
+.identity-row:last-child {
+    border-bottom: 0;
+}
+
+.identity-row span {
+    font-size: 5.8px;
+    color: #9da1af;
+}
+
+.identity-row strong {
+    font-size: 6.5px;
+    color: #555b6c;
+    text-align: right;
+}
+
+
+/* =====================================================
+   SECURITY NOTE
+===================================================== */
+
+.security-note {
+    display: flex;
+    gap: 9px;
+    margin-top: 14px;
+    padding: 10px;
+    border-radius: 9px;
+    background: #f5f5ff;
+}
+
+.security-note > i {
+    color: #696ad5;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.security-note strong {
+    display: block;
+    font-size: 6px;
+    color: #6062c9;
+}
+
+.security-note p {
+    font-size: 5.2px;
+    color: #999daa;
+    line-height: 1.6;
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   RESULT CARD
+===================================================== */
+
+.result-card {
+    display: none;
+    align-items: center;
+    gap: 13px;
+    padding: 17px 20px;
+    background: #eaf8f1;
+    border: 1px solid #d3efdf;
+    border-radius: 15px;
+    margin-bottom: 28px;
+    animation: resultIn .4s ease;
+}
+
+.result-card.show {
+    display: flex;
+}
+
+.result-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: #d5f1e1;
+    color: #42a273;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.result-content {
+    flex: 1;
+}
+
+.result-content > span {
+    font-size: 5px;
+    color: #58a47c;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.result-content h3 {
+    font-size: 9px;
+    color: #3e7559;
+    margin-top: 3px;
+}
+
+.result-content p {
+    font-size: 5.5px;
+    color: #72a088;
+    margin-top: 2px;
+}
+
+.result-time {
+    text-align: right;
+}
+
+.result-time span {
+    display: block;
+    font-size: 5px;
+    color: #82aa96;
+}
+
+.result-time strong {
+    display: block;
+    font-size: 9px;
+    color: #4a8968;
+    margin-top: 2px;
+}
+
+@keyframes resultIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   HOW IT WORKS
+===================================================== */
+
+.how-section {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.step-card {
+    background: white;
+    border: 1px solid #ebebf1;
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 15px 30px rgba(40,45,75,.07);
+}
+
+.step-number {
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #f0f0f7;
+}
+
+.step-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #eeeeff;
+    color: #6869d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.step-card h3 {
+    font-size: 8px;
+    color: #454b5c;
+    margin-top: 12px;
+}
+
+.step-card p {
+    font-size: 5.5px;
+    color: #9a9eac;
+    line-height: 1.7;
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   SECURITY FEATURES
+===================================================== */
+
+.security-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.security-feature {
+    background: white;
+    border: 1px solid #ebebf1;
+    border-radius: 14px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: .25s ease;
+}
+
+.security-feature:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 25px rgba(40,45,75,.06);
+}
+
+.feature-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #f0f0ff;
+    color: #6869d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.security-feature h4 {
+    font-size: 7.5px;
+    color: #454b5b;
+}
+
+.security-feature p {
+    font-size: 5.5px;
+    color: #9a9eac;
+    line-height: 1.6;
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.face-footer {
+    text-align: center;
+    padding: 22px 0 5px;
+    color: #a4a8b5;
+    font-size: 5.5px;
+}
+
+.face-footer i {
+    color: #696ad6;
+    margin-right: 4px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - LAPTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    
+
+    .main-content {
+        margin-left: 210px;
+    }
+
+    .face-page {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .topbar {
+        padding: 0 24px;
+    }
+
+    .steps-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    
+
+    
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .mobile-menu button {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        border: 1px solid #e8e8ef;
+        background: white;
+        color: #6566d4;
+    }
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .face-page {
+        padding: 20px 18px 30px;
+    }
+
+    .verification-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .security-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: 72px;
+    }
+
+    .top-profile-info,
+    .profile-arrow {
+        display: none;
+    }
+
+    .topbar-actions {
+        gap: 8px;
+    }
+
+    .page-title h1 {
+        font-size: 14px;
+    }
+
+    .page-title p {
+        font-size: 5.5px;
+    }
+
+    .face-page {
+        padding: 16px 12px 25px;
+    }
+
+
+    /* HERO */
+
+    .face-hero {
+        border-radius: 16px;
+    }
+
+    .face-hero-content {
+        min-height: auto;
+        padding: 21px 18px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .hero-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        font-size: 18px;
+    }
+
+    .face-hero-content > div:nth-child(2) {
+        width: calc(100% - 65px);
+    }
+
+    .face-hero h2 {
+        font-size: 17px;
+    }
+
+    .face-hero p {
+        font-size: 6px;
+    }
+
+    .ai-status {
+        margin-top: 4px;
+    }
+
+
+    /* CAMERA */
+
+    .camera-card,
+    .verification-card {
+        padding: 15px;
+    }
+
+    .camera-container {
+        height: 280px;
+    }
+
+    .face-frame {
+        width: 155px;
+        height: 205px;
+    }
+
+
+    /* RESULT */
+
+    .result-card {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .result-content {
+        min-width: calc(100% - 55px);
+    }
+
+    .result-time {
+        margin-left: 53px;
+        text-align: left;
+    }
+
+
+    /* STEPS */
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* SECURITY */
+
+    .security-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .page-title p {
+        display: none;
+    }
+
+    .face-hero h2 {
+        font-size: 15px;
+    }
+
+    .face-hero p {
+        font-size: 5.5px;
+    }
+
+    .camera-container {
+        height: 250px;
+    }
+
+    .face-frame {
+        width: 140px;
+        height: 185px;
+    }
+
+    .camera-controls {
+        flex-direction: column;
+    }
+
+    .stop-scan-btn {
+        width: 100%;
+    }
+
+}

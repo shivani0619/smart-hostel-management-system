@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartHostel AI | Complaints</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="complaints.css">
+
+    <!-- Global Sidebar CSS -->
+    <link rel="stylesheet" href="student-sidebar.css">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background-shape shape-one"></div>
+<div class="background-shape shape-two"></div>
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SmartHostel</h2>
+
+            <span>AI HOSTEL</span>
+
+        </div>
+
+    </div>
+    <!-- MINI PROFILE -->
+
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar">
+
+            SS
+
+            <span class="online-dot"></span>
+
+        </div>
+
+        <div class="student-mini-info">
+
+            <h4>Student</h4>
+
+            <p>Student ID: —</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SIDEBAR NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="student-dashboard.html"
+           class="nav-item">
+
+            <span class="nav-icon">⌂</span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- MY PROFILE -->
+
+        <a href="student-profile.html"
+           class="nav-item">
+
+            <span class="nav-icon">◉</span>
+
+            <span>My Profile</span>
+
+        </a>
+
+
+        <!-- MY ROOM -->
+
+        <a href="room-details.html"
+           class="nav-item">
+
+            <span class="nav-icon">▣</span>
+
+            <span>My Room</span>
+
+        </a>
+
+
+        <!-- LEAVE -->
+
+        <a href="leave-request.html"
+           class="nav-item">
+
+            <span class="nav-icon">▤</span>
+
+            <span>Leave Application</span>
+
+        </a>
+
+
+        <!-- EMERGENCY -->
+
+        <a href="emergency.html"
+           class="nav-item emergency-link">
+
+            <span class="nav-icon">!</span>
+
+            <span>Emergency / SOS</span>
+
+        </a>
+
+
+        <!-- ATTENDANCE -->
+
+        <a href="attendance.html"
+           class="nav-item">
+
+            <span class="nav-icon">◷</span>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+
+    <!-- =================================================
+         TOP BAR
+    ================================================== -->
+
+    <header class="topbar">
+
+
+        <!-- MOBILE MENU -->
+
+        <div class="mobile-menu">
+
+            <button id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-title">
+
+            <span class="small-heading">
+                STUDENT PORTAL
+            </span>
+
+            <h1>
+                Complaints
+            </h1>
+
+            <p>
+                Report issues and track your complaints
+            </p>
+
+        </div>
+
+
+
+        <!-- TOP ACTIONS -->
+
+        <div class="topbar-actions">
+
+
+            <!-- NOTIFICATION -->
+
+            <button
+                class="icon-button"
+                id="notificationBtn">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span class="top-notification">
+                    3
+                </span>
+
+            </button>
+
+
+
+            <!-- PROFILE -->
+
+            <div class="top-profile">
+
+                <div class="top-avatar">
+                    S
+                </div>
+
+                <div class="top-profile-info">
+
+                    <strong>
+                        Student
+                    </strong>
+
+                    <span>
+                        —
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         PAGE CONTENT
+    ================================================== -->
+
+    <section class="complaint-page">
+
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <div class="complaint-hero">
+
+
+            <div class="hero-pattern"></div>
+
+
+            <div class="hero-content">
+
+
+                <div class="hero-left">
+
+
+                    <div class="hero-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+
+                    <div class="hero-text">
+
+                        <span>
+                            HOSTEL SUPPORT
+                        </span>
+
+                        <h2>
+                            Need Help?
+                        </h2>
+
+                        <p>
+                            Submit a complaint and our hostel team
+                            will help resolve your issue.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Student Support
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUICK STATUS
+        ================================================== -->
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    OVERVIEW
+                </span>
+
+                <h2>
+                    Complaint Status
+                </h2>
+
+                <p>
+                    Track your submitted complaints
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="status-grid">
+
+
+            <!-- TOTAL -->
+
+            <div class="status-card">
+
+                <div class="status-icon blue">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <h3>
+                        04
+                    </h3>
+
+                    <p>
+                        Complaints submitted
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PENDING -->
+
+            <div class="status-card">
+
+                <div class="status-icon orange">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        PENDING
+                    </span>
+
+                    <h3>
+                        02
+                    </h3>
+
+                    <p>
+                        Awaiting action
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROGRESS -->
+
+            <div class="status-card">
+
+                <div class="status-icon purple">
+
+                    <i class="fa-solid fa-spinner"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        IN PROGRESS
+                    </span>
+
+                    <h3>
+                        01
+                    </h3>
+
+                    <p>
+                        Being reviewed
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESOLVED -->
+
+            <div class="status-card">
+
+                <div class="status-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        RESOLVED
+                    </span>
+
+                    <h3>
+                        01
+                    </h3>
+
+                    <p>
+                        Successfully closed
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             MAIN COMPLAINT AREA
+        ================================================== -->
+
+        <div class="complaint-grid">
+
+
+
+            <!-- =================================================
+                 NEW COMPLAINT
+            ================================================== -->
+
+            <div class="complaint-card new-complaint-card">
+
+
+                <div class="card-heading">
+
+
+                    <div class="heading-left">
+
+                        <div class="heading-icon">
+
+                            <i class="fa-solid fa-pen-to-square"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Submit a Complaint
+                            </h3>
+
+                            <p>
+                                Tell us what problem you are facing
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="required-badge">
+                        Required
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <form id="complaintForm">
+
+
+                    <!-- ROOM -->
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Room Number
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-door-open"></i>
+
+                                <input
+                                    type="text"
+                                    value="204-B"
+                                    readonly>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CATEGORY -->
+
+                        <div class="form-group">
+
+                            <label>
+                                Complaint Category
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-layer-group"></i>
+
+                                <select id="complaintCategory" required>
+
+                                    <option value="">
+                                        Select category
+                                    </option>
+
+                                    <option value="electricity">
+                                        Electricity
+                                    </option>
+
+                                    <option value="plumbing">
+                                        Plumbing
+                                    </option>
+
+                                    <option value="furniture">
+                                        Furniture
+                                    </option>
+
+                                    <option value="cleaning">
+                                        Cleaning
+                                    </option>
+
+                                    <option value="wifi">
+                                        Wi-Fi / Internet
+                                    </option>
+
+                                    <option value="food">
+                                        Food / Mess
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- PRIORITY -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Priority
+                        </label>
+
+
+                        <div class="priority-options">
+
+
+                            <label class="priority-option">
+
+                                <input
+                                    type="radio"
+                                    name="priority"
+                                    value="low">
+
+                                <span class="priority-dot low"></span>
+
+                                <div>
+
+                                    <strong>
+                                        Low
+                                    </strong>
+
+                                    <small>
+                                        Can wait
+                                    </small>
+
+                                </div>
+
+                            </label>
+
+
+
+                            <label class="priority-option">
+
+                                <input
+                                    type="radio"
+                                    name="priority"
+                                    value="medium"
+                                    checked>
+
+                                <span class="priority-dot medium"></span>
+
+                                <div>
+
+                                    <strong>
+                                        Medium
+                                    </strong>
+
+                                    <small>
+                                        Needs attention
+                                    </small>
+
+                                </div>
+
+                            </label>
+
+
+
+                            <label class="priority-option">
+
+                                <input
+                                    type="radio"
+                                    name="priority"
+                                    value="high">
+
+                                <span class="priority-dot high"></span>
+
+                                <div>
+
+                                    <strong>
+                                        High
+                                    </strong>
+
+                                    <small>
+                                        Urgent issue
+                                    </small>
+
+                                </div>
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SUBJECT -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Complaint Subject
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-heading"></i>
+
+                            <input
+                                type="text"
+                                id="complaintSubject"
+                                placeholder="Enter complaint subject"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Description
+                        </label>
+
+                        <div class="textarea-wrapper">
+
+                            <i class="fa-solid fa-align-left"></i>
+
+                            <textarea
+                                id="complaintDescription"
+                                rows="5"
+                                placeholder="Describe your problem clearly..."
+                                required></textarea>
+
+                        </div>
+
+                        <span class="character-count">
+                            0 / 500 characters
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- ATTACHMENT -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Attachment
+                            <span class="optional">
+                                Optional
+                            </span>
+                        </label>
+
+
+                        <label class="upload-box">
+
+                            <input
+                                type="file"
+                                id="complaintFile"
+                                accept="image/*,.pdf">
+
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                            <div>
+
+                                <strong>
+                                    Upload supporting file
+                                </strong>
+
+                                <span>
+                                    JPG, PNG or PDF • Max 5MB
+                                </span>
+
+                            </div>
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="submit-btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Submit Complaint
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SIDE INFORMATION
+            ================================================== -->
+
+            <div class="side-column">
+
+
+
+                <!-- SUPPORT CARD -->
+
+                <div class="support-card">
+
+
+                    <div class="support-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Need Immediate Help?
+                    </h3>
+
+
+                    <p>
+                        For urgent safety or emergency issues,
+                        contact your hostel warden directly.
+                    </p>
+
+
+                    <button
+                        class="warden-btn"
+                        id="wardenBtn">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                        Contact Warden
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- GUIDELINES -->
+
+                <div class="guidelines-card">
+
+
+                    <div class="card-heading">
+
+
+                        <div class="heading-left">
+
+                            <div class="heading-icon green-icon">
+
+                                <i class="fa-solid fa-circle-info"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Complaint Guidelines
+                                </h3>
+
+                                <p>
+                                    Before submitting
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="guideline-list">
+
+
+                        <div class="guideline-item">
+
+                            <span>
+                                01
+                            </span>
+
+                            <p>
+                                Describe the issue clearly.
+                            </p>
+
+                        </div>
+
+
+                        <div class="guideline-item">
+
+                            <span>
+                                02
+                            </span>
+
+                            <p>
+                                Select the correct category.
+                            </p>
+
+                        </div>
+
+
+                        <div class="guideline-item">
+
+                            <span>
+                                03
+                            </span>
+
+                            <p>
+                                Choose priority based on urgency.
+                            </p>
+
+                        </div>
+
+
+                        <div class="guideline-item">
+
+                            <span>
+                                04
+                            </span>
+
+                            <p>
+                                Attach a photo if necessary.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             RECENT COMPLAINTS
+        ================================================== -->
+
+        <div class="recent-section">
+
+
+            <div class="section-heading recent-heading">
+
+
+                <div>
+
+                    <span>
+                        HISTORY
+                    </span>
+
+                    <h2>
+                        Recent Complaints
+                    </h2>
+
+                    <p>
+                        Your previously submitted complaints
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="view-all-btn"
+                    id="viewAllBtn">
+
+                    View All
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </div>
+
+
+
+            <div class="complaints-list">
+
+
+
+                <!-- COMPLAINT 1 -->
+
+                <div class="complaint-item">
+
+
+                    <div class="complaint-category-icon electricity">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+
+                    <div class="complaint-info">
+
+                        <div class="complaint-title-row">
+
+                            <h3>
+                                Fan not working
+                            </h3>
+
+                            <span class="status-badge pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Ceiling fan is making noise and
+                            stops frequently.
+                        </p>
+
+                        <span class="complaint-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Aug 19, 2026
+                            •
+                            #CMP004
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="complaint-priority high-priority">
+
+                        High
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- COMPLAINT 2 -->
+
+                <div class="complaint-item">
+
+
+                    <div class="complaint-category-icon wifi">
+
+                        <i class="fa-solid fa-wifi"></i>
+
+                    </div>
+
+
+                    <div class="complaint-info">
+
+                        <div class="complaint-title-row">
+
+                            <h3>
+                                Wi-Fi connection issue
+                            </h3>
+
+                            <span class="status-badge progress">
+                                In Progress
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Internet connection is unstable
+                            during evening hours.
+                        </p>
+
+                        <span class="complaint-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Aug 15, 2026
+                            •
+                            #CMP003
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="complaint-priority medium-priority">
+
+                        Medium
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- COMPLAINT 3 -->
+
+                <div class="complaint-item">
+
+
+                    <div class="complaint-category-icon cleaning">
+
+                        <i class="fa-solid fa-broom"></i>
+
+                    </div>
+
+
+                    <div class="complaint-info">
+
+                        <div class="complaint-title-row">
+
+                            <h3>
+                                Room cleaning request
+                            </h3>
+
+                            <span class="status-badge resolved">
+                                Resolved
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Requested additional room cleaning
+                            service.
+                        </p>
+
+                        <span class="complaint-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            Aug 10, 2026
+                            •
+                            #CMP002
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="complaint-priority low-priority">
+
+                        Low
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOTER INFO
+        ================================================== -->
+
+        <div class="support-footer">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            Your complaints are securely recorded and
+            visible only to authorized hostel staff.
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="api.js"></script>
+    <script src="complaints.js"></script>
+
+
+<script src="chatbot.js"></script>
+</body>
+
+</html>

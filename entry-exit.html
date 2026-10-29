@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartHostel AI | Entry / Exit</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="entry-exit.css">
+
+    <!-- Global Sidebar CSS -->
+    <link rel="stylesheet" href="student-sidebar.css">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <div class="logo-icon">
+            <span>AI</span>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>SmartHostel</h2>
+
+            <span>AI HOSTEL</span>
+
+        </div>
+
+    </div>
+    <!-- MINI PROFILE -->
+
+    <div class="student-mini-profile">
+
+        <div class="profile-avatar">
+
+            SS
+
+            <span class="online-dot"></span>
+
+        </div>
+
+        <div class="student-mini-info">
+
+            <h4>Student</h4>
+
+            <p>Student ID: —</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SIDEBAR NAVIGATION
+    ================================================= -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- DASHBOARD -->
+
+        <a href="student-dashboard.html"
+           class="nav-item">
+
+            <span class="nav-icon">⌂</span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- MY PROFILE -->
+
+        <a href="student-profile.html"
+           class="nav-item">
+
+            <span class="nav-icon">◉</span>
+
+            <span>My Profile</span>
+
+        </a>
+
+
+        <!-- MY ROOM -->
+
+        <a href="room-details.html"
+           class="nav-item">
+
+            <span class="nav-icon">▣</span>
+
+            <span>My Room</span>
+
+        </a>
+
+
+        <!-- LEAVE -->
+
+        <a href="leave-request.html"
+           class="nav-item">
+
+            <span class="nav-icon">▤</span>
+
+            <span>Leave Application</span>
+
+        </a>
+
+
+        <!-- EMERGENCY -->
+
+        <a href="emergency.html"
+           class="nav-item emergency-link">
+
+            <span class="nav-icon">!</span>
+
+            <span>Emergency / SOS</span>
+
+        </a>
+
+
+        <!-- ATTENDANCE -->
+
+        <a href="attendance.html"
+           class="nav-item">
+
+            <span class="nav-icon">◷</span>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- =================================================
+         SIDEBAR BOTTOM
+    ================================================= -->
+
+    <div class="sidebar-bottom">
+        <a href="roleselection.html"
+           class="logout-btn"
+           id="logoutBtn">
+
+            <span>↪</span>
+
+            Logout
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOP BAR
+    ================================================== -->
+
+    <header class="topbar">
+
+
+        <div class="topbar-left">
+
+
+            <button
+                class="menu-btn"
+                id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div>
+
+                <h1>Entry / Exit</h1>
+
+                <p>
+                    Manage your hostel entry and outing activities
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="topbar-right">
+
+
+            <!-- NOTIFICATION -->
+
+            <button
+                class="icon-button"
+                id="notificationBtn">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <!-- PROFILE -->
+
+            <div class="top-profile">
+
+                <div class="top-avatar">
+                    S
+                </div>
+
+                <div class="top-profile-info">
+
+                    <strong>
+                        Student
+                    </strong>
+
+                    <span>
+                        —
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         PAGE CONTENT
+    ================================================== -->
+
+    <section class="entry-page">
+
+
+        <!-- =================================================
+             CURRENT STATUS
+        ================================================== -->
+
+        <div class="status-card">
+
+
+            <div class="status-icon">
+
+                <i class="fa-solid fa-house-circle-check"></i>
+
+            </div>
+
+
+            <div class="status-content">
+
+                <span class="status-label">
+                    CURRENT HOSTEL STATUS
+                </span>
+
+                <h2 id="hostelStatus">Loading...</h2>
+
+                <p id="statusMessage">
+                    Loading current entry/exit status.
+                </p>
+
+            </div>
+
+
+            <div class="status-badge inside"
+                 id="statusBadge">
+
+                <i class="fa-solid fa-circle"></i>
+
+                INSIDE
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUICK STATUS
+        ================================================== -->
+
+        <div class="stats-grid">
+
+
+            <!-- LAST ENTRY -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Last Entry</span>
+
+                    <h3 id="lastEntry">—</h3>
+
+                    <small>
+                        Today
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- LAST EXIT -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Last Exit</span>
+
+                    <h3 id="lastExit">—</h3>
+
+                    <small>
+                        Yesterday
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOTAL OUTINGS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+
+                    <i class="fa-solid fa-person-walking"></i>
+
+                </div>
+
+                <div>
+
+                    <span>This Month</span>
+
+                    <h3 id="monthlyOutings">—</h3>
+
+                    <small>
+                        Outings
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- VERIFICATION -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-face-smile"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Verification</span>
+
+                    <h3>—</h3>
+
+                    <small>
+                        Face Recognition
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             MAIN GRID
+        ================================================== -->
+
+        <div class="entry-grid">
+
+
+            <!-- =================================================
+                 OUTING REQUEST
+            ================================================== -->
+
+            <div class="entry-card outing-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Request Outing
+                        </h2>
+
+                        <p>
+                            Submit your outing details
+                        </p>
+
+                    </div>
+
+                    <div class="card-header-icon">
+
+                        <i class="fa-solid fa-person-walking"></i>
+
+                    </div>
+
+                </div>
+
+
+                <form id="outingForm">
+
+
+                    <!-- DESTINATION -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Going To
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <input
+                                type="text"
+                                id="destination"
+                                placeholder="Enter destination"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PURPOSE -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Purpose
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-clipboard"></i>
+
+                            <select
+                                id="outingPurpose"
+                                required>
+
+                                <option value="">
+                                    Select purpose
+                                </option>
+
+                                <option value="College">
+                                    College
+                                </option>
+
+                                <option value="Medical">
+                                    Medical
+                                </option>
+
+                                <option value="Shopping">
+                                    Shopping
+                                </option>
+
+                                <option value="Family">
+                                    Family Visit
+                                </option>
+
+                                <option value="Personal">
+                                    Personal
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EXIT DATE -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Exit Date
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <input
+                                type="date"
+                                id="exitDate"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EXIT TIME -->
+
+                    <div class="time-row">
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Exit Time
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                <input
+                                    type="time"
+                                    id="exitTime"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Expected Return
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                <input
+                                    type="time"
+                                    id="returnTime"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- REASON -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Additional Note
+                        </label>
+
+                        <div class="textarea-box">
+
+                            <textarea
+                                id="outingNote"
+                                placeholder="Enter any additional information..."
+                                rows="3"></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOTIFICATION INFO -->
+
+                    <div class="notification-info">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span>
+                            Your request will be sent to the
+                            warden and parent for notification.
+                        </span>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="submit-button">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Submit Outing Request
+
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SAFETY / VERIFICATION
+            ================================================== -->
+
+            <div class="entry-card safety-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Safety & Verification
+                        </h2>
+
+                        <p>
+                            Your hostel security status
+                        </p>
+
+                    </div>
+
+                    <div class="card-header-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FACE -->
+
+                <div class="security-item">
+
+                    <div class="security-item-icon blue">
+
+                        <i class="fa-solid fa-face-smile"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Face Recognition
+                        </strong>
+
+                        <span>
+                            Identity verified
+                        </span>
+
+                    </div>
+
+                    <b class="verified">
+                        Verified
+                    </b>
+
+                </div>
+
+
+                <!-- PARENT -->
+
+                <div class="security-item">
+
+                    <div class="security-item-icon purple">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Parent Notification
+                        </strong>
+
+                        <span>
+                            Emergency notifications enabled
+                        </span>
+
+                    </div>
+
+                    <b class="verified">
+                        Active
+                    </b>
+
+                </div>
+
+
+                <!-- WARDEN -->
+
+                <div class="security-item">
+
+                    <div class="security-item-icon orange">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Warden Monitoring
+                        </strong>
+
+                        <span>
+                            Entry / Exit monitoring enabled
+                        </span>
+
+                    </div>
+
+                    <b class="verified">
+                        Active
+                    </b>
+
+                </div>
+
+
+                <!-- SAFETY MESSAGE -->
+
+                <div class="safety-message">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <p>
+                        Always update your outing details
+                        before leaving the hostel.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             ENTRY / EXIT HISTORY
+        ================================================== -->
+
+        <div class="entry-card history-card">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <h2>
+                        Entry / Exit History
+                    </h2>
+
+                    <p>
+                        Your recent hostel movement records
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="filter-button"
+                    id="historyFilterBtn">
+
+                    <i class="fa-solid fa-filter"></i>
+
+                    Recent
+
+                </button>
+
+
+            </div>
+
+
+            <div class="history-table-wrapper">
+
+
+                <table class="history-table">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Type
+                            </th>
+
+                            <th>
+                                Time
+                            </th>
+
+                            <th>
+                                Destination
+                            </th>
+
+                            <th>
+                                Verification
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="historyTableBody">
+                        <tr><td colspan="6">Loading entry/exit history...</td></tr>
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="api.js"></script>
+<script src="entry-exit-api.js"></script>
+
+
+</body>
+
+</html>

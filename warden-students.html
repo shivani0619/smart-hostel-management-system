@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHostel AI | Warden Students</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="emergency.css">
+  <link rel="stylesheet" href="portal-dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-section">
+      <div class="logo-icon"><span>AI</span></div>
+      <div class="logo-text"><h2>SmartHostel</h2><span>WARDEN</span></div>
+    </div>
+    <div class="student-mini-profile">
+      <div class="profile-avatar">W</div>
+      <div class="student-mini-info"><h4 id="wardenName">Warden</h4><p>Administrator</p></div>
+    </div>
+    <nav class="sidebar-nav">
+      <p class="nav-title">MAIN MENU</p>
+      <a href="warden-dashboard.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span><span>Dashboard</span></a>
+      <a href="warden-students.html" class="nav-item active"><span class="nav-icon"><i class="fa-solid fa-users"></i></span><span>Students</span></a>
+      <a href="warden-rooms.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-bed"></i></span><span>Rooms</span></a>
+      <a href="warden-attendance.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-clock"></i></span><span>Attendance</span></a>
+      <a href="warden-leaves.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-calendar-check"></i></span><span>Leave Requests</span></a>
+      <a href="warden-visitors.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-id-card"></i></span><span>Visitor Management</span></a>
+      <a href="warden-fees.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-money-bill-wave"></i></span><span>Fees</span></a>
+      <a href="warden-emergency.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-triangle-exclamation"></i></span><span>Emergency Alerts</span></a>
+      <a href="warden-notifications.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-bell"></i></span><span>Notifications</span></a>
+      <a href="warden-announcements.html" class="nav-item"><span class="nav-icon"><i class="fa-solid fa-bullhorn"></i></span><span>Announcements</span></a>
+    </nav>
+    <div class="sidebar-bottom"><a href="#" id="logoutBtn" class="logout-btn"><span class="nav-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span><span>Logout</span></a></div>
+  </aside>
+
+  <main class="main-content portal-main">
+    <header class="portal-header">
+      <button class="portal-menu-btn" id="menuBtn" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+      <div>
+        <h1>Students</h1>
+        <p>Manage active student records</p>
+      </div>
+    </header>
+
+    <div class="panel">
+      <h2>Student Directory</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+            <th>Department</th>
+            <th>Year</th>
+            <th>Room Number</th>
+            <th>Block</th>
+            <th>Bed</th>
+            <th>Phone</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="studentsTable">
+          <tr><td colspan="8">Loading students...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="api.js"></script>
+  <script src="shared-portal.js"></script>
+  <script src="warden-pages.js"></script>
+</body>
+</html>
